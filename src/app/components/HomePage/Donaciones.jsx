@@ -4,8 +4,8 @@ export default function Donaciones() {
         <div id="donate" className="py-4 mt-3">
             <div className="container">
                 <div className="text-center">
-                    <h4 className="mb-4">¡Haz Clik y Sé el Cambio! Apoya la Educación en el Caribe Colombiano</h4>
-                    {/* <hr className="w-24 mx-auto mb-4" /> */}
+                    <h4 className="mb-4">¡Haz Click y Sé el Cambio! Apoya la Educación en el Caribe Colombiano</h4>
+                    <hr className="w-75 mx-auto" />
                 </div>
                 <div className="row d-flex align-items-center justify-content-center py-2">
                     <div className="col-md-6 text-center">

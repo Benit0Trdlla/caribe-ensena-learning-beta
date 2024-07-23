@@ -1,30 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
-export  default function Header() {
+export default function Header({ ImgUrl }) {
     return (
         <>
             <header id="header">
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
-                        <Image src='/Images/Logo/Header.png' width={80} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
+                        <Image src={ImgUrl} width={80} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto gap-3">
                                 <li className="nav-item">
-                                    <a href="#services" className="nav-link text-secondary"><small>Servicios</small></a>
+                                    <Link href="/" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Home</small></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#preguntas" className="nav-link text-secondary"><small>Preguntas Frecuentes</small></a>
+                                    <Link href="#" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }} ><small>Mi progreso</small></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#instrucciones" className="nav-link text-secondary"><small>Instrucciones</small></a>
+                                    <Link href="/api/auth/logout" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Cerrar sesión</small></Link>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="#donate" className="nav-link text-black"><strong> Haz tu donación</strong></a>
-                                </li>
-                                <Link href="/Ingresar" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Iniciar</small></Link>
                             </ul>
                         </div>
                     </div>

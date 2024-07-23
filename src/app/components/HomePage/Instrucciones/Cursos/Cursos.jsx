@@ -3,14 +3,14 @@ import NombresCursos from "./NombresCursos"
 export default function Cursos() {
     return (
         <div className="col-md-3">
-            <div className="accordion" id="accordionExample1">
+            <div className="accordion" id="accordion1">
                 <div className="accordion-item">
                     <h2 className="accordion-header">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            CURSOS
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Cursos
                         </button>
                     </h2>
-                    <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+                    <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordion1">
                         <NombresCursos CursosInfo={[
                             { Id: "ModalOne", Title: "Enseñapaz" },
                             { Id: "ModalTwo", Title: "Access to Training" },
