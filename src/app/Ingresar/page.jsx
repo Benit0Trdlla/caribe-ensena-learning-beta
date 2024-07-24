@@ -1,9 +1,12 @@
+'use client'
 import Header from "../components/IngresarPage/Header";
 import Prelogin from "../components/IngresarPage/Prelogin";
-import { getSession } from '@auth0/nextjs-auth0';
+import { useUser } from '@auth0/nextjs-auth0/client';
 import { redirect } from 'next/navigation'
-export default async function IngresarPage() {
-    const { user } = await getSession();
+export default function IngresarPage() {
+    const { user, error, isLoading } = useUser();
+    if (error) return <div>{error.message}</div>;
+
     if (user) {
         redirect('/Cursos');
     }
