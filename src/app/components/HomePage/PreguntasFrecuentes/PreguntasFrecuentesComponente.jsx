@@ -35,6 +35,17 @@ export default function PreguntasFrecuentesComponente() {
                 <Preguntas flushheading={"flush-headingNine"} flushcollapse={"flush-collapseNine"} title={"Si tengo alguna duda con respecto a un curso o taller, ¿dónde consulto?"}>
                     Para dudas sobre un curso o taller, envía un email con tu consulta y el nombre de la formación a e-learning@caribeensena.org.
                 </Preguntas>
+                <Preguntas flushheading={"flush-headingTen"} flushcollapse={"flush-collapseTen"} title={"¿Qué ofrece CEL?"}>
+                    <p>
+                        <strong>Caribe Enseña Learning</strong> ofrece a los estudiantes una amplia gama de recursos educativos, que incluyen:
+                    </p>
+                    <ul>
+                        <li><strong>Materiales educativos interactivos:</strong></li>Lecciones multimedia que combinan texto, imágenes, audio y video para una experiencia de aprendizaje dinámica y envolvente.
+                        <li><strong>Guías de estudio personalizadas:</strong></li> Documentos y recursos que ayudan a los estudiantes a comprender los temas de estudio, adaptados a diferentes niveles de conocimiento y estilos de aprendizaje.
+                        <li><strong>Evaluaciones y cuestionarios:</strong></li> Herramientas de evaluación que permiten a los estudiantes medir su progreso y comprensión del material.
+                        <li><strong>Biblioteca digital:</strong></li> Una amplia colección de libros, artículos y otros recursos académicos disponibles en todo momento.
+                    </ul>
+                </Preguntas>
             </PreguntasFrecuentesLista>
         </>
     )
