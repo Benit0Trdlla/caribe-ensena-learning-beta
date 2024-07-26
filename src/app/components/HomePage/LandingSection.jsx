@@ -5,7 +5,7 @@ export default function LandingSection({ ImgUrl }) {
             <div className="row d-flex align-items-center justify-content-center">
                 <div className="col-md-6 px-1 lh-lg text-wrap">
                     <Image className="img-fluid" src='/Images/Titulo.png' width={800} height={800} alt='Imagen Principal' />
-                    <p style={{ textAlign: "justify" }}>
+                    <p className="text-center">
                         Nuestra plataforma e-learning tiene un gran propósito, ofrecer cursos, talleres y diplomados relacionados
                         con las necesidades educativas de la región,  para potenciar el aprendizaje en contextos formales y no formales.
                         Esta herramienta educativa virtual se puede usar en computadoras y dispositivos móviles como teléfonos y tabletas,

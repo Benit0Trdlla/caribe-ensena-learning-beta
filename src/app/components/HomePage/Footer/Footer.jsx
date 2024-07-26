@@ -3,7 +3,7 @@ import SubFooter from './SubFooter';
 import NavItemSubFooter from './NavItemSubFooter';
 export default function Footer() {
     return (
-        <MainFooter srcImg={'/Images/Logo/Header.png'} titleMiddle={"Un proyecto de Fundación Caribe Enseña"} titleEnd={"Contactanos"}>
+        <MainFooter srcImg={'/Images/Logo/Footer.png'} titleMiddle={"Un proyecto de Fundación Caribe Enseña"} titleEnd={"Contactanos"}>
             <a className="link-secondary text-decoration-none text-info"  href="https://caribeensena.org/" target="_blank">@caribeensena.org</a>
             <ul className="list-unstyled">
                 <p className="mb-0 mt-2">

@@ -8,11 +8,11 @@ export default function MainFooter({ children, srcImg, titleMiddle, titleEnd }) 
                         <div className="col-12 col-md-4 col-lg-3 col-xl-3">
                             <div className="widget">
                                 <div className='d-flex justify-content-center align-items-center'>
-                                    <Image src={srcImg} width={120} height={120} alt='Logo Proyecto Genius' priority={true} />
+                                    <Image src={srcImg} width={160} height={160} alt='Logo Proyecto Genius' priority={true} />
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-4 col-lg-3 col-xl-4 text-center">
+                        <div className="col-12 col-md-4 col-lg-3 col-xl-4 text-center mt-4">
                             <div className="widget">
                                 <h4 className="widget-title">{titleMiddle}</h4>
                                 {/* <address className="mb-4">Fundación Caribe Enseña</address> */}

@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
-export  default function Header() {
+export  default function Header({imgUrl}) {
     return (
         <>
             <header id="header">
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
-                        <Image src='/Images/Logo/Header.png' width={80} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
+                        <Image src={imgUrl} width={60} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span className="navbar-toggler-icon"></span>
                         </button>

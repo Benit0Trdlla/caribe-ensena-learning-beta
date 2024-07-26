@@ -6,7 +6,7 @@ export default function Header({ ImgUrl }) {
             <header id="header">
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
-                        <Image src={ImgUrl} width={80} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
+                        <Image src={ImgUrl} width={60} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span className="navbar-toggler-icon"></span>
                         </button>

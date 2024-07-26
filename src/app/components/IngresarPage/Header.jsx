@@ -6,7 +6,7 @@ export default function Header({ ImgUrl, href }) {
             <header id="header">
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
-                        <Image src={ImgUrl} width={80} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
+                        <Image src={ImgUrl} width={60} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <ul className="navbar-nav ms-auto">
                             <Link href={href} className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>
                                 <small>Volver</small>

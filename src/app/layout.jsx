@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="shortcut icon" href='/Images/Logo/Header.png' />
+        <link rel="shortcut icon" href='/Images/Logo/Pestaña.png' />
       </head>
       <body className={inter.className}>
         <UserProvider>

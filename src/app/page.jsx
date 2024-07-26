@@ -8,7 +8,7 @@ import Footer from "./components/HomePage/Footer/Footer";
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Header imgUrl={"/Images/Logo/Header.png"} />
       <LandingSection ImgUrl="/Images/Home.png" />
       <ServicioComponente />
       <PreguntasFrecuentesComponente />
