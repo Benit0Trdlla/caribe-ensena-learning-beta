@@ -8,7 +8,7 @@ export default async function CursosPage() {
         user && (
             <>
                 <Header ImgUrl={"/Images/Logo/Header.png"} />
-                <h1 className="display-5 font-weight-bold py-4 text-black"><strong>{user.nickname}, Empieza la prueba!</strong></h1>
+                <h1 className="display-6 font-weight-bold py-4 text-black text-center"><strong>¡Bienvenido {user.nickname}, Empieza la prueba!</strong></h1>
                 <Cursos />
                 <Certificado nombre={user.nickname} />
             </>
