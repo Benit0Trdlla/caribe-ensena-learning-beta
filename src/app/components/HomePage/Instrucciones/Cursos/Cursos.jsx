@@ -7,13 +7,13 @@ export default function Cursos() {
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            Cursos
+                            CURSOS
                         </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordion1">
                         <NombresCursos CursosInfo={[
                             { Id: "ModalOne", Title: "Enseñapaz" },
-                            { Id: "ModalTwo", Title: "Access to Training" },
+                            { Id: "ModalTwo", Title: "New skills" },
                             { Id: "ModalThree", Title: "Derechos Humanos" },
                             { Id: "ModalFour", Title: "Robótica" },
                             { Id: "ModalFive", Title: "Educación Financiera" },
@@ -34,7 +34,7 @@ export default function Cursos() {
                                 Se recomienda hacer cada módulo por semana, por lo tanto la duración es de un mes y medio aproximadamente.
                             </p>
                         </ModalCursos>
-                        <ModalCursos id="ModalTwo" title="Access to Training">
+                        <ModalCursos id="ModalTwo" title="New skills">
                             <p>
                                 4KT
                             </p>

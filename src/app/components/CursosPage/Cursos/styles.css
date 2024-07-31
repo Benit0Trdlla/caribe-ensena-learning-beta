@@ -1,0 +1,41 @@
+.curso-card {
+    width: 280px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #beefff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+}
+
+.curso-logo {
+    width: 150px;
+    height: auto;
+    border-radius: 75px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.curso-title {
+    background-color: #beefff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    max-width: 200px;
+    /* Ajusta el ancho máximo según sea necesario */
+}

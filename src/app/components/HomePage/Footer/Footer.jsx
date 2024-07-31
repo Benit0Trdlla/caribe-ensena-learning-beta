@@ -7,10 +7,10 @@ export default function Footer() {
             <a className="link-secondary text-decoration-none text-info"  href="https://caribeensena.org/" target="_blank">@caribeensena.org</a>
             <ul className="list-unstyled">
                 <p className="mb-0 mt-2">
-                    <a className="link-secondary text-decoration-none text-info" href="mailto:">e-learining@caribeensena.org</a>
+                    <a className="link-secondary text-decoration-none text-info" href="mailto:">e-learning@caribeensena.org</a>
                 </p>
                 <p className="mb-0 mt-2">
-                    <a className="link-secondary text-decoration-none text-info" href="mailto:">e-leariningsoporte@caribeensena.org</a>
+                    <a className="link-secondary text-decoration-none text-info" href="mailto:">e-learningsoporte@caribeensena.org</a>
                 </p>
                 <p className="mb-0 mt-2">
                     <a className="link-secondary text-decoration-none text-info" href="mailto:">donaciones@caribeensena.org</a>

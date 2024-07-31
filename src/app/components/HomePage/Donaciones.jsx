@@ -20,8 +20,8 @@ export default function Donaciones() {
                                 Para mayor información: <strong>donaciones@caribeensena.org</strong>
                             </small>
                         </p>
-                        <button className='btn btn-warning' style={{ backgroundColor: "#beefff ", borderColor: "#beefff" }}>
-                            <a className='text-black link-underline-info' href="https://www.paypal.com/paypalme/caribeensena?country.x=CO&locale.x=es_XC" target="_blank"><strong>¡Haz tu donación aqui!</strong></a>
+                        <button className='btn' style={{ backgroundColor: "#beefff ", borderColor: "#beefff" }}>
+                            <a className='text-black link-offset-2 link-underline link-underline-opacity-0' href="https://www.paypal.com/paypalme/caribeensena?country.x=CO&locale.x=es_XC" target="_blank"><strong>¡Haz tu donación aqui!</strong></a>
                         </button>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center py-4">
