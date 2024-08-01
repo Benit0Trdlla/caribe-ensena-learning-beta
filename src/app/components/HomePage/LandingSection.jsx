@@ -13,7 +13,7 @@ export default function LandingSection({ ImgUrl }) {
                     </p>
                 </div>
                 <div className="col-md-6 row mt-2">
-                    <Image className="img-fluid" src={ ImgUrl } width={800} height={800} alt='Imagen Principal' />
+                    <Image className="img-fluid" src={ImgUrl} width={800} height={800} alt='Imagen Principal' />
                 </div>
             </div>
         </div>
