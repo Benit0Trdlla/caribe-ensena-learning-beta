@@ -20,12 +20,12 @@
 }
 
 .curso-logo {
-    width: 150px;
+    width: 180px;
     height: auto;
     border-radius: 75px;
     align-items: center;
     margin-bottom: 10px;
-    margin-top: 10px;
+    border-radius: 20px;
 }
 
 .curso-title {

@@ -8,7 +8,7 @@ export default function AccordionModulos({ children, title, collapseNumber }) {
                     </button>
                 </h2>
                 <div id={collapseNumber} className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
+                    <div className="overflow-auto accordion-body" style={{ maxHeight: '300px' }}>
                         {children}
                     </div>
                 </div>

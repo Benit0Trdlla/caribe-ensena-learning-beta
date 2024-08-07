@@ -7,7 +7,7 @@ export default function CursosCard({ CursosInfo }) {
                 <div className="col-12 col-md-6 col-lg-4" key={curso.Id}>
                     <div className="curso-card">
                         <a href={curso.href}>
-                            <img src={curso.ImgUrl} alt={`Imagen de ${curso.Title}`} className="curso-logo img-fluid border" />
+                            <img src={curso.ImgUrl} alt={`Imagen de ${curso.Title}`} className="curso-logo img-fluid" />
                         </a>
                         <div className="curso-title  fs-6">
                             {curso.Title}
