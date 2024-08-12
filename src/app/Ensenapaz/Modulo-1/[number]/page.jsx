@@ -2,7 +2,8 @@
 // import { useCallback } from 'react'
 // import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 // import Link from 'next/link'
-import Header from "@/app/components/Secciones/Header";
+import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
+import Header from "@/app/components/Modulos/Header";
 import BtnLocked from "@/app/components/CursosPage/Cursos/Botones/BtnLocked";
 import BtnUnlocked from "@/app/components/CursosPage/Cursos/Botones/BtnUnlocked";
 export default function SectionsPage({ params }) {
@@ -24,7 +25,8 @@ export default function SectionsPage({ params }) {
     // )
     return (
         <>
-            <Header />
+            <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Ensenapaz" />
+            <SectionNavigation />
             <div className="container">
                 <div className="px-1 py-5 row">
                     La seccion es: {number}
