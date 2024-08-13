@@ -1,7 +1,11 @@
 import BtnLocked from "./BtnLocked"
 import BtnUnlocked from "./BtnUnlocked"
-export default function Botones() {
-    const Botones = [<BtnUnlocked />, <BtnLocked />, <BtnLocked />, <BtnLocked />]
+export default function Botones({ BtnHref }) {
+    const Botones = [
+        <BtnUnlocked href={`${BtnHref}/Modulo-1/1`} />,
+        <BtnLocked href={`${BtnHref}/Modulo-1/2`} />,
+        <BtnLocked href={BtnHref} />,
+        <BtnLocked href={BtnHref} />]
     return (
         <nav aria-label="breadcrumb">
             <ol className="breadcrumb">

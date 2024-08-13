@@ -1,0 +1,18 @@
+.div-svg:hover {
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: translateY(-5px);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+}
+
+@media (max-width: 576px) {
+    .myclase {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .myclase {
+        display: none;
+    }
+}

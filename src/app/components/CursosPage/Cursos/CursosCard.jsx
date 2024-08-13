@@ -9,11 +9,11 @@ export default function CursosCard({ CursosInfo }) {
                         <a href={curso.href}>
                             <img src={curso.ImgUrl} alt={`Imagen de ${curso.Title}`} className="curso-logo img-fluid" />
                         </a>
-                        <div className="curso-title  fs-6">
+                        <div className="curso-title fs-6">
                             {curso.Title}
                         </div>
                         {/* Botones levels */}
-                        <Botones />
+                        <Botones BtnHref={curso.href} />
                     </div>
                 </div>
             ))}
