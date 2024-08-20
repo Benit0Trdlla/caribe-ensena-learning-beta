@@ -1,37 +1,20 @@
 'use client'
-// import { useCallback } from 'react'
-// import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
 import Header from "@/app/components/Modulos/Header";
-import BtnLocked from "@/app/components/CursosPage/Cursos/Botones/BtnLocked";
-import BtnUnlocked from "@/app/components/CursosPage/Cursos/Botones/BtnUnlocked";
-export default function SectionsPage({ params }) {
+import FilePdf from '@/app/components/Modulos/Secciones/FilePdf';
+export default function SectionsPage({params}) {
     const number = params.number
-    const Botones = [<BtnUnlocked href={`/Ensenapaz`} />, <BtnLocked href={`/Ensenapaz`}/>, <BtnLocked href={`/Ensenapaz`}/>, <BtnUnlocked href={`/Ensenapaz`} />]
 
-    // const pathname = usePathname()
-    // const searchParams = useSearchParams()
-    // Get a new searchParams string by merging the current
-    // searchParams with a provided key/value pair
-    // const createQueryString = useCallback(
-    //     (name, value) => {
-    //         const params = new URLSearchParams(searchParams)
-    //         params.set(name, value)
-
-    //         return params.toString()
-    //     },
-    //     [searchParams]
-    // )
     return (
         <>
             <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" />
-            <SectionNavigation />
+            <SectionNavigation CursoPath={"/Ensenapaz/Modulo-1/"}/>
             <div className="container">
                 <div className="row d-flex align-items-center justify-content-center mt-3">
                     <div className="col-md-6 px-3 text-center">
                         Leer el siguiente PDF <br />
                         La seccion es: {number}
-                        <embed src="https://drive.google.com/file/d/1LqWcqMKsoBJpa2dOJRyyp5EbuFXkDyZ5/preview" type="application/pdf" width="100%" height="400px"></embed>
+                        <FilePdf href={"https://drive.google.com/file/d/1LqWcqMKsoBJpa2dOJRyyp5EbuFXkDyZ5/preview"} />
                     </div>
                     <div className="col-md-6 row" >
                         <p className="text-center fw-bold">
@@ -45,7 +28,6 @@ export default function SectionsPage({ params }) {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, explicabo. Deserunt velit minima voluptas magnam modi veniam vero culpa libero harum minus, adipisci voluptate veritatis error pariatur aperiam inventore dicta.
                             </p>
                         </div>
-                        {Botones[number - 1]}
                     </div>
                 </div>
             </div>
@@ -68,19 +50,6 @@ export default function SectionsPage({ params }) {
                                     }
                                 `}
             </style>
-            {/* <>
-                    <p>Sort By</p>
-                    <Link
-                        href={
-                            // <pathname>?sort=desc
-                            pathname + '?' + createQueryString('Seccion', '1')
-                        }
-                    >
-                        DESC
-                    </Link>
-                </> 
-            */}
         </>
-
     );
 }
