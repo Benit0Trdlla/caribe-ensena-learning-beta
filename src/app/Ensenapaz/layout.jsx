@@ -1,7 +1,7 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-
+import Buttons from '../components/Modulos/Buttons';
 export const metadata = {
-    title: "Enseñapaz",
+    title: "Ensenapaz - Caribe Enseña Learning",
     description: "Caribe Enseña Learning, developed by developers from Caribe Enseña",
     // manifest: "/manifest.json",
     // icons: {
@@ -10,10 +10,13 @@ export const metadata = {
     // themeColor: "#f69435",
 };
 
-export default withPageAuthRequired(function RootLayout({ children }) {
+export default withPageAuthRequired(function RootLayout({ children, params }) {
+    const NumInt = parseInt(params.number)
+
     return (
         <>
             {children}
+            <Buttons NumInt={NumInt} />
         </>
     );
 })
