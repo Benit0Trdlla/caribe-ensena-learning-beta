@@ -5,6 +5,7 @@ import Buttons from "@/app/components/Modulos/Buttons";
 import VideoIframe from "@/app/components/Modulos/Secciones/VideoIframe";
 export default function SectionsPage({ params }) {
     const number = params.number
+    const numInt = parseInt(number)
 
     return (
         <>
@@ -15,7 +16,7 @@ export default function SectionsPage({ params }) {
                     <div className="col-md-6 px-3 text-center">
                         Leer el siguiente PDF <br />
                         La seccion es: {number}
-                        <FilePdf href={"https://drive.google.com/file/d/1LqWcqMKsoBJpa2dOJRyyp5EbuFXkDyZ5/preview"} />
+                        {/* <FilePdf href={"https://drive.google.com/file/d/1LqWcqMKsoBJpa2dOJRyyp5EbuFXkDyZ5/preview"} /> */}
                         <VideoIframe href="https://www.youtube.com/embed/puCG51NX5sE?si=7lvUNfwIQMTS6Zr1" />
                         <h6 className="text-center mt-3">
                             <p>eJEMPLEO</p>
@@ -91,7 +92,7 @@ export default function SectionsPage({ params }) {
                         </div>
                     </div>
                 </div>
-                {/* <Buttons NumInt={NumInt} /> */}
+                <Buttons NumInt={numInt} />
             </div>
             <style>
                 {`

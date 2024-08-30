@@ -11,12 +11,10 @@ export const metadata = {
 };
 
 export default withPageAuthRequired(function RootLayout({ children, params }) {
-    const NumInt = parseInt(params.number)
 
     return (
         <>
             {children}
-            <Buttons NumInt={NumInt} />
         </>
     );
 })
