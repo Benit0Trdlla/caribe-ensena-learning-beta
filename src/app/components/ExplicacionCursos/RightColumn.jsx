@@ -4,7 +4,7 @@ export default function RightColumn({children}) {
             <nav className="nav border-bottom justify-content-center">
                 <a className="nav-link text-info" href="#Presentación">Presentación</a>
                 <a className="nav-link text-info" href="#Contenidos">Contenidos</a>
-                <a className="nav-link text-info" href="#">Recursos</a>
+                <a className="nav-link text-info" href="#Recursos">Recursos</a>
             </nav>
             <div className="overflow-auto p-3" style={{ maxHeight: '390px', textAlign: 'justify' }}>
                 {children}

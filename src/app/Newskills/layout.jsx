@@ -1,6 +1,6 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 export const metadata = {
-    title: "Ensenapaz - Caribe Enseña Learning",
+    title: "New Skills - Caribe Enseña Learning",
     description: "Caribe Enseña Learning, developed by developers from Caribe Enseña",
     // manifest: "/manifest.json",
     // icons: {

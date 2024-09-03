@@ -1,23 +1,23 @@
-import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
 import Header from "@/app/components/Modulos/Header";
-// import FilePdf from '@/app/components/Modulos/Secciones/FilePdf';
-import Buttons from "@/app/components/Modulos/Buttons";
-import VideoIframe from "@/app/components/Modulos/Secciones/VideoIframe";
+import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
 import Activities from "@/app/components/Modulos/Activities";
-export default function SectionsPage({ params }) {
+import VideoIframe from "@/app/components/Modulos/Secciones/VideoIframe";
+import Buttons from "@/app/components/Modulos/Buttons";
+
+
+export default function NewskillsPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)
-    const ComponentsSections = ["<ComponentN1/>", "<ComponentN2/>", "<ComponentN3/>", "<ComponentN4/>", "<ComponentN5/>", "<ComponentN6/>", "<ComponentN7/>" ]
+
     return (
         <>
-            <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" />
-            <SectionNavigation CursoPath={"/Ensenapaz/Modulo-1/"} />
+            <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href="/Cursos" />
+            <SectionNavigation CursoPath={"/Newskills/Modulo-1/"} />
             <div className="container">
                 <div className="row d-flex align-items-center justify-content-center mt-3">
                     <div className="col-md-6 text-center">
-                        <p>Leer el contenido</p>
-                        {/* {ComponentsSections[numInt - 1]} */}
-                        {/* <FilePdf href={"https://drive.google.com/file/d/1LqWcqMKsoBJpa2dOJRyyp5EbuFXkDyZ5/preview"} /> */}
+                        <p>Ve el contenido del video</p>
+                        {/* <FilePdf href={"https://drive.google.com/file/d/1LqWcqMKsoBJpa2dOJRyyp5EbuFXkDyZ5/preview"} />  */}
                         <VideoIframe href="https://www.youtube.com/embed/puCG51NX5sE?si=7lvUNfwIQMTS6Zr1" />
                         <Activities Enunciado="Actividad" />
                     </div>
@@ -48,26 +48,7 @@ export default function SectionsPage({ params }) {
                     </div>
                 </div>
             </div>
-            <Buttons NumInt={numInt} />
-            <style>
-                {`
-                                    /* Estilos para la barra de desplazamiento */
-                                    .overflow-auto::-webkit-scrollbar {
-                                        width: 8px;
-                                    }
-
-                                    /* Estilos para el thumb de la barra de desplazamiento */
-                                    .overflow-auto::-webkit-scrollbar-thumb {
-                                        background-color: #888;
-                                        border-radius: 4px;
-                                    }
-
-                                    /* Estilos para el thumb de la barra de desplazamiento al pasar el cursor */
-                                    .overflow-auto::-webkit-scrollbar-thumb:hover {
-                                        background-color: #555;
-                                    }
-                                `}
-            </style>
+            <Buttons NumInt={numInt} CursoPath={"/Newskills/Modulo-1/"} />
         </>
-    );
+    )
 }

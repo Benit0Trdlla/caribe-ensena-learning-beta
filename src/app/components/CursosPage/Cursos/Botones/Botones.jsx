@@ -5,7 +5,8 @@ export default function Botones({ BtnHref }) {
         <BtnUnlocked href={`${BtnHref}/Modulo-1/1`} />,
         <BtnLocked href={`${BtnHref}/Modulo-1/1`} />,
         <BtnLocked href={`${BtnHref}/Modulo-1/1`} />,
-        <BtnLocked href={`${BtnHref}/Modulo-1/1`} />]
+        <BtnLocked href={`${BtnHref}/Modulo-1/1`} />
+    ]
     return (
         <nav aria-label="breadcrumb">
             <ol className="breadcrumb">

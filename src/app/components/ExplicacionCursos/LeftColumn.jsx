@@ -1,4 +1,4 @@
-export default function LeftColumn({ title, children }) {
+export default function LeftColumn({ title, children, curso }) {
     return (
         <div className="col-md-6 px-3 lh-lg" >
             <div className="d-flex flex-column justify-content-center ">
@@ -7,7 +7,7 @@ export default function LeftColumn({ title, children }) {
                 </p>
                 {children}
                 <div className="d-flex justify-content-center ">
-                    <a href="/Ensenapaz/Modulo-1/1" className="btn w-50 mt-3" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>Iniciar</a>
+                    <a href={`/${curso}/Modulo-1/1`} className="btn w-50 mt-3" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>Iniciar</a>
                 </div>
             </div>
         </div>

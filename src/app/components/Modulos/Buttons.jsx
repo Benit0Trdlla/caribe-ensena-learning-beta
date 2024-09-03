@@ -1,5 +1,5 @@
 import Link from "next/link"
-export default function Buttons({ NumInt }) {
+export default function Buttons({ NumInt, CursoPath }) {
     return (
         <div className="d-flex justify-content-around align-items-center mt-5 mb-3 me-2 ms-2">
             <Link href="/Cursos" className="btn btn-danger">
@@ -8,7 +8,7 @@ export default function Buttons({ NumInt }) {
                     <path fillRule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
                 </svg>
             </Link>
-            <Link href={NumInt === 7 ? "#" : `/Ensenapaz/Modulo-1/${NumInt + 1}`} className="btn btn-primary">
+            <Link href={NumInt === 7 ? "#" : `${CursoPath}${NumInt + 1}`} className="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                 </svg>
