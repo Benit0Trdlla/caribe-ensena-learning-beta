@@ -1,8 +1,9 @@
+import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Header from "../components/ExplicacionCursos/Header";
 import RightColumn from "../components/ExplicacionCursos/RightColumn";
 import LeftColumn from "../components/ExplicacionCursos/LeftColumn";
 import AccordionModulos from "../components/ExplicacionCursos/AccordionModulos";
-export default function NewskillsPage() {
+ function NewskillsPage() {
     return (
         <>
             <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href={"/Cursos"} />
@@ -67,3 +68,7 @@ export default function NewskillsPage() {
         </>
     )
 }
+
+export default withPageAuthRequired(NewskillsPage, {
+    returnTo: '/Newskills',
+}); 

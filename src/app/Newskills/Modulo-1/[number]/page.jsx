@@ -1,12 +1,13 @@
-import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
+import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Header from "@/app/components/Modulos/Header";
+import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
 import Buttons from "@/app/components/Modulos/Buttons";
+
 import BookSection from "@/app/components/Modulos/BookSection";
 import VideoSection from "@/app/components/Modulos/VideoSection";
 import FinalExamSection from "@/app/components/Modulos/FinalExamSection";
 
-
-export default function NewskillsModuloPage({ params }) {
+function NewskillsModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)
     const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <FinalExamSection />]
@@ -20,3 +21,7 @@ export default function NewskillsModuloPage({ params }) {
         </>
     )
 }
+
+export default withPageAuthRequired(NewskillsModuloPage, {
+    returnTo: ({ params }) => `/Newskills/Modulo-1/${params.number}`,
+});

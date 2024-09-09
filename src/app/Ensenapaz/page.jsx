@@ -1,8 +1,9 @@
+import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Header from "../components/ExplicacionCursos/Header";
 import RightColumn from "../components/ExplicacionCursos/RightColumn";
 import LeftColumn from "../components/ExplicacionCursos/LeftColumn";
 import AccordionModulos from "../components/ExplicacionCursos/AccordionModulos";
-export default function EnsenapazPage() {
+function EnsenapazPage() {
     return (
         <>
             <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" />
@@ -81,10 +82,10 @@ export default function EnsenapazPage() {
                     <RightColumn>
                         <strong id="Presentación">Establecer una Cátedra de Paz Integral y Adaptada a las Necesidades Regionales</strong>
                         <br /><br />
-                        En el marco de los principios y objetivos del Objetivo de Desarrollo Sostenible (ODS) 16, 
-                        que promueve la paz, la justicia y la construcción de instituciones sólidas, presentamos la iniciativa de establecer 
-                        una Cátedra de Paz integral y adaptada a las necesidades regionales del Caribe Colombiano. 
-                        Esta cátedra tiene como objetivo principal capacitar a docentes comprometidos y capacitados para fomentar una 
+                        En el marco de los principios y objetivos del Objetivo de Desarrollo Sostenible (ODS) 16,
+                        que promueve la paz, la justicia y la construcción de instituciones sólidas, presentamos la iniciativa de establecer
+                        una Cátedra de Paz integral y adaptada a las necesidades regionales del Caribe Colombiano.
+                        Esta cátedra tiene como objetivo principal capacitar a docentes comprometidos y capacitados para fomentar una
                         cultura de paz, convivencia y transformación positiva en sus comunidades educativas y territorios. <strong>Objetivos Generales:</strong> <br /><br />
                         <strong>Capacitar a Docentes:</strong> Equipar a los educadores con prácticas educativas centradas en la paz, la convivencia y la resolución pacífica de conflictos. <br /><br />
                         <strong>Integrar la Educación para la Paz:</strong> Incorporar el enfoque de Educación para la Paz en el currículo escolar de 50 escuelas rurales, asegurando que los principios de paz sean una parte fundamental de la educación de nuestros jóvenes. <br /><br />
@@ -96,11 +97,11 @@ export default function EnsenapazPage() {
                         <strong>Capacitar a Docentes en Prácticas Educativas Centrada en la Paz:</strong> Proveer a los educadores de herramientas y estrategias que les permitan enseñar y promover la paz y la convivencia en sus aulas. <br />
                         <strong>Integrar el Enfoque de Educación para la Paz en el Currículo Escolar:</strong> Adaptar los planes de estudio para incluir conceptos y prácticas relacionadas con la paz, asegurando que los estudiantes comprendan y valoren la importancia de vivir en armonía. <br />
                         <strong>Crear un Ambiente de Aprendizaje Seguro y Participativo:</strong> Establecer un entorno en el que los valores de paz sean promovidos activamente y en el que los estudiantes se sientan seguros y motivados para participar y aprender. <br />
-                        <strong>Fortalecer Habilidades Socioemocionales y Ciudadanas de los Estudiantes:</strong>  Desarrollar en los estudiantes habilidades esenciales como la empatía, la resolución pacífica de conflictos y la participación ciudadana. 
+                        <strong>Fortalecer Habilidades Socioemocionales y Ciudadanas de los Estudiantes:</strong>  Desarrollar en los estudiantes habilidades esenciales como la empatía, la resolución pacífica de conflictos y la participación ciudadana.
                         <br /><br />
                         <strong>Enseñapaz: Programa de Formación en Educación y Cultura de Paz</strong>
                         <hr className="w-100" />
-                        Es un programa de formación diseñado para los docentes de nuestras escuelas, con un enfoque particular en los territorios y contextos del Caribe Colombiano. Este programa se propone como una herramienta esencial para construir una cultura de paz desde las aulas, capacitando a los maestros para que sean agentes de cambio en sus comunidades. A través de talleres teóricos y prácticos, actividades colaborativas y proyectos de aprendizaje, los docentes aprenderán a: 
+                        Es un programa de formación diseñado para los docentes de nuestras escuelas, con un enfoque particular en los territorios y contextos del Caribe Colombiano. Este programa se propone como una herramienta esencial para construir una cultura de paz desde las aulas, capacitando a los maestros para que sean agentes de cambio en sus comunidades. A través de talleres teóricos y prácticos, actividades colaborativas y proyectos de aprendizaje, los docentes aprenderán a:
                         <br />
                         - Promover la paz y la convivencia en sus aulas. <br />
                         - Resolver conflictos de manera pacífica y constructiva. <br />
@@ -124,3 +125,7 @@ export default function EnsenapazPage() {
         </>
     );
 }
+
+export default withPageAuthRequired(EnsenapazPage, {
+    returnTo: '/Ensenapaz',
+});

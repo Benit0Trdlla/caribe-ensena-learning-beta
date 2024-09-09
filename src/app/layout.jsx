@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import InstallBootstrap from "./components/Bootstrap/InstallBootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import InstallBootstrap from "./components/Bootstrap/InstallBootstrap";
 import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 const inter = Inter({ subsets: ["latin"] });
