@@ -4,7 +4,7 @@ import Buttons from "@/app/components/Modulos/Buttons";
 import BookSection from "@/app/components/Modulos/BookSection";
 import VideoSection from "@/app/components/Modulos/VideoSection";
 import FinalExamSection from "@/app/components/Modulos/FinalExamSection";
-export default function SectionsPage({ params }) {
+export default function EnsenapazModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)
     const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <FinalExamSection />]
