@@ -7,7 +7,7 @@ export default function EnsenapazPage() {
         <>
             <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" />
             <div className="container">
-                <div className="px-1 py-5 row">
+                <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Ensenapaz"} curso={"Ensenapaz"}>
                         <AccordionModulos title={"Módulo 1: Introducción a la Paz en Colombia e Identidad y Diversidad"} collapseNumber={"collapseOne"}>
                             <strong>Tema 1: Introducción a la Paz en Colombia</strong>
