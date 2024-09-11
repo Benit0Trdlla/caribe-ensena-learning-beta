@@ -4,6 +4,11 @@ import Header from "../components/CursosPage/Header";
 import Certificado from "../components/Certificado";
 import Cursos from "../components/CursosPage/Cursos/Cursos";
 
+export const metadata = {
+    title: "Cursos",
+    description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
+}
+
 async function CursosPage() {
     const { user } = await getSession();
     return (

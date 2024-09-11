@@ -3,7 +3,12 @@ import Header from "../components/ExplicacionCursos/Header";
 import RightColumn from "../components/ExplicacionCursos/RightColumn";
 import LeftColumn from "../components/ExplicacionCursos/LeftColumn";
 import AccordionModulos from "../components/ExplicacionCursos/AccordionModulos";
- function NewskillsPage() {
+
+export const metadata = {
+    title: "Newskills",
+    description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
+}
+function NewskillsPage() {
     return (
         <>
             <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href={"/Cursos"} />

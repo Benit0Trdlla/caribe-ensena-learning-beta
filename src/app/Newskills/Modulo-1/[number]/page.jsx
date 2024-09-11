@@ -7,6 +7,11 @@ import BookSection from "@/app/components/Modulos/BookSection";
 import VideoSection from "@/app/components/Modulos/VideoSection";
 import FinalExamSection from "@/app/components/Modulos/FinalExamSection";
 
+export function generateMetadata({ params }) {
+    return {
+        title: `Modulo 1 | Seccion ${params.number}`,
+    };
+}
 function NewskillsModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)

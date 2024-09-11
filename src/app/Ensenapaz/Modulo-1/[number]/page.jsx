@@ -1,11 +1,17 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
 import Header from "@/app/components/Modulos/Header";
+import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
 import Buttons from "@/app/components/Modulos/Buttons";
+
 import BookSection from "@/app/components/Modulos/BookSection";
 import VideoSection from "@/app/components/Modulos/VideoSection";
 import FinalExamSection from "@/app/components/Modulos/FinalExamSection";
 
+export function generateMetadata({ params }) {
+    return {
+        title: `Modulo 1 | Seccion ${params.number}`,
+    };
+}
 function EnsenapazModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)

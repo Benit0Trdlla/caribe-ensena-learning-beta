@@ -19,7 +19,7 @@ export default function Header({ ImgUrl }) {
                                     <Link href="#" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }} ><small>Mi progreso</small></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link href="/api/auth/logout" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Cerrar sesión</small></Link>
+                                    <a href="/api/auth/logout" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Cerrar sesión</small></a>
                                 </li>
                             </ul>
                         </div>

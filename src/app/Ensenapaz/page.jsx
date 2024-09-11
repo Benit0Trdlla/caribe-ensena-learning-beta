@@ -3,6 +3,12 @@ import Header from "../components/ExplicacionCursos/Header";
 import RightColumn from "../components/ExplicacionCursos/RightColumn";
 import LeftColumn from "../components/ExplicacionCursos/LeftColumn";
 import AccordionModulos from "../components/ExplicacionCursos/AccordionModulos";
+
+export const metadata = {
+    title: "Ensenapaz",
+    description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
+}
+
 function EnsenapazPage() {
     return (
         <>

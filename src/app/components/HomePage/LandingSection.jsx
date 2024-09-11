@@ -4,7 +4,7 @@ export default function LandingSection({ ImgUrl }) {
         <div className="container">
             <div className="row d-flex align-items-center justify-content-center">
                 <div className="col-md-6 px-1 lh-lg text-wrap">
-                    <Image className="img-fluid" src='/Images/Titulo.png' width={800} height={800} alt='Imagen Principal' />
+                    <Image className="img-fluid" src='/Images/Titulo.png' width={800} height={800} alt='Imagen Principal' priority/>
                     <p className="text-center">
                         Nuestra plataforma e-learning tiene un gran propósito, ofrecer cursos, talleres y diplomados relacionados
                         con las necesidades educativas de la región,  para potenciar el aprendizaje en contextos formales y no formales.
