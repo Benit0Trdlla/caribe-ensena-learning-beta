@@ -6,7 +6,7 @@ import {
     Header,
     Buttons,
     SectionNavigation
-} from '@/app/components/Modulos';
+} from '../../../components/Modulos';
 
 export function generateMetadata({ params }) {
     return {
