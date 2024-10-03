@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-export default function Activities({ Enunciado }) {
+export const Activities = ({ Enunciado }) => {
     const [showAlert, setShowAlert] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
     const examplesQuestions = [

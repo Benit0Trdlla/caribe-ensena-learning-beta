@@ -1,11 +1,11 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import Header from "@/app/components/Modulos/Header";
-import SectionNavigation from "@/app/components/Modulos/Secciones/SectionNavigation";
-import Buttons from "@/app/components/Modulos/Buttons";
+import Header from "@/app/components/Modulos/components/Header";
+import SectionNavigation from "@/app/components/Modulos/components/SectionNavigation/SectionNavigation";
+import Buttons from "@/app/components/Modulos/components/Buttons";
 
 import BookSection from "@/app/components/Modulos/BookSection";
 import VideoSection from "@/app/components/Modulos/VideoSection";
-import FinalExamSection from "@/app/components/Modulos/FinalExamSection";
+import FinalExamSection from "@/app/components/Modulos/Secciones/FinalExamSection";
 
 export function generateMetadata({ params }) {
     return {

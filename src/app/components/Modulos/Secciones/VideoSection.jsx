@@ -1,7 +1,8 @@
-import VideoIframe from "./Secciones/VideoIframe"
-import Activities from "./Secciones/Activities"
-import ContenidoTeorico from "./Secciones/ContenidoTeorico"
-export default function VideoSection() {
+// import VideoIframe from "./components/VideoIframe/VideoIframe"
+// import Activities from "./components/Activities/Activities"
+// import ContenidoTeorico from "./components/ContenidoTeorico/ContenidoTeorico"
+import { VideoIframe, Activities, ContenidoTeorico } from "../componentsSecciones";
+export const VideoSection = () => {
     return (
         <div className="container">
             <div className="row d-flex align-items-center justify-content-center mt-4">

@@ -1,7 +1,7 @@
 'use client'
 import styles from "./FilePdf.module.css"
 import { useState } from 'react'
-export default function FilePdf({ href }) {
+export const FilePdf = ({ href }) => {
     const [loading, setLoading] = useState(true);
 
     const handleLoad = () => {

@@ -1,4 +1,4 @@
-export default function ContenidoTeorico({maxHeight}) {
+export const ContenidoTeorico = ({maxHeight}) => {
     return (
         <>
             <p className="text-center fw-bold">

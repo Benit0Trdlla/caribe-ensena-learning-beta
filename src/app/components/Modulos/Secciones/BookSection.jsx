@@ -1,7 +1,8 @@
-import FilePdf from "./Secciones/FilePdf";
-import Activities from "./Secciones/Activities";
-import ContenidoTeorico from "./Secciones/ContenidoTeorico";
-export default function BookSection() {
+// import FilePdf from "./components/FilePdf/FilePdf";
+// import Activities from "./components/Activities/Activities";
+// import ContenidoTeorico from "./components/ContenidoTeorico/ContenidoTeorico";
+import { FilePdf, Activities, ContenidoTeorico } from "../componentsSecciones";
+export const BookSection = () => {
     return (
         <div className="container">
             <div className="row d-flex align-items-center justify-content-center mt-4">

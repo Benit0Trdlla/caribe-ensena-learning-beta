@@ -1,4 +1,4 @@
-export default function FinalExamSection() {
+export const FinalExamSection = () => {
     return (
         <div className="final-exam-section">
             <h1>Final Exam Section</h1>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-export default function Buttons({ NumInt, CursoPath }) {
+export const Buttons = ({ NumInt, CursoPath }) => {
     return (
         <div className="d-flex justify-content-around align-items-center mt-5 mb-3 me-2 ms-2">
             <Link href="/Cursos" className="btn btn-danger">
