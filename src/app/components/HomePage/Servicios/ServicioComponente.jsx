@@ -1,6 +1,6 @@
 import Cards from "./Cards";
 import CardServicesList from "./CardServicesList";
-export default function Servicios() {
+export const ServicioComponente = () => {
     return (
         <CardServicesList>
             <Cards title={"PWA, o Progressive Web App"} href={"PWA"}>

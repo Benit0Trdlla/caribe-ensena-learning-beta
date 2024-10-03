@@ -1,6 +1,6 @@
 import Preguntas from "./Preguntas";
 import PreguntasFrecuentesLista from "./PreguntasFrecuentesLista";
-export default function PreguntasFrecuentesComponente() {
+export const PreguntasFrecuentesComponente = () => {
     return (
         <>
             <PreguntasFrecuentesLista MyImage={'/Images/Preguntas.png'}>

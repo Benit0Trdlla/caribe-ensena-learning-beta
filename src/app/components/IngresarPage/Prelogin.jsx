@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Prelogin({ ImgLeft, ImgTitle }) {
+export const Prelogin = ({ ImgLeft, ImgTitle }) => {
     return (
         <section className='gradient-custom'>
             <div className="container py-5">

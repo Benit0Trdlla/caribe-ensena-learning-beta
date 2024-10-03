@@ -1,5 +1,5 @@
 import Image from "next/image";
-export default function Donaciones() {
+export const Donaciones = () => {
     return (
         <div id="donate" className="py-4 mt-3">
             <div className="container">

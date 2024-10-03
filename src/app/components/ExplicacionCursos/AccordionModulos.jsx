@@ -1,4 +1,4 @@
-export default function AccordionModulos({ children, title, collapseNumber }) {
+export const AccordionModulos = ({ children, title, collapseNumber }) => {
     return (
         <div className="accordion mt-3" id="accordionExample">
             <div className="accordion-item border border-0">

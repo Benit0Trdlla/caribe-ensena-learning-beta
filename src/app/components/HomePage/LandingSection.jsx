@@ -1,5 +1,5 @@
 import Image from "next/image";
-export default function LandingSection({ ImgUrl }) {
+export const LandingSection= ({ ImgUrl }) => {
     return (
         <div className="container">
             <div className="row d-flex align-items-center justify-content-center">

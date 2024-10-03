@@ -1,6 +1,5 @@
 'use client'
-import Header from "../components/IngresarPage/Header";
-import Prelogin from "../components/IngresarPage/Prelogin";
+import { Header, Prelogin } from '../components/IngresarPage'
 import { useUser } from '@auth0/nextjs-auth0/client';
 import { redirect } from 'next/navigation'
 export default function IngresarPage() {

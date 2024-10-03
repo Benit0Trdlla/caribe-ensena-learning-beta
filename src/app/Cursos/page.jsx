@@ -1,8 +1,7 @@
+import { Header, Cursos } from "../components/CursosPage";
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { getSession } from '@auth0/nextjs-auth0';
-import Header from "../components/CursosPage/Header";
 import Certificado from "../components/Certificado";
-import Cursos from "../components/CursosPage/Cursos/Cursos";
 
 export const metadata = {
     title: "Cursos",

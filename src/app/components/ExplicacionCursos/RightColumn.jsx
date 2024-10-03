@@ -1,4 +1,4 @@
-export default function RightColumn({children}) {
+export const RightColumn = ({children}) => {
     return (
         <div className="col-md-6 mt-2">
             <nav className="nav border-bottom justify-content-center">

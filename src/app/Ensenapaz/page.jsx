@@ -1,8 +1,5 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import Header from "../components/ExplicacionCursos/Header";
-import RightColumn from "../components/ExplicacionCursos/RightColumn";
-import LeftColumn from "../components/ExplicacionCursos/LeftColumn";
-import AccordionModulos from "../components/ExplicacionCursos/AccordionModulos";
+import { AccordionModulos, Header, LeftColumn, RightColumn } from "../components/ExplicacionCursos";
 
 export const metadata = {
     title: "Ensenapaz",

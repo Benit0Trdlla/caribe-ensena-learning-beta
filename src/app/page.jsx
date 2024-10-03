@@ -1,10 +1,12 @@
-import Header from "./components/HomePage/Header";
-import LandingSection from "./components/HomePage/LandingSection";
-import ServicioComponente from "./components/HomePage/Servicios/ServicioComponente";
-import PreguntasFrecuentesComponente from "./components/HomePage/PreguntasFrecuentes/PreguntasFrecuentesComponente";
-import InstruccionesList from "./components/HomePage/Instrucciones/InstruccionesList";
-import Donaciones from "./components/HomePage/Donaciones";
-import Footer from "./components/HomePage/Footer/Footer";
+import { 
+  Header, 
+  LandingSection, 
+  Donaciones, 
+  Footer, 
+  InstruccionesList, 
+  PreguntasFrecuentesComponente,
+  ServicioComponente
+ } from "./components/HomePage";
 export default function Home() {
   return (
     <main>

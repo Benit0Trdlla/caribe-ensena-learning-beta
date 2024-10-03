@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-export default function Header({ ImgUrl }) {
+export const Header = ({ ImgUrl }) =>{
     return (
         <>
             <header id="header">

@@ -1,4 +1,4 @@
-export default function LeftColumn({ title, children, curso }) {
+export const LeftColumn = ({ title, children, curso }) => {
     return (
         <div className="col-md-6 px-3 lh-lg" >
             <div className="d-flex flex-column justify-content-center ">
