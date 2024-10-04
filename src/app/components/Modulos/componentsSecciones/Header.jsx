@@ -9,7 +9,7 @@ export const Header = ({ ImgUrl, href }) => {
                     <div className="container d-flex">
                         <Image src={ImgUrl} width={60} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <div className='d-flex justify-content-center'>
-                            <button className='btn border ms-2 ms-lg-0 d-flex align-items-center gap-2' type='button'>
+                            <button title='¡UNETE AL EVENTO!' className='btn border ms-2 ms-lg-0 d-flex align-items-center gap-2' type='button'>
                                 <Point />
                                 ¡Únete al evento!
                             </button>
