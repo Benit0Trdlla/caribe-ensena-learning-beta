@@ -5,7 +5,8 @@ import {
   Footer, 
   InstruccionesList, 
   PreguntasFrecuentesComponente,
-  ServicioComponente
+  ServicioComponente,
+  AliadosSection
  } from "./components/HomePage";
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PreguntasFrecuentesComponente />
       <InstruccionesList />
       <Donaciones />
+      <AliadosSection />
       <Footer />
     </main>
   );

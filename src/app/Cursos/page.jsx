@@ -1,7 +1,6 @@
 import { Header, Cursos } from "../components/CursosPage";
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { getSession } from '@auth0/nextjs-auth0';
-import Certificado from "../components/Certificado";
 
 export const metadata = {
     title: "Cursos",
@@ -15,7 +14,6 @@ async function CursosPage() {
             <Header ImgUrl={"/Images/Logo/Header.png"} />
             <h1 className="display-6 font-weight-bold py-4 text-black text-center"><strong>¡Bienvenido {user.nickname}, Empieza la prueba!</strong></h1>
             <Cursos />
-            <Certificado nombre={user.nickname} />
         </>
     );
 };
