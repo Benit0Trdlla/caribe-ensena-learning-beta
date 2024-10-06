@@ -19,7 +19,7 @@ function EnsenapazModuloPage({ params }) {
     const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <FinalExamSection />]
     return (
         <>
-            <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" />
+            <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0}/>
             <SectionNavigation CursoPath={"/Ensenapaz/Modulo-1/"} />
             {ComponentsSections[numInt - 1]}
             <Buttons NumInt={numInt} CursoPath={"/Ensenapaz/Modulo-1/"} />
