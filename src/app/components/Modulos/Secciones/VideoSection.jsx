@@ -1,15 +1,16 @@
 import { VideoIframe, Activities, ContenidoTeorico } from "../componentsSecciones";
-export const VideoSection = () => {
+export const VideoSection = ({txtText}) => {
     return (
         <div className="container">
             <div className="row d-flex align-items-center justify-content-center mt-4">
                 <div className="col-md-6 text-center">
                     <p>Ve el video</p>
-                    <VideoIframe href={"https://www.youtube.com/embed/TYo3h6mPBvc?si=FQJ5ysE1ALfYVDt4"} />
-                    <Activities Enunciado="ejemplo" />
+                    {txtText}
+                    <VideoIframe />
+                    <Activities />
                 </div>
                 <div className="col-md-6">
-                    <ContenidoTeorico maxHeight={"550px"}/>
+                    <ContenidoTeorico maxHeight={"550px"} />
                 </div>
             </div>
         </div>

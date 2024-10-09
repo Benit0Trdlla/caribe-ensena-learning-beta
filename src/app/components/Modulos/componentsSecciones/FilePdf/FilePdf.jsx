@@ -7,6 +7,7 @@ export const FilePdf = ({ href }) => {
     const handleLoad = () => {
         setLoading(false);
     };
+    
     return (
         <div className={styles['pdf-container']}>
             {loading && (

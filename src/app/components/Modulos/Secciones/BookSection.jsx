@@ -1,3 +1,4 @@
+'use client'
 import { FilePdf, Activities, ContenidoTeorico } from "../componentsSecciones";
 export const BookSection = () => {
     return (
@@ -6,7 +7,7 @@ export const BookSection = () => {
                 <div className="col-md-6 text-center">
                     <p>Leer el contenido</p>
                     <FilePdf />
-                    <Activities Enunciado="ejemplo" />
+                    <Activities />
                 </div>
                 <div className="col-md-6">
                     <ContenidoTeorico maxHeight={"640px"} />

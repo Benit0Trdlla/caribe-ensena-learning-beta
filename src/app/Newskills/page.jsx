@@ -9,7 +9,7 @@ export const metadata = {
 function NewskillsPage() {
     return (
         <>
-            <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href={"/Cursos"} indexMeet={1}/>
+            {/* <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href={"/Cursos"} indexMeet={1}/> */}
             <div className="container">
                 <div className="px-1 py-5 row">
                     <LeftColumn title={"New skills"} curso={"Newskills"}>

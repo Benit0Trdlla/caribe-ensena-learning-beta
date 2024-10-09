@@ -1,66 +1,69 @@
 'use client';
-import { useState } from 'react';
-export const Activities = ({ Enunciado }) => {
+import { useState, useContext, useEffect } from 'react';
+import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
+import { Success, Failed } from './Alerts';
+import { BtnActivies } from './Buttons/BtnActivities';
+export const Activities = () => {
+    const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
+
     const [showAlert, setShowAlert] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
-    const examplesQuestions = [
-        { index: 1, label: 'Ejemplo 1', value: 'option1' },
-        { index: 2, label: 'Ejemplo 2', value: 'option2' },
-        { index: 3, label: 'Ejemplo 3', value: 'option3' },
-        { index: 4, label: 'Ejemplo 4', value: 'option4' },
+    const [selectedOption, setSelectedOption] = useState(null); // Estado para la opción seleccionada
+
+    // Función para actualizar el índice que viene desde el compoenente BtnActivies
+    const updateIndexActivities = (newIndex) => {
+        if (newIndex >= 0 && newIndex < data.length) {
+            setIndexContext(newIndex);
+        }
+    };
+
+    const Questions = [
+        { index: 1, label: data[indexContext].A, value: data[indexContext].A },
+        { index: 2, label: data[indexContext].B, value: data[indexContext].B },
+        { index: 3, label: data[indexContext].C, value: data[indexContext].C },
+        { index: 4, label: data[indexContext].D, value: data[indexContext].D }
     ]
-    const correctAnswer = 'option1';
+
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
-        setIsCorrect(selectedValue === correctAnswer);
-        setShowAlert(selectedValue !== correctAnswer);
+        setSelectedOption(selectedValue); // Guardamos la opción seleccionada
+        setIsCorrect(selectedValue === data[indexContext].Respuesta);
+        setShowAlert(selectedValue !== data[indexContext].Respuesta);
     };
+
+    useEffect(() => {
+        setIsCorrect(false);
+        setShowAlert(false);
+        setSelectedOption(null); // Reseteamos la opción seleccionada al cambiar de pregunta
+    }, [indexContext]);
+
     return (
         <div >
             <h6 className="text-center mt-3">
-                <p>{Enunciado}</p>
+                <p>{data[indexContext].Enunciado}</p>
             </h6>
-            {examplesQuestions.map((example) => (
-                <div className="form-check" key={example.index}>
+            {Questions.map((q) => (
+                <div className="form-check" key={q.index}>
                     <input
                         className="form-check-input border border-secondary border-2"
                         type="radio"
                         name="flexRadioDefault"
-                        value={example.value}
+                        value={q.value}
+                        checked={selectedOption === q.value} // Controlamos cuál está seleccionado
                         onChange={handleOptionChange}
                     />
                     <label className="form-check-label">
-                        {example.label}
+                        {q.label}
                     </label>
                 </div>
             ))}
             {isCorrect &&
-                <div className="alert alert-success" role="alert">
-                    Respuesta Correcta
-                </div>
+                <Success />
             }
             {showAlert &&
-                <div className="alert alert-danger" role="alert">
-                    La respuesta correcta: {correctAnswer} <a className="" data-bs-toggle="modal" data-bs-target="#Modaljustificacion"><strong>Conocé la justificación. Haz Click aquí.</strong></a>
-                    {/* MODAL */}
-                    <div className="modal fade" id="Modaljustificacion" aria-labelledby="ModalJustify" aria-hidden="true">
-                        <div className="modal-dialog">
-                            <div className="modal-content">
-                                <div className="modal-body text-black">
-                                    XCV
-                                </div>
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-gray border border-dark text-black" data-bs-dismiss="modal">Ok! Gracias.</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Failed correctOpcion={data[indexContext].Respuesta} justificacion={data[indexContext].Explicacion} />
             }
-            <div className='d-flex justify-content-center p-4'>
-                <button type="button" className="btn btn-primary me-4">Anterior</button>
-                <button type="button" className="btn btn-primary">Siguiente</button>
-            </div>
+            <BtnActivies indexActivities={indexContext} updateIndex={updateIndexActivities} answered={selectedOption === null} />
         </div>
     )
 }

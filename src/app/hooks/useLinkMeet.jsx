@@ -7,7 +7,7 @@ export const useLinkMeet = (url) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const fetchData = useCallback(async () => {
+    const fetchData = async () => {
         try {
             const response = await fetch(url, { next: { revalidate: 30 } });
 
@@ -17,7 +17,7 @@ export const useLinkMeet = (url) => {
 
             const csvData = await response.text();
             const jsonData = parse(csvData, { header: true });
-            
+
             setData(jsonData.data);
             setError(null);
         } catch (error) {
@@ -25,7 +25,7 @@ export const useLinkMeet = (url) => {
         } finally {
             setIsLoading(false);
         }
-    }, [url]);
+    };
 
     useEffect(() => {
         fetchData();

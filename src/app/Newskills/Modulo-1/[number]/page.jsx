@@ -13,6 +13,7 @@ export function generateMetadata({ params }) {
         title: `Modulo 1 | Seccion ${params.number}`,
     };
 }
+
 function NewskillsModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)
@@ -20,7 +21,7 @@ function NewskillsModuloPage({ params }) {
 
     return (
         <>
-            <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href="/Cursos" indexMeet={1} />
+            {/* <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href="/Cursos" indexMeet={1} /> */}
             <SectionNavigation CursoPath={"/Newskills/Modulo-1/"} />
             {ComponentsSections[numInt - 1]}
             <Buttons NumInt={numInt} CursoPath={"/Newskills/Modulo-1/"} />
