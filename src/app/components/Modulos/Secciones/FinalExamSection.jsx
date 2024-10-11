@@ -6,8 +6,8 @@ export const FinalExamSection = async () => {
     return (
         <div className="final-exam-section">
             <h1>Final Exam Section</h1>
-            <p>{user.nickname}</p>
-            <Certificado nombre={user.nickname}/>
+            <p>{user.name}</p>
+            <Certificado nombre={user.name}/>
         </div>
     )
 }

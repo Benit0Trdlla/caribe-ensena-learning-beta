@@ -12,7 +12,7 @@ async function CursosPage() {
     return (
         <>
             <Header ImgUrl={"/Images/Logo/Header.png"} />
-            <h1 className="display-6 font-weight-bold py-4 text-black text-center"><strong>¡Bienvenido {user.nickname}, Empieza la prueba!</strong></h1>
+            <h1 className="display-6 font-weight-bold py-4 text-black text-center"><strong>¡Bienvenido {user.name}, aqui estan los cursos!</strong></h1>
             <Cursos />
         </>
     );
