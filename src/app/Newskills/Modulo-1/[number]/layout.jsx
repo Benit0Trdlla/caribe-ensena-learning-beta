@@ -10,11 +10,11 @@ export default function RootLayout({ children }) {
     if (error) {
         return <div>Error: {error.message}</div>;
     }
-    useEffect(() => {
-        if (!isLoading) {
-            setData(preguntas);
-        }
-    }, [preguntas]);
+    if (!isLoading) {
+        setData(preguntas);
+    }
+    // useEffect(() => {
+    // }, [preguntas]);
 
     return (
         <>

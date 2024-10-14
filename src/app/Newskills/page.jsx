@@ -1,11 +1,11 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { AccordionModulos, Header, LeftColumn, RightColumn } from "../components/ExplicacionCursos";
 
-
 export const metadata = {
     title: "Newskills",
     description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
 }
+
 function NewskillsPage() {
     return (
         <>

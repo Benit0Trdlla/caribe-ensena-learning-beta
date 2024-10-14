@@ -17,17 +17,25 @@ export const Header = ({ ImgUrl, href, indexMeet }) => {
                         <Image src={ImgUrl} width={60} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <div className='d-flex justify-content-center'>
                             {!isLoading &&
-                                <a href={`https://${data[IndexMeetData].URL}`} title={data[IndexMeetData].Title} className='btn border ms-2 ms-lg-0 d-flex align-items-center gap-2' target="_blank" type='button'>
+                                <a href={`https://${data[IndexMeetData].URL}`} title={data[IndexMeetData].Title} className='btn border me-4 ms-lg-0 d-flex align-items-center gap-2' target="_blank" type='button'>
                                     <Point />
                                     ¡Únete al evento!
                                 </a>
                             }
                         </div>
-                        <ul className="navbar-nav ms-auto">
-                            <Link href={href} className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>
-                                <small>Volver</small>
-                            </Link>
-                        </ul>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className='collapse navbar-collapse' id='navbarNav'>
+                            <ul className="navbar-nav ms-auto gap-3">
+                                <Link href={`${href}/Progreso`} className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>
+                                    <small>Mi Progreso</small>
+                                </Link>
+                                <Link href='/Cursos' className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>
+                                    <small>Volver</small>
+                                </Link>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </header>

@@ -9,7 +9,7 @@ export const metadata = {
 function EnsenapazPage() {
     return (
         <>
-            <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} />
+            {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} /> */}
             <div className="container">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Ensenapaz"} curso={"Ensenapaz"}>
