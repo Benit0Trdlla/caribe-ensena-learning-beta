@@ -1,16 +1,20 @@
 'use client';
 import { useState, useContext, useEffect } from 'react';
+import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
 export const Activities = () => {
     const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
+    
+    const params = useParams()
+    console.log(typeof params.number)
 
     const [showAlert, setShowAlert] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null); // Estado para la opción seleccionada
 
-    // Función para actualizar el índice que viene desde el compoenente BtnActivies
+    // Función para actualizar el índice que viene desde el componente BtnActivies
     const updateIndexActivities = (newIndex) => {
         if (newIndex >= 0 && newIndex < data.length) {
             setIndexContext(newIndex);

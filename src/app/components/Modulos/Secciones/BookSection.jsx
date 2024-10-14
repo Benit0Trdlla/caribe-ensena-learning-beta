@@ -1,4 +1,3 @@
-'use client'
 import { FilePdf, Activities, ContenidoTeorico } from "../componentsSecciones";
 export const BookSection = () => {
     return (
