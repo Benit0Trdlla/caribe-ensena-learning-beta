@@ -1,17 +1,17 @@
 'use client';
 import { useState, useContext, useEffect } from 'react';
-import { useParams, usePathname } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { saveLocalStorage } from '@/app/lib/saveLocalStorage';
+import { usePathData } from '@/app/hooks/usePathData';
 import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
+
 export const Activities = () => {
     const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
-
-    // Obtener el nombre del curso desde la URL
-    const pathname = usePathname()
-    const curso = pathname.split('/')[1];
-    console.log(curso);
+    
+    // Obtener el nombre y nivel del curso desde la URL
+    const { cursoName, cursoLevel } = usePathData();
 
     // Obtener el numero de la seccion desde la URL
     const params = useParams()
@@ -47,6 +47,7 @@ export const Activities = () => {
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedOption(selectedValue); // Guardamos la opción seleccionada
+        saveLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext, selectedQuestions[indexContext].Respuesta, selectedValue);
         setIsCorrect(selectedValue === selectedQuestions[indexContext].Respuesta);
         setShowAlert(selectedValue !== selectedQuestions[indexContext].Respuesta);
     };
@@ -58,10 +59,8 @@ export const Activities = () => {
     }, [indexContext]);
 
     return (
-        <div>
-            <h6 className="text-center mt-3">
-                {selectedQuestions[indexContext].Enunciado}
-            </h6>
+        <>
+            <h6 className="text-center mt-3">{selectedQuestions[indexContext].Enunciado}</h6>
             {Questions.map((q) => (
                 <div className="form-check" key={q.index}>
                     <input
@@ -84,6 +83,6 @@ export const Activities = () => {
                 <Failed correctOpcion={selectedQuestions[indexContext].Respuesta} justificacion={selectedQuestions[indexContext].Explicacion} />
             }
             <BtnActivies indexActivities={indexContext} updateIndex={updateIndexActivities} answered={selectedOption === null} />
-        </div>
+        </>
     )
 }
