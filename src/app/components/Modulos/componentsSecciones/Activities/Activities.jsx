@@ -1,38 +1,54 @@
 'use client';
 import { useState, useContext, useEffect } from 'react';
-import { useParams } from 'next/navigation'
+import { useParams, usePathname } from 'next/navigation'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
+import { saveLocalStorage } from '@/app/lib/saveLocalStorage';
 import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
 export const Activities = () => {
     const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
-    
+
+    // Obtener el nombre del curso desde la URL
+    const pathname = usePathname()
+    const curso = pathname.split('/')[1];
+    console.log(curso);
+
+    // Obtener el numero de la seccion desde la URL
     const params = useParams()
-    console.log(typeof params.number)
+    const number = parseInt(params.number);
+
+    // Seleccionar las 5 preguntas correspondientes para cada seccion
+    const startIndex = (number - 1) * 5;
+    const endIndex = startIndex + 5;
+    const selectedQuestions = data.slice(startIndex, endIndex);
+
+    // Reiniciar el índice de las preguntas al cambiar de sección
+    useEffect(() => {
+        setIndexContext(0);
+    }, [params.number]);
 
     const [showAlert, setShowAlert] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null); // Estado para la opción seleccionada
 
-    // Función para actualizar el índice que viene desde el componente BtnActivies
+    // Función para actualizar el índice recibido desde el componente hijo 'BtnActivies'
     const updateIndexActivities = (newIndex) => {
-        if (newIndex >= 0 && newIndex < data.length) {
-            setIndexContext(newIndex);
-        }
+        if (newIndex >= 5) return
+        if (newIndex >= 0) setIndexContext(newIndex);
     };
 
     const Questions = [
-        { index: 1, label: data[indexContext].A, value: data[indexContext].A },
-        { index: 2, label: data[indexContext].B, value: data[indexContext].B },
-        { index: 3, label: data[indexContext].C, value: data[indexContext].C },
-        { index: 4, label: data[indexContext].D, value: data[indexContext].D }
+        { index: 1, label: selectedQuestions[indexContext].A, value: selectedQuestions[indexContext].A },
+        { index: 2, label: selectedQuestions[indexContext].B, value: selectedQuestions[indexContext].B },
+        { index: 3, label: selectedQuestions[indexContext].C, value: selectedQuestions[indexContext].C },
+        { index: 4, label: selectedQuestions[indexContext].D, value: selectedQuestions[indexContext].D }
     ]
 
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedOption(selectedValue); // Guardamos la opción seleccionada
-        setIsCorrect(selectedValue === data[indexContext].Respuesta);
-        setShowAlert(selectedValue !== data[indexContext].Respuesta);
+        setIsCorrect(selectedValue === selectedQuestions[indexContext].Respuesta);
+        setShowAlert(selectedValue !== selectedQuestions[indexContext].Respuesta);
     };
 
     useEffect(() => {
@@ -42,9 +58,9 @@ export const Activities = () => {
     }, [indexContext]);
 
     return (
-        <div >
+        <div>
             <h6 className="text-center mt-3">
-                <p>{data[indexContext].Enunciado}</p>
+                {selectedQuestions[indexContext].Enunciado}
             </h6>
             {Questions.map((q) => (
                 <div className="form-check" key={q.index}>
@@ -65,7 +81,7 @@ export const Activities = () => {
                 <Success />
             }
             {showAlert &&
-                <Failed correctOpcion={data[indexContext].Respuesta} justificacion={data[indexContext].Explicacion} />
+                <Failed correctOpcion={selectedQuestions[indexContext].Respuesta} justificacion={selectedQuestions[indexContext].Explicacion} />
             }
             <BtnActivies indexActivities={indexContext} updateIndex={updateIndexActivities} answered={selectedOption === null} />
         </div>

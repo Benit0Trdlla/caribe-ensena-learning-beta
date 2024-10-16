@@ -1,4 +1,4 @@
-export const saveLocalStorage = (cursoName, numIndex, correctAnswer, selectedValue, cursoLevel, seccionNumber) => {
+export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex, correctAnswer, selectedValue) => {
     // Obtener las respuestas anteriores del localStorage
     const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
 
