@@ -1,7 +1,7 @@
 'use client'
-import { DataActivitiesContext } from "@/app/contexts/DataActivities-context"
+import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { useContext, useEffect } from "react"
-import { useDataFromSheets } from "@/app/hooks/useDataFromSheets"
+import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 
 export default function RootLayout({ children }) {
     const { setData } = useContext(DataActivitiesContext);

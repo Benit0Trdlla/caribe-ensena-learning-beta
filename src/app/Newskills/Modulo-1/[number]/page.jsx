@@ -8,7 +8,6 @@ import {
     SectionNavigation
 } from '../../../components/Modulos';
 
-// import { Activities } from '../../../components/Modulos/componentsSecciones';
 export function generateMetadata({ params }) {
     return {
         title: `Modulo 1 | Seccion ${params.number}`,
@@ -25,7 +24,6 @@ function NewskillsModuloPage({ params }) {
             {/* <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href="/Cursos" indexMeet={1} /> */}
             <SectionNavigation CursoPath={"/Newskills/Modulo-1/"} />
             {ComponentsSections[numInt - 1]}
-            {/* <Activities /> */}
             <Buttons NumInt={numInt} CursoPath={"/Newskills/Modulo-1/"} />
         </>
     )

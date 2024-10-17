@@ -2,14 +2,14 @@
 import { useState, useContext, useEffect } from 'react';
 import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
-import { saveLocalStorage } from '@/app/lib/saveLocalStorage';
+import { saveLocalStorage, readLocalStorage } from '@/app/lib';
 import { usePathData } from '@/app/hooks/usePathData';
 import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
 
 export const Activities = () => {
     const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
-    
+
     // Obtener el nombre y nivel del curso desde la URL
     const { cursoName, cursoLevel } = usePathData();
 
@@ -58,6 +58,9 @@ export const Activities = () => {
         setSelectedOption(null); // Reseteamos la opción seleccionada al cambiar de pregunta
     }, [indexContext]);
 
+    // Obtener las respuestas anteriores del localStorage
+    const { respuestaUser, respuestaCorrecta, isCorrect: isCorrectLocalStorage, seccionCompleted } = readLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext);
+
     return (
         <>
             <h6 className="text-center mt-3">{selectedQuestions[indexContext].Enunciado}</h6>
@@ -68,7 +71,7 @@ export const Activities = () => {
                         type="radio"
                         name="flexRadioDefault"
                         value={q.value}
-                        checked={selectedOption === q.value} // Controlamos cuál está seleccionado
+                        checked={respuestaUser ? respuestaUser === q.value : selectedOption === q.value} // Controlamos cuál está seleccionado
                         onChange={handleOptionChange}
                     />
                     <label className="form-check-label">
@@ -76,13 +79,12 @@ export const Activities = () => {
                     </label>
                 </div>
             ))}
-            {isCorrect &&
-                <Success />
-            }
-            {showAlert &&
-                <Failed correctOpcion={selectedQuestions[indexContext].Respuesta} justificacion={selectedQuestions[indexContext].Explicacion} />
-            }
-            <BtnActivies indexActivities={indexContext} updateIndex={updateIndexActivities} answered={selectedOption === null} />
+            {respuestaUser ? (
+                isCorrectLocalStorage ? <Success /> : <Failed correctOpcion={respuestaCorrecta} justificacion={selectedQuestions[indexContext].Explicacion} />
+            ) : (
+                isCorrect ? <Success /> : showAlert && <Failed correctOpcion={selectedQuestions[indexContext].Respuesta} justificacion={selectedQuestions[indexContext].Explicacion} />
+            )}
+            <BtnActivies indexActivities={indexContext} updateIndex={updateIndexActivities} answered={respuestaUser ? false : selectedOption == null} />
         </>
     )
-}
+}   
