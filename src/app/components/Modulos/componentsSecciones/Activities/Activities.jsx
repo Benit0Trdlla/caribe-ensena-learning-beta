@@ -44,10 +44,13 @@ export const Activities = () => {
         { index: 4, label: selectedQuestions[indexContext].D, value: selectedQuestions[indexContext].D }
     ]
 
+    // Obtener las respuestas anteriores del localStorage
+    const { respuestaUser, respuestaCorrecta, isCorrect: isCorrectLocalStorage, seccionCompleted, percentageCompleted } = readLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext);
+
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedOption(selectedValue); // Guardamos la opción seleccionada
-        saveLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext, selectedQuestions[indexContext].Respuesta, selectedValue);
+        saveLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext, selectedQuestions[indexContext].Respuesta, selectedValue, data.length);
         setIsCorrect(selectedValue === selectedQuestions[indexContext].Respuesta);
         setShowAlert(selectedValue !== selectedQuestions[indexContext].Respuesta);
     };
@@ -57,9 +60,6 @@ export const Activities = () => {
         setShowAlert(false);
         setSelectedOption(null); // Reseteamos la opción seleccionada al cambiar de pregunta
     }, [indexContext]);
-
-    // Obtener las respuestas anteriores del localStorage
-    const { respuestaUser, respuestaCorrecta, isCorrect: isCorrectLocalStorage, seccionCompleted } = readLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext);
 
     return (
         <>
