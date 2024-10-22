@@ -1,7 +1,8 @@
 export const Failed = ({ correctOpcion, justificacion }) => {
     return (
         <div className="alert alert-danger" role="alert">
-            La respuesta correcta: {correctOpcion} <a className="" data-bs-toggle="modal" data-bs-target="#Modaljustificacion"><strong>Conocé la justificación. Haz Click aquí.</strong></a>
+            La respuesta correcta: {correctOpcion} <br />
+            <a className="" data-bs-toggle="modal" data-bs-target="#Modaljustificacion"><strong>Conocé la justificación. Haz Click aquí.</strong></a>
             {/* MODAL */}
             <div className="modal fade" id="Modaljustificacion" aria-labelledby="ModalJustify" aria-hidden="true">
                 <div className="modal-dialog">

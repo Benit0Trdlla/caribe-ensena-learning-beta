@@ -16,6 +16,7 @@ export const readLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex)
         // Verificar si la sección está completada
         const seccionCompleted = seccionData.seccionCompleted !== undefined ? seccionData.seccionCompleted : false;
 
+        // Obtener el porcentaje completado
         const percentageCompleted = cursoData.percentageCompleted || 0;
 
         // Datos de la respuesta guardada en localStorage

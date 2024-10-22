@@ -8,6 +8,12 @@ import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
 
 export const Activities = () => {
+    // Hidration problem, solution
+    const [isClient, setIsClient] = useState(false)
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
     const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
 
     // Obtener el nombre y nivel del curso desde la URL
@@ -67,24 +73,20 @@ export const Activities = () => {
             {Questions.map((q) => (
                 <div className="form-check" key={q.index}>
                     <input
-                        className="form-check-input border border-secondary border-2"
-                        type="radio"
-                        name="flexRadioDefault"
+                        className="form-check-input border border-secondary border-2" type="radio" name="flexRadioDefault"
                         value={q.value}
                         checked={respuestaUser ? respuestaUser === q.value : selectedOption === q.value} // Controlamos cuál está seleccionado
                         onChange={handleOptionChange}
                     />
-                    <label className="form-check-label">
-                        {q.label}
-                    </label>
+                    <label className="form-check-label">{q.label}</label>
                 </div>
             ))}
-            {respuestaUser ? (
+            {respuestaUser && isClient ? (
                 isCorrectLocalStorage ? <Success /> : <Failed correctOpcion={respuestaCorrecta} justificacion={selectedQuestions[indexContext].Explicacion} />
             ) : (
                 isCorrect ? <Success /> : showAlert && <Failed correctOpcion={selectedQuestions[indexContext].Respuesta} justificacion={selectedQuestions[indexContext].Explicacion} />
             )}
-            <BtnActivies indexActivities={indexContext} updateIndex={updateIndexActivities} answered={respuestaUser ? false : selectedOption == null} />
+            <BtnActivies indexActivities={indexContext} updateIndex={updateIndexActivities} answered={respuestaUser && isClient ? false : selectedOption == null} />
         </>
     )
 }   
