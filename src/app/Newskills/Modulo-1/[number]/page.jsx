@@ -24,7 +24,7 @@ function NewskillsModuloPage({ params }) {
             {/* <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href="/Cursos" indexMeet={1} /> */}
             <SectionNavigation CursoPath={"/Newskills/Modulo-1/"} />
             {ComponentsSections[numInt - 1]}
-            <Buttons NumInt={numInt} CursoPath={"/Newskills/Modulo-1/"} />
+            {/* <Buttons NumInt={numInt} CursoPath={"/Newskills/Modulo-1/"} /> */}
         </>
     )
 }

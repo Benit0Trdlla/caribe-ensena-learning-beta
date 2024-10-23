@@ -23,7 +23,7 @@ function EnsenapazModuloPage({ params }) {
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0}/> */}
             <SectionNavigation />
             {ComponentsSections[numInt - 1]}
-            <Buttons NumInt={numInt} CursoPath={"/Ensenapaz/Modulo-1/"} />
+            {/* <Buttons NumInt={numInt} CursoPath={"/Ensenapaz/Modulo-1/"} /> */}
         </>
     );
 }

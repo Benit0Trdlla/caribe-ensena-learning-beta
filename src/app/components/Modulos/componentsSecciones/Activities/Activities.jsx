@@ -45,7 +45,7 @@ export const Activities = () => {
         }
         if (newIndex >= 0) setIndexContext(newIndex);
     };
-
+    
     const Questions = [
         { index: 1, label: selectedQuestions[indexContext].A, value: selectedQuestions[indexContext].A },
         { index: 2, label: selectedQuestions[indexContext].B, value: selectedQuestions[indexContext].B },
