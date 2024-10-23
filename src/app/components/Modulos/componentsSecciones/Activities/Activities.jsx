@@ -2,7 +2,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
-import { saveLocalStorage, readLocalStorage } from '@/app/lib';
+import { saveLocalStorage, readLocalStorage, updateSeccionCompleted } from '@/app/lib';
 import { usePathData } from '@/app/hooks/usePathData';
 import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
@@ -39,7 +39,10 @@ export const Activities = () => {
 
     // Función para actualizar el índice recibido desde el componente hijo 'BtnActivies'
     const updateIndexActivities = (newIndex) => {
-        if (newIndex >= 5) return
+        if (newIndex >= 5) {
+            updateSeccionCompleted(cursoName, cursoLevel, `Seccion-${number}`, true);
+            return; // Salir de la función para evitar cambios en el índice
+        }
         if (newIndex >= 0) setIndexContext(newIndex);
     };
 
@@ -51,8 +54,8 @@ export const Activities = () => {
     ]
 
     // Obtener las respuestas anteriores del localStorage
-    const { respuestaUser, respuestaCorrecta, isCorrect: isCorrectLocalStorage, seccionCompleted, percentageCompleted } = readLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext);
-
+    const { respuestaUser, respuestaCorrecta, isCorrect: isCorrectLocalStorage, seccionCompleted } = readLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext);
+   
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedOption(selectedValue); // Guardamos la opción seleccionada

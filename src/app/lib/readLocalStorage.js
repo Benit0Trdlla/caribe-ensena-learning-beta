@@ -7,9 +7,6 @@ export const readLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex)
         const cursoData = previousAnswers[cursoLevel] || {};
         const seccionData = cursoData[seccionNumber] || {};
 
-        // Calcular cuántas respuestas hay en esta sección (excluyendo 'seccionCompleted')
-        // const userResponseLength = Object.keys(seccionData).filter(key => key !== 'seccionCompleted').length;
-
         // Obtener la respuesta del usuario para el numIndex
         const userResponse = seccionData[numIndex] || {};
 
