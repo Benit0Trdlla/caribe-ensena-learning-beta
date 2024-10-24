@@ -1,6 +1,6 @@
 'use client'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 
 export default function RootLayout({ children }) {
@@ -13,8 +13,7 @@ export default function RootLayout({ children }) {
     if (!isLoading) {
         setData(preguntas);
     }
-    // useEffect(() => {
-    // }, [preguntas]);
+
 
     return (
         <>

@@ -2,6 +2,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
+import { FinishSectionContext } from '@/app/contexts/FinishSection-context';
 import { saveLocalStorage, readLocalStorage, updateSeccionCompleted } from '@/app/lib';
 import { usePathData } from '@/app/hooks/usePathData';
 import { Success, Failed } from './Alerts';
@@ -15,6 +16,7 @@ export const Activities = () => {
     }, [])
 
     const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
+    const { setFinished } = useContext(FinishSectionContext);
 
     // Obtener el nombre y nivel del curso desde la URL
     const { cursoName, cursoLevel } = usePathData();
@@ -41,11 +43,12 @@ export const Activities = () => {
     const updateIndexActivities = (newIndex) => {
         if (newIndex >= 5) {
             updateSeccionCompleted(cursoName, cursoLevel, `Seccion-${number}`, true);
+            setFinished(true); // Marcar la sección como completada, cambia el state del context y muestra la alerta de 'Seccion completada'
             return; // Salir de la función para evitar cambios en el índice
         }
         if (newIndex >= 0) setIndexContext(newIndex);
     };
-    
+
     const Questions = [
         { index: 1, label: selectedQuestions[indexContext].A, value: selectedQuestions[indexContext].A },
         { index: 2, label: selectedQuestions[indexContext].B, value: selectedQuestions[indexContext].B },
@@ -55,7 +58,7 @@ export const Activities = () => {
 
     // Obtener las respuestas anteriores del localStorage
     const { respuestaUser, respuestaCorrecta, isCorrect: isCorrectLocalStorage, seccionCompleted } = readLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext);
-   
+
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedOption(selectedValue); // Guardamos la opción seleccionada

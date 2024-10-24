@@ -4,7 +4,7 @@ export * from "./FilePdf/FilePdf";
 export * from "./SectionNavigation/SectionNavigation";
 export * from "./VideoIframe/VideoIframe";
 export * from "./Point/Point";
-
+export * from "./AlertFinishSection/Alert";
 
 export * from "./Buttons";
 export * from "./Header";

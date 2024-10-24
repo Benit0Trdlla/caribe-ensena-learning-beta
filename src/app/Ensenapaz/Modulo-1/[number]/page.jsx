@@ -5,7 +5,8 @@ import {
     FinalExamSection,
     Header,
     Buttons,
-    SectionNavigation
+    SectionNavigation,
+    Alert
 } from '../../../components/Modulos';
 
 export function generateMetadata({ params }) {
@@ -18,9 +19,11 @@ function EnsenapazModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)
     const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <FinalExamSection />]
+    
     return (
         <>
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0}/> */}
+            <Alert seccionNumber={numInt}/>
             <SectionNavigation />
             {ComponentsSections[numInt - 1]}
             {/* <Buttons NumInt={numInt} CursoPath={"/Ensenapaz/Modulo-1/"} /> */}
