@@ -1,11 +1,10 @@
 import { VideoIframe, Activities, ContenidoTeorico } from "../componentsSecciones";
-export const VideoSection = ({txtText}) => {
+export const VideoSection = () => {
     return (
         <div className="container">
             <div className="row d-flex align-items-center justify-content-center mt-4">
                 <div className="col-md-6 text-center">
                     <p>Ve el video</p>
-                    {txtText}
                     <VideoIframe />
                     <Activities />
                 </div>
