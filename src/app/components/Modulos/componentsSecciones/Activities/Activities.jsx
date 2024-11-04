@@ -83,6 +83,7 @@ export const Activities = () => {
                         value={q.value}
                         checked={respuestaUser ? respuestaUser === q.value : selectedOption === q.value} // Controlamos cuál está seleccionado
                         onChange={handleOptionChange}
+                        disabled={respuestaUser !== null} // Deshabilita todos los input si la pregunta ya está respondida
                     />
                     <label className="form-check-label">{q.label}</label>
                 </div>

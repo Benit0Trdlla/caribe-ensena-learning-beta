@@ -18,7 +18,7 @@ export const ProgressBar = ({ cursoName }) => {
                 <p>Modulo 1</p>
                 <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                     <div className="progress-bar" style={{ width: isClient && `${Modulo1}%` }} >
-                        {isClient && `${Modulo1}%`}
+                        {isClient && `${Modulo1.toFixed(0)}%`}
                         {/* {`${Modulo1}%`} */}
                     </div>
                 </div>
