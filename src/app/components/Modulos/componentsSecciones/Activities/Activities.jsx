@@ -49,12 +49,16 @@ export const Activities = () => {
         if (newIndex >= 0) setIndexContext(newIndex);
     };
 
-    const Questions = [
-        { index: 1, label: selectedQuestions[indexContext].A, value: selectedQuestions[indexContext].A },
-        { index: 2, label: selectedQuestions[indexContext].B, value: selectedQuestions[indexContext].B },
-        { index: 3, label: selectedQuestions[indexContext].C, value: selectedQuestions[indexContext].C },
-        { index: 4, label: selectedQuestions[indexContext].D, value: selectedQuestions[indexContext].D }
-    ]
+    // Obtener las preguntas
+    let Questions = [];
+    if (selectedQuestions && selectedQuestions.length > 0) {
+        Questions = [
+            { index: 1, label: selectedQuestions[indexContext].A, value: selectedQuestions[indexContext].A },
+            { index: 2, label: selectedQuestions[indexContext].B, value: selectedQuestions[indexContext].B },
+            { index: 3, label: selectedQuestions[indexContext].C, value: selectedQuestions[indexContext].C },
+            { index: 4, label: selectedQuestions[indexContext].D, value: selectedQuestions[indexContext].D }
+        ];
+    }
 
     // Obtener las respuestas anteriores del localStorage
     const { respuestaUser, respuestaCorrecta, isCorrect: isCorrectLocalStorage, seccionCompleted } = readLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext);
@@ -75,7 +79,7 @@ export const Activities = () => {
 
     return (
         <>
-            <h6 className="text-center mt-3">{selectedQuestions[indexContext].Enunciado}</h6>
+            <h6 className="text-center mt-3">{selectedQuestions && selectedQuestions.length > 0 && selectedQuestions[indexContext].Enunciado}</h6>
             {Questions.map((q) => (
                 <div className="form-check" key={q.index}>
                     <input

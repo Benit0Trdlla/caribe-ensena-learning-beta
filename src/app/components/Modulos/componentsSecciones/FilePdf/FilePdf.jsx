@@ -31,7 +31,7 @@ export const FilePdf = () => {
             )}
             <iframe
                 onLoad={handleLoad}
-                src={selectedQuestions[indexContext].PdfUrl}
+                src={selectedQuestions && selectedQuestions.length > 0 ? selectedQuestions[indexContext].PdfUrl : null}
                 style={{ display: loading ? 'none' : 'block', width: '100%', height: '400px' }}
                 className={styles['pdf-iframe']}
             />

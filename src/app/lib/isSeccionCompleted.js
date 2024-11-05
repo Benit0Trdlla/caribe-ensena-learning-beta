@@ -1,4 +1,4 @@
-export const isSeccionCompleted = (cursoName, cursoLevel, seccionNumber) => {
+export const isSeccionCompleted = (cursoName, cursoLevel) => {
     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
         // Obtener los datos previos del localStorage
         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
@@ -8,15 +8,13 @@ export const isSeccionCompleted = (cursoName, cursoLevel, seccionNumber) => {
             previousAnswers[cursoLevel] = {};
         }
 
-
         // Obtener las secciones existentes
         // const secciones = Object.keys(previousAnswers[cursoLevel]).filter(seccion => seccion !== 'levelCompleted' && seccion !== 'percentageCompleted');
         const secciones = ['Seccion-1', 'Seccion-2', 'Seccion-3', 'Seccion-4', 'Seccion-5', 'Seccion-6', 'Seccion-7'];
 
-
-        // Obtener el 'seccionCompleted' completado guardado en el localStorage de cada seccion
+        // Obtener el estado 'seccionCompleted' de cada sección o 'false' si la sección no existe
         const seccionesCompleted = secciones.reduce((acc, seccion) => {
-            acc[seccion] = previousAnswers[cursoLevel][seccion] && previousAnswers[cursoLevel][seccion].seccionCompleted || false;
+            acc[seccion] = previousAnswers[cursoLevel][seccion]?.seccionCompleted || false;
             return acc;
         }, {});
 
@@ -28,14 +26,7 @@ export const isSeccionCompleted = (cursoName, cursoLevel, seccionNumber) => {
         const Seccion6 = seccionesCompleted['Seccion-6'];
         const Seccion7 = seccionesCompleted['Seccion-7'];
 
-        console.log(Seccion1, Seccion2, Seccion3, Seccion4, Seccion5, Seccion6, Seccion7);
-
         return { Seccion1, Seccion2, Seccion3, Seccion4, Seccion5, Seccion6, Seccion7 };
-        // const seccionValues = [];
-        // for (const seccion of secciones) {
-        //     seccionValues.push(seccionesCompleted[seccion]);
-        // }
-
-        // return seccionValues
     }
+    return { Seccion1: false, Seccion2: false, Seccion3: false, Seccion4: false, Seccion5: false, Seccion6: false, Seccion7: false };
 }

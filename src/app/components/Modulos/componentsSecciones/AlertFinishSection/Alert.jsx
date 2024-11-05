@@ -7,6 +7,19 @@ export const Alert = ({ seccionNumber }) => {
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
 
+    const DeleteSeccion = (cursoName, cursoLevel, seccionNumber) => {
+        if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+            const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
+            if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
+                delete previousAnswers[cursoLevel][seccionNumber];
+                if (!previousAnswers[cursoLevel][seccionNumber]) {
+                    localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
+                }
+            }
+        }
+        setFinished(false)
+    };
+
     return (
         <>
             {finished && (
@@ -16,9 +29,16 @@ export const Alert = ({ seccionNumber }) => {
                         <h4 className="alert-heading mb-3">{`Sección ${seccionNumber} Completada!`}</h4>
                         <img src="/Images/Home.png" alt="Imagen de nivel completado" width={200} height={200} />
                         <hr />
-                        <Link href={`/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => setFinished(false)}>
-                            Comienza el siguiente nivel aquí
-                        </Link>
+                        <div className="d-grid gap-2 w-50 mx-auto">
+                            <Link href={`/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => setFinished(false)}>
+                                Siguiente nivel
+                            </Link>
+                            <button className="btn btn-danger" onClick={() => DeleteSeccion(cursoName, cursoLevel, `Seccion-${seccionNumber}`)}>
+                                <a href={`/${cursoName}/${cursoLevel}/${seccionNumber}`}>
+                                    Resetear la sección
+                                </a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}
