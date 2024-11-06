@@ -93,7 +93,7 @@ export const Activities = () => {
                 </div>
             ))}
             {respuestaUser && isClient ? (
-                isCorrectLocalStorage ? <Success /> : <Failed correctOpcion={respuestaCorrecta} justificacion={selectedQuestions[indexContext].Explicacion} />
+                isCorrectLocalStorage ? <Success /> : <Failed correctOpcion={respuestaCorrecta} justificacion={selectedQuestions && selectedQuestions.length > 0 && selectedQuestions[indexContext].Explicacion} />
             ) : (
                 isCorrect ? <Success /> : showAlert && <Failed correctOpcion={selectedQuestions[indexContext].Respuesta} justificacion={selectedQuestions[indexContext].Explicacion} />
             )}

@@ -3,9 +3,13 @@ import Link from "next/link"
 import { usePathData } from "@/app/hooks/usePathData"
 import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
 import { useContext } from "react"
+import { calculatePercentageCorrect } from "@/app/lib/calculatePercentageCorrect"
 export const Alert = ({ seccionNumber }) => {
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
+
+    const porcentajeCorrectas = calculatePercentageCorrect(cursoName, cursoLevel, `Seccion-${seccionNumber}`);
+    console.log("rendered");
 
     const DeleteSeccion = (cursoName, cursoLevel, seccionNumber) => {
         if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
@@ -30,11 +34,14 @@ export const Alert = ({ seccionNumber }) => {
                         <img src="/Images/Home.png" alt="Imagen de nivel completado" width={200} height={200} />
                         <hr />
                         <div className="d-grid gap-2 w-50 mx-auto">
-                            <Link href={`/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => setFinished(false)}>
-                                Siguiente nivel
-                            </Link>
+                            {porcentajeCorrectas < 75 && <h5 className="text-center"><small>Tu porcentaje de respuestas correctas es de: {porcentajeCorrectas} % debes resetear la sección</small></h5>}
+                            {porcentajeCorrectas > 75 &&
+                                <Link href={`/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => setFinished(false)}>
+                                    Siguiente nivel
+                                </Link>
+                            }
                             <button className="btn btn-danger" onClick={() => DeleteSeccion(cursoName, cursoLevel, `Seccion-${seccionNumber}`)}>
-                                <a href={`/${cursoName}/${cursoLevel}/${seccionNumber}`}>
+                                <a href={`/${cursoName}/${cursoLevel}/${seccionNumber}`} className="text-white text-decoration-none">
                                     Resetear la sección
                                 </a>
                             </button>
