@@ -2,14 +2,13 @@
 import Link from "next/link"
 import { usePathData } from "@/app/hooks/usePathData"
 import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
+import { calculatePercentageCorrect } from "@/app/lib"
 import { useContext } from "react"
-import { calculatePercentageCorrect } from "@/app/lib/calculatePercentageCorrect"
 export const Alert = ({ seccionNumber }) => {
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
 
     const porcentajeCorrectas = calculatePercentageCorrect(cursoName, cursoLevel, `Seccion-${seccionNumber}`);
-    console.log("rendered");
 
     const DeleteSeccion = (cursoName, cursoLevel, seccionNumber) => {
         if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
