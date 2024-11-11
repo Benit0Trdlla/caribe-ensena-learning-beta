@@ -13,9 +13,9 @@ function ProgresoPage() {
         <>
             <Header ImgUrl={"/Images/Logo/Header.png"} />
             <div className='container'>
-                <div className='d-flex flex-wrap flex-lg-row justify-content-center align-items-center ms-3 mt-5'>
-                    <CardCourses />
-                    <CardCourses />
+                <div className='d-flex flex-wrap flex-lg-row justify-content-center align-items-center mt-0 mt-lg-5 mt-md-5 mb-5'>
+                    <CardCourses cursoName={'Ensenapaz'} ImgUrl={'Ensenapaz'}/>
+                    <CardCourses cursoName={'New skills'} ImgUrl={'NewSkills'}/>
                 </div>
             </div>
         </>

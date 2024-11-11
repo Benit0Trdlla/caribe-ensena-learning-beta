@@ -33,7 +33,7 @@ export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex,
         .filter(key => key !== 'seccionCompleted' && key !== 'percentageCompleted').length;
 
     // Calcular el porcentaje de preguntas respondidas
-    const percentageCompleted = (preguntasRespondidas / totalPreguntas) * 100;
+    const percentageCompleted = ((preguntasRespondidas / totalPreguntas) * 100).toFixed(0);
 
     // Guardar el porcentaje completado
     previousAnswers[cursoLevel].percentageCompleted = percentageCompleted;

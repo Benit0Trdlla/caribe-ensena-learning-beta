@@ -18,27 +18,32 @@ export const ProgressBar = ({ cursoName }) => {
                 <p>Modulo 1</p>
                 <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                     <div className="progress-bar" style={{ width: isClient && `${Modulo1}%` }} >
-                        {isClient && `${Modulo1.toFixed(0)}%`}
-                        {/* {`${Modulo1}%`} */}
+                        {isClient && `${Modulo1}%`}
                     </div>
                 </div>
             </div>
             <div className='m-5'>
                 <p>Modulo 2</p>
                 <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    <div className="progress-bar" style={{ width: `0%` }}></div>
+                    <div className="progress-bar" style={{ width: isClient && `${Modulo2}%` }}>
+                        {isClient && `${Modulo2}%`}
+                    </div>
                 </div>
             </div>
             <div className='m-5'>
                 <p>Modulo 3</p>
                 <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    <div className="progress-bar" style={{ width: `0%` }}></div>
+                    <div className="progress-bar" style={{ width: isClient && `${Modulo3}%` }}>
+                        {isClient && `${Modulo3}%`}
+                    </div>
                 </div>
             </div>
             <div className='m-5'>
                 <p>Modulo 4</p>
                 <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                    <div className="progress-bar" style={{ width: `0%` }}></div>
+                    <div className="progress-bar" style={{ width: isClient && `${Modulo4}%` }}>
+                        {isClient && `${Modulo4}%`}
+                    </div>
                 </div>
             </div>
         </div>
