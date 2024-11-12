@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react"
 import { readPercentage } from "@/app/lib/readPercentage"
 import Link from "next/link"
+import './styles.css';
+
 export const CardCourses = ({ cursoName, ImgUrl }) => {
     const [isClient, setIsClient] = useState(false)
     useEffect(() => {
@@ -62,60 +64,6 @@ export const CardCourses = ({ cursoName, ImgUrl }) => {
                         </div>
                     </div>
                 </div>
-
-                <style>
-                    {`
-                    .card {
-                        position: relative;
-                        width: 350px;
-                        height: 240px;
-                        aspect-ratio: 16/9;
-                        background-color: #f2f2f2;
-                        border-radius: 10px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        overflow: hidden;
-                        perspective: 1000px;
-                        box-shadow: 0 0 0 5px #ffffff80;
-                    }
-
-                    .cardHover {
-                        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    }
-
-                    .cardHover {
-                        transform: scale(1.05);
-                        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-                    }
-
-                    .card__content {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        padding: 15px;
-                        box-sizing: border-box;
-                        background-color: #f2f2f2;
-                        transform: rotateX(-90deg);
-                        transform-origin: bottom;
-                        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    }
-
-                    .cardHover .card__content {
-                        transform: rotateX(0deg);
-                    }
-
-                    .card__title {
-                        text-align: center;
-                        margin-bottom: 2px;
-                        font-size: 12px;
-                        color: #333;
-                        font-weight: 700;
-                    }
-                `}
-                </style>
             </div>
         </div>
     )

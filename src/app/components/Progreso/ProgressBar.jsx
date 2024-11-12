@@ -12,7 +12,6 @@ export const ProgressBar = ({ cursoName }) => {
     const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage(cursoName);
 
     return (
-
         <div className='container text-center'>
             <div className='m-5'>
                 <p>Modulo 1</p>
