@@ -1,5 +1,5 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import { Header, CardCourses } from '@/app/components/Progreso/Page';
+import { Header, CardCourses } from '@/app/components/Progreso';
 
 export const metadata = {
     title: "Progreso General",
