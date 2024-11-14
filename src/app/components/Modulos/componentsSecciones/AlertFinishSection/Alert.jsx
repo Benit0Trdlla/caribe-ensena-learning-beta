@@ -23,6 +23,46 @@ export const Alert = ({ seccionNumber }) => {
         setFinished(false)
     };
 
+    const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) => {
+        if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+            const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
+            if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
+                
+                const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
+                const totalPreguntasSaved = preguntas.length - 1;
+                const preguntasCorrectas = preguntas.filter(pregunta => pregunta.isCorrect).length;
+                const preguntasIncorrectas = totalPreguntasSaved - preguntasCorrectas;
+
+                const { correct, inCorrect } = readQuestionsData(cursoName, cursoLevel);
+                const newCorrect = preguntasCorrectas - correct;
+                const newIncorrect = preguntasIncorrectas - inCorrect;
+
+                // Actualizar los contadores en el localStorage
+                previousAnswers[cursoLevel]['questionsData'] = {
+                    mountCorrect: newCorrect,
+                    mountIncorrect: newIncorrect
+                };
+                localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
+
+                // Luego de actualizar los contadores, elimina la sección
+                DeleteSeccion(cursoName, cursoLevel, seccionNumber);
+            }
+        }
+    };
+
+    // Leer el TOTAL de preguntas correctas e incorrectas
+    const readQuestionsData = (cursoName, cursoLevel) => {
+        if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+            const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
+            if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel]) {
+                const correct = previousAnswers[cursoLevel]['questionsData'].mountCorrect;
+                const inCorrect = previousAnswers[cursoLevel]['questionsData'].mountIncorrect;
+                return { correct, inCorrect };
+            }
+        }
+        return {};
+    };
+
     return (
         <>
             {finished && (
@@ -39,7 +79,7 @@ export const Alert = ({ seccionNumber }) => {
                                     Siguiente nivel
                                 </Link>
                             }
-                            <button className="btn btn-danger" onClick={() => DeleteSeccion(cursoName, cursoLevel, `Seccion-${seccionNumber}`)}>
+                            <button className="btn btn-danger" onClick={() => recalculateQuestionsData(cursoName, cursoLevel, `Seccion-${seccionNumber}`)}>
                                 <a href={`/${cursoName}/${cursoLevel}/${seccionNumber}`} className="text-white text-decoration-none">
                                     Resetear la sección
                                 </a>

@@ -1,15 +1,13 @@
-// Calcula el porcentaje de preguntas correctas para una sección específica de un curso.
+// Calcula el porcentaje de preguntas correctas de una sección en específica.
 
 export const calculatePercentageCorrect = (cursoName, cursoLevel, seccionNumber,) => {
     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-
         // Obtener los datos previos del localStorage
         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
 
         // Verificar si existen los niveles y las secciones antes de acceder    
         if (previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
 
-            // Calcular el porcentaje de preguntas correctas
             const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
             
             // Restar 1 al total, porque queda seccion tiene 'seccionCompleted'

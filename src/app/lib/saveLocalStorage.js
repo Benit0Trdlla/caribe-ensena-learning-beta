@@ -6,6 +6,10 @@ export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex,
     if (!previousAnswers[cursoLevel]) {
         previousAnswers[cursoLevel] = {
             levelCompleted: false, // Inicialmente el nivel no está completado
+            'questionsData': {
+                mountCorrect: 0, // Contador de preguntas correctas
+                mountIncorrect: 0 // Contador de preguntas incorrectas
+            },
         };
     }
 
@@ -28,6 +32,24 @@ export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex,
         isCorrect: selectedValue === correctAnswer ? true : false,
     };
 
+    // Verificar si el nivel y 'questionsData' existen antes de actualizar
+    if (previousAnswers[cursoLevel] && previousAnswers[cursoLevel]['questionsData']) {
+        // Actualizar los contadores de preguntas correctas e incorrectas
+        if (selectedValue === correctAnswer) {
+            previousAnswers[cursoLevel]['questionsData'].mountCorrect++;
+        } else {
+            previousAnswers[cursoLevel]['questionsData'].mountIncorrect++;
+        }
+    }
+
+    // const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
+    // const totalPreguntasSaved = preguntas.length - 1;
+    // console.log('totalPreguntasSaved', totalPreguntasSaved);
+    // const preguntasCorrectas = preguntas.filter(pregunta => pregunta.isCorrect).length;
+    // console.log('preguntasCorrectas', preguntasCorrectas);
+    // const preguntasIncorrectas = totalPreguntasSaved - preguntasCorrectas;
+    // console.log('preguntasIncorrectas', preguntasIncorrectas);
+    
     // Calcular la cantidad de preguntas respondidas
     const preguntasRespondidas = Object.keys(previousAnswers[cursoLevel][seccionNumber])
         .filter(key => key !== 'seccionCompleted' && key !== 'percentageCompleted').length;
