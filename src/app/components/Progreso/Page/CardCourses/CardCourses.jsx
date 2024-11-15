@@ -2,7 +2,7 @@
 import './styles.css';
 import Link from "next/link"
 import { useState } from "react"
-import { readPercentage } from "@/app/lib/readPercentage"
+import { readPercentage } from "@/app/lib"
 import { ProgressBar } from "../../ProgressBar"
 
 export const CardCourses = ({ cursoName, ImgUrl }) => {

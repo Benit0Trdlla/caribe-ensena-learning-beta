@@ -1,24 +1,31 @@
 'use client'
 import { ProgressBar, Modal } from '@/app/components/Progreso';
-import { readPercentage } from "@/app/lib/readPercentage";
+import { readPercentage, readQuestionsData } from "@/app/lib";
 import { useState } from 'react';
 
 export default function ProgresoNewskillsPage() {
     const [selectedModulo, setSelectedModulo] = useState(null);
     const [showModal, setShowModal] = useState(false);
 
+    const [inCorrect, setInCorrect] = useState(0);
+    const [correct, setCorrect] = useState(0);
+
     const openModal = (modulo) => {
         setSelectedModulo(modulo);
         setShowModal(true);
+
+        const { correct, inCorrect } = readQuestionsData('Newskills', modulo.number);
+        setInCorrect(inCorrect);
+        setCorrect(correct);
     }
 
     const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage('Newskills');
 
     const ModuloData = [
-        { number: 'Modulo 1', percentage: Modulo1, totalQuestions: 10 },
-        { number: 'Modulo 2', percentage: Modulo2, totalQuestions: 10 },
-        { number: 'Modulo 3', percentage: Modulo3, totalQuestions: 60 },
-        { number: 'Modulo 4', percentage: Modulo4, totalQuestions: 60 },
+        { number: 'Modulo-1', percentage: Modulo1, totalQuestions: 10 },
+        { number: 'Modulo-2', percentage: Modulo2, totalQuestions: 10 },
+        { number: 'Modulo-3', percentage: Modulo3, totalQuestions: 60 },
+        { number: 'Modulo-4', percentage: Modulo4, totalQuestions: 60 },
     ];
 
     return (
@@ -41,10 +48,11 @@ export default function ProgresoNewskillsPage() {
                         showInfo={showModal}
                         onClose={() => setShowModal(false)}
                         total={selectedModulo?.totalQuestions}
+                        inCorrect={inCorrect}
+                        correct={correct}
                     />
                 )}
             </div>
         </>
     )
 }
-

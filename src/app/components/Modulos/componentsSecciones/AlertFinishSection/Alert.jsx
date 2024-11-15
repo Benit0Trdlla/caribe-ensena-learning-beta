@@ -2,13 +2,15 @@
 import Link from "next/link"
 import { usePathData } from "@/app/hooks/usePathData"
 import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
-import { calculatePercentageCorrect } from "@/app/lib"
+import { calculatePercentageCorrect, readQuestionsData } from "@/app/lib"
 import { useContext } from "react"
 export const Alert = ({ seccionNumber }) => {
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
 
     const porcentajeCorrectas = calculatePercentageCorrect(cursoName, cursoLevel, `Seccion-${seccionNumber}`);
+    const { correct, inCorrect } = readQuestionsData(cursoName, cursoLevel);
+
 
     const DeleteSeccion = (cursoName, cursoLevel, seccionNumber) => {
         if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
@@ -27,13 +29,12 @@ export const Alert = ({ seccionNumber }) => {
         if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
             const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
             if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
-                
+
                 const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
                 const totalPreguntasSaved = preguntas.length - 1;
                 const preguntasCorrectas = preguntas.filter(pregunta => pregunta.isCorrect).length;
                 const preguntasIncorrectas = totalPreguntasSaved - preguntasCorrectas;
 
-                const { correct, inCorrect } = readQuestionsData(cursoName, cursoLevel);
                 const newCorrect = preguntasCorrectas - correct;
                 const newIncorrect = preguntasIncorrectas - inCorrect;
 
@@ -48,19 +49,6 @@ export const Alert = ({ seccionNumber }) => {
                 DeleteSeccion(cursoName, cursoLevel, seccionNumber);
             }
         }
-    };
-
-    // Leer el TOTAL de preguntas correctas e incorrectas
-    const readQuestionsData = (cursoName, cursoLevel) => {
-        if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-            const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
-            if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel]) {
-                const correct = previousAnswers[cursoLevel]['questionsData'].mountCorrect;
-                const inCorrect = previousAnswers[cursoLevel]['questionsData'].mountIncorrect;
-                return { correct, inCorrect };
-            }
-        }
-        return {};
     };
 
     return (
