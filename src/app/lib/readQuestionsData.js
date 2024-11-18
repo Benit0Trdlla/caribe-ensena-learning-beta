@@ -11,6 +11,6 @@ export const readQuestionsData = (cursoName, cursoLevel) => {
             }
         }
     }
-    console.warn(`No data: ${cursoLevel}`);
+    console.warn(`No data, 'readQuestionsData': ${cursoLevel}`);
     return { correct: 0, inCorrect: 0 }; // Valores predeterminados
 };

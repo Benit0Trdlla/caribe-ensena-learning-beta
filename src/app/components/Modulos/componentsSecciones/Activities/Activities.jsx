@@ -66,7 +66,7 @@ export const Activities = () => {
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
         setSelectedOption(selectedValue); // Guardamos la opción seleccionada
-        saveLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext, selectedQuestions[indexContext].Respuesta, selectedValue, data.length);
+        saveLocalStorage(cursoName, cursoLevel, `Seccion-${number}`, indexContext, selectedQuestions[indexContext].Respuesta, selectedValue);
         setIsCorrect(selectedValue === selectedQuestions[indexContext].Respuesta);
         setShowAlert(selectedValue !== selectedQuestions[indexContext].Respuesta);
     };

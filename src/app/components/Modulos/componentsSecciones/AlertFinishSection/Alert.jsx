@@ -5,6 +5,7 @@ import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
 import { calculatePercentageCorrect, readQuestionsData } from "@/app/lib"
 import { useContext } from "react"
 export const Alert = ({ seccionNumber }) => {
+    const TotalPreguntasSheets = 35
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
 
@@ -24,6 +25,30 @@ export const Alert = ({ seccionNumber }) => {
         }
         setFinished(false)
     };
+
+    // const recalculatePercentage = (cursoName, cursoLevel, seccionNumber) => {
+    //     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+    //         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
+    //         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel]) {
+    //             const percentageCompleted = previousAnswers[cursoLevel].percentageCompleted;
+
+    //             // Calcular la cantidad de preguntas respondidas
+    //             const preguntasRespondidas = Object.keys(previousAnswers[cursoLevel][seccionNumber])
+    //                 .filter(key => key !== 'seccionCompleted' && key !== 'percentageCompleted').length;
+
+    //             // Calcular el porcentaje de preguntas respondidas
+    //             const percentageCompletedSeccion = ((preguntasRespondidas / TotalPreguntasSheets) * 100).toFixed(0);
+
+    //             // Calcular el nuevo porcentaje
+    //             const newPercentage = percentageCompleted - percentageCompletedSeccion;
+
+    //             // Actualizar el porcentaje
+    //             previousAnswers[cursoLevel].percentageCompleted = newPercentage;
+
+    //             localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
+    //         }
+    //     }
+    // }
 
     const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) => {
         if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
@@ -56,7 +81,6 @@ export const Alert = ({ seccionNumber }) => {
             {finished && (
                 <div className="LevelCompleted" >
                     <div className='alert alert-light' role='alert'>
-                        <button type="button" className="btn-close float-end" data-bs-dismiss="alert" aria-label="Close" onClick={() => setFinished(false)}></button>
                         <h4 className="alert-heading mb-3">{`Sección ${seccionNumber} Completada!`}</h4>
                         <img src="/Images/Home.png" alt="Imagen de nivel completado" width={200} height={200} />
                         <hr />

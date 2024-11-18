@@ -1,4 +1,6 @@
-export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex, correctAnswer, selectedValue, totalPreguntas) => {
+import { calculateTotalPercentage } from './calculateTotalPercentage'
+
+export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex, correctAnswer, selectedValue) => {
     // Obtener las respuestas anteriores del localStorage
     const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
 
@@ -42,23 +44,7 @@ export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex,
         }
     }
 
-    // const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
-    // const totalPreguntasSaved = preguntas.length - 1;
-    // console.log('totalPreguntasSaved', totalPreguntasSaved);
-    // const preguntasCorrectas = preguntas.filter(pregunta => pregunta.isCorrect).length;
-    // console.log('preguntasCorrectas', preguntasCorrectas);
-    // const preguntasIncorrectas = totalPreguntasSaved - preguntasCorrectas;
-    // console.log('preguntasIncorrectas', preguntasIncorrectas);
-    
-    // Calcular la cantidad de preguntas respondidas
-    const preguntasRespondidas = Object.keys(previousAnswers[cursoLevel][seccionNumber])
-        .filter(key => key !== 'seccionCompleted' && key !== 'percentageCompleted').length;
-
-    // Calcular el porcentaje de preguntas respondidas
-    const percentageCompleted = ((preguntasRespondidas / totalPreguntas) * 100).toFixed(0);
-
-    // Guardar el porcentaje completado
-    previousAnswers[cursoLevel].percentageCompleted = percentageCompleted;
+    calculateTotalPercentage(previousAnswers, cursoLevel);
 
     localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
 }
