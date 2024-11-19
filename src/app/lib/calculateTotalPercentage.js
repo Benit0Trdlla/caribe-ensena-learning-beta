@@ -10,7 +10,7 @@ export const calculateTotalPercentage = (previousAnswers, cursoLevel) => {
         return total + preguntasRespondidas;
     }, 0);
 
-    // Calcular el total de preguntas (sumar las preguntas de todas las secciones)
+    // Calcular el total de preguntas (sumar las preguntas de todas las secciones), el 5 es la cantidad de preguntas por seccion
     const totalPreguntas = 5 * secciones.length;
 
     // Calcular el porcentaje total
