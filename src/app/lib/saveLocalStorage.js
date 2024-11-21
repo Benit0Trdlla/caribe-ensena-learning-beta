@@ -1,4 +1,4 @@
-import { calculateTotalPercentage } from './calculateTotalPercentage'
+import { calculateTotalPercentage } from '../lib'
 
 export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex, correctAnswer, selectedValue) => {
     // Obtener las respuestas anteriores del localStorage
