@@ -2,7 +2,7 @@
 
 import "./styles.css";
 import { usePathData } from "@/app/hooks/usePathData";
-import { isSeccionCompleted } from "@/app/lib/isSeccionCompleted";
+import { isSeccionCompleted } from "@/app/lib";
 import { Book, Exam, Video } from "./Icons";
 
 export const SectionNavigation = () => {
