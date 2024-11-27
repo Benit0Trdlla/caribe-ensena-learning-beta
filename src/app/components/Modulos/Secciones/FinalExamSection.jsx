@@ -1,10 +1,11 @@
 import { getSession } from '@auth0/nextjs-auth0';
 import { FilePdf, Activities, ContenidoTeorico } from "../componentsSecciones";
+import { usePathData } from '@/app/hooks/usePathData';
 // import Certificado from "../../Certificado"
 
 export const FinalExamSection = async () => {
     const { user } = await getSession();
-
+    const { cursoName, cursoLevel } = usePathData();
     return (
         <div className="container">
             <div className="row d-flex align-items-center justify-content-center mt-4">
