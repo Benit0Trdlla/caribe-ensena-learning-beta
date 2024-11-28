@@ -2,13 +2,16 @@
 import BtnLocked from "./BtnLocked"
 import BtnUnlocked from "./BtnUnlocked"
 import { useState, useEffect } from "react"
-import { readPercentage } from "@/app/lib"
+import { readPercentage, readLastSeccion } from "@/app/lib"
 export default function Botones({ BtnHref }) {
     // Hidration problem, solution
     const [isClient, setIsClient] = useState(false)
     useEffect(() => {
         setIsClient(true)
     }, [])
+
+    const { NumberSeccionModulo1, NumberSeccionModulo2, NumberSeccionModulo3, NumberSeccionModulo4 } = readLastSeccion(BtnHref);
+    console.log({ NumberSeccionModulo1, NumberSeccionModulo2, NumberSeccionModulo3, NumberSeccionModulo4 });
 
     const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage(BtnHref);
     const modulos = [
@@ -21,34 +24,6 @@ export default function Botones({ BtnHref }) {
     return (
         <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-                {/* <li className="breadcrumb-item active" aria-current="page">
-                    {isClient && Modulo1 === 100 ?
-                        <BtnUnlocked href={`/${BtnHref}/Modulo-1/1`} />
-                        :
-                        <BtnLocked href={`/${BtnHref}/Modulo-1/1`} />
-                    }
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                    {isClient && Modulo2 === 100 ?
-                        <BtnUnlocked href={`/${BtnHref}/Modulo-2/1`} />
-                        :
-                        <BtnLocked href='' />
-                    }
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                    {isClient && Modulo3 === 100 ?
-                        <BtnUnlocked href={`/${BtnHref}/Modulo-3/1`} />
-                        :
-                        <BtnLocked href='' />
-                    }
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                    {isClient && Modulo4 === 100 ?
-                        <BtnUnlocked href={`/${BtnHref}/Modulo-4/1`} />
-                        :
-                        <BtnLocked href='' />
-                    }
-                </li> */}
                 {modulos.map((modulo) => (
                     <li key={modulo.id} className="breadcrumb-item active" aria-current="page">
                         {isClient && modulo.modulo === 100 ? (

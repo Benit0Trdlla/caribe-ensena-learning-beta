@@ -8,6 +8,7 @@ export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex,
     if (!previousAnswers[cursoLevel]) {
         previousAnswers[cursoLevel] = {
             levelCompleted: false, // Inicialmente el nivel no está completado
+            lastSeccion: 10,
             'questionsData': {
                 mountCorrect: 0, // Contador de preguntas correctas
                 mountIncorrect: 0 // Contador de preguntas incorrectas
