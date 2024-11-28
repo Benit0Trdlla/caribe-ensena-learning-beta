@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { usePathData } from "@/app/hooks/usePathData"
 import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
-import { calculatePercentageCorrect } from "@/app/lib"
+import { calculatePercentageCorrect, setLastModuloAndSeccion } from "@/app/lib"
 import { useContext } from "react"
 
 export const Alert = ({ seccionNumber }) => {
@@ -94,7 +94,7 @@ export const Alert = ({ seccionNumber }) => {
                         <div className="d-grid gap-2 w-50 mx-auto">
                             {porcentajeCorrectas < 75 && <h5 className="text-center"><small>Tu porcentaje de respuestas correctas es de: {porcentajeCorrectas} % debes resetear la sección</small></h5>}
                             {porcentajeCorrectas > 75 &&
-                                <Link href={`/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => setFinished(false)}>
+                                <Link href={`/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => { setLastModuloAndSeccion(cursoName, cursoLevel, seccionNumber); setFinished(false) }}>
                                     Siguiente nivel
                                 </Link>
                             }

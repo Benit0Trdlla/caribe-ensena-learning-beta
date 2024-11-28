@@ -2,16 +2,13 @@
 import BtnLocked from "./BtnLocked"
 import BtnUnlocked from "./BtnUnlocked"
 import { useState, useEffect } from "react"
-import { readPercentage, readLastSeccion } from "@/app/lib"
+import { readPercentage } from "@/app/lib"
 export default function Botones({ BtnHref }) {
     // Hidration problem, solution
     const [isClient, setIsClient] = useState(false)
     useEffect(() => {
         setIsClient(true)
     }, [])
-
-    const { NumberSeccionModulo1, NumberSeccionModulo2, NumberSeccionModulo3, NumberSeccionModulo4 } = readLastSeccion(BtnHref);
-    console.log({ NumberSeccionModulo1, NumberSeccionModulo2, NumberSeccionModulo3, NumberSeccionModulo4 });
 
     const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage(BtnHref);
     const modulos = [
