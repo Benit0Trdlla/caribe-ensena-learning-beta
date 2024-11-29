@@ -2,20 +2,23 @@
 import BtnLocked from "./BtnLocked"
 import BtnUnlocked from "./BtnUnlocked"
 import { useState, useEffect } from "react"
-import { readPercentage } from "@/app/lib"
+import { readPercentage, readLastModuloAndSeccion } from "@/app/lib"
 export default function Botones({ BtnHref }) {
-    // Hidration problem, solution
-    const [isClient, setIsClient] = useState(false)
+    const [lastData, setLastData] = useState({ lastModuloAndSeccion: 'Modulo-1/1', lastModulo: 'Modulo-1', });
+
+    const [isClient, setIsClient] = useState(false);
     useEffect(() => {
-        setIsClient(true)
-    }, [])
+        setIsClient(true);
+        const data = readLastModuloAndSeccion(BtnHref);
+        setLastData(data);
+    }, [BtnHref]);
 
     const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage(BtnHref);
     const modulos = [
-        { id: 1, modulo: Modulo1, href: `/Modulo-1/1` },
-        { id: 2, modulo: Modulo2, href: `/Modulo-2/1` },
-        { id: 3, modulo: Modulo3, href: `/Modulo-3/1` },
-        { id: 4, modulo: Modulo4, href: `/Modulo-4/1` },
+        { id: 1, modulo: Modulo1, href: `/Modulo-1` },
+        { id: 2, modulo: Modulo2, href: `/Modulo-2` },
+        { id: 3, modulo: Modulo3, href: `/Modulo-3` },
+        { id: 4, modulo: Modulo4, href: `/Modulo-4` },
     ];
 
     return (
@@ -24,9 +27,9 @@ export default function Botones({ BtnHref }) {
                 {modulos.map((modulo) => (
                     <li key={modulo.id} className="breadcrumb-item active" aria-current="page">
                         {isClient && modulo.modulo === 100 ? (
-                            <BtnUnlocked href={`/${BtnHref}${modulo.href}`} />
+                            <BtnUnlocked href={`/${BtnHref}${modulo.href}/1`} />
                         ) : (
-                            <BtnLocked href={modulo.href === `/Modulo-1/1` ? `${BtnHref}${modulo.href}` : ''} />
+                            <BtnLocked href={lastData.lastModulo === modulo.href || lastData.lastModulo && modulo.href === `/Modulo-1` ? `/${BtnHref}/${lastData.lastModuloAndSeccion}` : ''} />
                         )}
                     </li>
                 ))}
