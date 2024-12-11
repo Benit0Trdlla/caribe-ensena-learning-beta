@@ -1,4 +1,6 @@
 export const recalculatePercentage = (cursoName, cursoLevel, seccionNumber) => {
+    const TotalPreguntasSheets = 35
+
     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel]) {

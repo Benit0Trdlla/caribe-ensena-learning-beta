@@ -2,86 +2,93 @@
 import Link from "next/link"
 import { usePathData } from "@/app/hooks/usePathData"
 import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
-import { calculatePercentageCorrect, setLastModuloAndSeccion } from "@/app/lib"
+import { calculatePercentageCorrect, setLastModuloAndSeccion, recalculateQuestionsData } from "@/app/lib"
 import { useContext } from "react"
 
 export const Alert = ({ seccionNumber }) => {
-    const TotalPreguntasSheets = 35
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
 
     const porcentajeCorrectas = calculatePercentageCorrect(cursoName, cursoLevel, `Seccion-${seccionNumber}`);
 
-    const DeleteSeccion = (cursoName, cursoLevel, seccionNumber) => {
+    const recalculate = (cursoName, cursoLevel, seccionNumber) => {
         if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-            const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
-            if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
-                delete previousAnswers[cursoLevel][seccionNumber];
-                if (!previousAnswers[cursoLevel][seccionNumber]) {
-                    localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
-                }
-            }
-        }
-        setFinished(false)
-    };
-
-    const recalculatePercentage = (cursoName, cursoLevel, seccionNumber) => {
-        if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-            const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
-            if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel]) {
-                const percentageCompleted = previousAnswers[cursoLevel].percentageCompleted;
-
-                // Calcular la cantidad de preguntas respondidas
-                const preguntasRespondidas = Object.keys(previousAnswers[cursoLevel][seccionNumber])
-                    .filter(key => key !== 'seccionCompleted' && key !== 'percentageCompleted').length;
-
-                // Calcular el porcentaje de preguntas respondidas
-                const percentageCompletedSeccion = ((preguntasRespondidas / TotalPreguntasSheets) * 100).toFixed(0);
-
-                // Calcular el nuevo porcentaje
-                const newPercentage = percentageCompleted - percentageCompletedSeccion;
-
-                // Actualizar el porcentaje
-                previousAnswers[cursoLevel].percentageCompleted = newPercentage;
-
-                localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
-            }
+            console.log(seccionNumber);
+            recalculateQuestionsData(cursoName, cursoLevel, seccionNumber);
+            setFinished(false)
         }
     }
 
-    const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) => {
-        if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-            const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
+    // const DeleteSeccion = (cursoName, cursoLevel, seccionNumber) => {
+    //     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+    //         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
+    //         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
+    //             delete previousAnswers[cursoLevel][seccionNumber];
+    //             if (!previousAnswers[cursoLevel][seccionNumber]) {
+    //                 localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
+    //             }
+    //         }
+    //     }
+    //     setFinished(false)
+    // };
 
-            if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
-                const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
+    // const recalculatePercentage = (cursoName, cursoLevel, seccionNumber) => {
+    //     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+    //         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
+    //         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel]) {
+    //             const percentageCompleted = previousAnswers[cursoLevel].percentageCompleted;
 
-                const totalPreguntasSaved = preguntas.length - 1;
-                const preguntasCorrectas = preguntas.filter(pregunta => pregunta.isCorrect).length;
-                const preguntasIncorrectas = totalPreguntasSaved - preguntasCorrectas;
+    //             // Calcular la cantidad de preguntas respondidas
+    //             const preguntasRespondidas = Object.keys(previousAnswers[cursoLevel][seccionNumber])
+    //                 .filter(key => key !== 'seccionCompleted' && key !== 'percentageCompleted').length;
 
-                const { mountCorrect = 0, mountIncorrect = 0 } = previousAnswers[cursoLevel].questionsData || {};
+    //             // Calcular el porcentaje de preguntas respondidas
+    //             const percentageCompletedSeccion = ((preguntasRespondidas / TotalPreguntasSheets) * 100).toFixed(0);
 
-                // Actualizar los contadores en base a los cambios de esta sección
-                const updatedCorrect = mountCorrect - preguntasCorrectas; // Resta las correctas de la sección
-                const updatedIncorrect = mountIncorrect - preguntasIncorrectas; // Resta las incorrectas de la sección
+    //             // Calcular el nuevo porcentaje
+    //             const newPercentage = percentageCompleted - percentageCompletedSeccion;
 
-                // Evitar valores negativos
-                previousAnswers[cursoLevel].questionsData = {
-                    mountCorrect: Math.max(0, updatedCorrect),
-                    mountIncorrect: Math.max(0, updatedIncorrect)
-                };
+    //             // Actualizar el porcentaje
+    //             previousAnswers[cursoLevel].percentageCompleted = newPercentage;
 
-                localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
+    //             localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
+    //         }
+    //     }
+    // }
 
-                // Recalcular el porcentaje
-                recalculatePercentage(cursoName, cursoLevel, seccionNumber)
+    // const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) => {
+    //     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
+    //         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
 
-                // Luego de actualizar los contadores, elimina la sección
-                DeleteSeccion(cursoName, cursoLevel, seccionNumber);
-            }
-        }
-    };
+    //         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
+    //             const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
+
+    //             const totalPreguntasSaved = preguntas.length - 1;
+    //             const preguntasCorrectas = preguntas.filter(pregunta => pregunta.isCorrect).length;
+    //             const preguntasIncorrectas = totalPreguntasSaved - preguntasCorrectas;
+
+    //             const { mountCorrect = 0, mountIncorrect = 0 } = previousAnswers[cursoLevel].questionsData || {};
+
+    //             // Actualizar los contadores en base a los cambios de esta sección
+    //             const updatedCorrect = mountCorrect - preguntasCorrectas; // Resta las correctas de la sección
+    //             const updatedIncorrect = mountIncorrect - preguntasIncorrectas; // Resta las incorrectas de la sección
+
+    //             // Evitar valores negativos
+    //             previousAnswers[cursoLevel].questionsData = {
+    //                 mountCorrect: Math.max(0, updatedCorrect),
+    //                 mountIncorrect: Math.max(0, updatedIncorrect)
+    //             };
+
+    //             localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
+
+    //             // Recalcular el porcentaje
+    //             recalculatePercentage(cursoName, cursoLevel, seccionNumber)
+
+    //             // Luego de actualizar los contadores, elimina la sección
+    //             DeleteSeccion(cursoName, cursoLevel, seccionNumber);
+    //         }
+    //     }
+    // };
 
     return (
         <>
@@ -98,7 +105,7 @@ export const Alert = ({ seccionNumber }) => {
                                     Siguiente nivel
                                 </Link>
                             }
-                            <button className="btn btn-danger" onClick={() => recalculateQuestionsData(cursoName, cursoLevel, `Seccion-${seccionNumber}`)}>
+                            <button className="btn btn-danger" onClick={() => recalculate(cursoName, cursoLevel, `Seccion-${seccionNumber}`)}>
                                 <a href={`/${cursoName}/${cursoLevel}/${seccionNumber}`} className="text-white text-decoration-none">
                                     Resetear la sección
                                 </a>
