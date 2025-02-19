@@ -2,9 +2,9 @@ import CursosCard from "./CursosCard";
 export const Cursos = () => {
     const Cursos = [
         { Id: 1, Title: 'Enseñapaz', ImgUrl: '/Images/Logo_Cursos/Ensenapaz.png', href: 'Ensenapaz' },
-        { Id: 2, Title: 'New skills', ImgUrl: '/Images/Logo_Cursos/NewSkills.png', href: 'Newskills' }
-        // { Id: 3, Title: 'Derechos Humanos', ImgUrl: '/Images/Home.png', href: '/DerechosHumanos' },
-        // { Id: 4, Title: 'Robótica', ImgUrl: '/Images/Donaciones.png', href: '/Robotica' },
+        { Id: 2, Title: 'New skills', ImgUrl: '/Images/Logo_Cursos/NewSkills.png', href: 'Newskills' },
+        { Id: 3, Title: 'Tica', ImgUrl: '/Images/Logo_Cursos/Tica.png', href: '/Tica' },
+        { Id: 4, Title: 'Poket', ImgUrl: '/Images/Logo_Cursos/Poket.png', href: '/Poket' },
         // { Id: 5, Title: 'Educación Financiera', ImgUrl: '/Images/Donaciones.png', href: '/EducacionFinanciera' },
     ]
     return (

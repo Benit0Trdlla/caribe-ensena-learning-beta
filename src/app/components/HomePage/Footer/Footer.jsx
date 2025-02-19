@@ -4,7 +4,13 @@ import NavItemSubFooter from './NavItemSubFooter';
 export const Footer = () => {
     return (
         <MainFooter srcImg={'/Images/Logo/Footer.png'} titleMiddle={"Un proyecto de Fundación Caribe Enseña"} titleEnd={"Contactanos"}>
-            <a className="link-secondary text-decoration-none text-info"  href="https://caribeensena.org/" target="_blank">@caribeensena.org</a>
+            <div>
+                <a className="link-secondary text-decoration-none text-info" href="https://www.linkedin.com/in/camilo-de-jes%C3%BAs-galv%C3%A1n-g%C3%B3mez-18b8b4121/" target="_blank">Gerente de proyecto: Camilo Galván Gómez</a>
+                <br />
+                <a className="link-secondary text-decoration-none text-info" href="https://www.linkedin.com/in/benito-tridella-dolce/" target="_blank">Desarrollador: Benito Tridella Dolce</a>
+                <br />
+                {/* <a className="link-secondary text-decoration-none text-info"  href="https://caribeensena.org/" target="_blank">@caribeensena.org</a> */}
+            </div>
             <ul className="list-unstyled">
                 <p className="mb-0 mt-2">
                     <a className="link-secondary text-decoration-none text-info" href="mailto:">e-learning@caribeensena.org</a>

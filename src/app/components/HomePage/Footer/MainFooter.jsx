@@ -16,9 +16,9 @@ export default function MainFooter({ children, srcImg, titleMiddle, titleEnd }) 
                             <div className="widget">
                                 <h4 className="widget-title">{titleMiddle}</h4>
                                 {/* <address className="mb-4">Fundación Caribe Enseña</address> */}
-                                <p className="mb-0">
+                                <div className="mb-0">
                                     {children[0]}
-                                </p>
+                                </div>
                             </div>
                         </div>
                         <div className="col-12 col-md-4 col-lg-3 col-xl-4 text-center">
