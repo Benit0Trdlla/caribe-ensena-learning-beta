@@ -3,7 +3,7 @@ import { ProgressBar, Modal } from '@/app/components/Progreso';
 import { readPercentage, readQuestionsData } from "@/app/lib";
 import { useState } from 'react';
 
-export default function ProgresoTicaPage() {
+export default function ProgresoPoketPage() {
     const [selectedModulo, setSelectedModulo] = useState(null);
     const [showModal, setShowModal] = useState(false);
 
@@ -14,12 +14,12 @@ export default function ProgresoTicaPage() {
         setSelectedModulo(modulo);
         setShowModal(true);
 
-        const { correct, inCorrect } = readQuestionsData('Tica', modulo.number);
+        const { correct, inCorrect } = readQuestionsData('Poket', modulo.number);
         setInCorrect(inCorrect);
         setCorrect(correct);
     }
 
-    const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage('Tica');
+    const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage('Poket');
 
     const ModuloData = [
         { number: 'Modulo-1', percentage: Modulo1, totalQuestions: 10 },
@@ -30,7 +30,7 @@ export default function ProgresoTicaPage() {
 
     return (
         <>
-            <h1 className='text-center mt-3'>Este el progreso del curso Tica</h1>
+            <h1 className='text-center mt-3'>Este el progreso del curso Poket</h1>
             <div className='container'>
                 {ModuloData.map((modulo) => (
                     <div className='mb-5 mt-4 mt-md-3' key={modulo.number}>
