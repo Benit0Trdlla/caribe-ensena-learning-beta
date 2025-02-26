@@ -22,11 +22,9 @@ function PoketModuloPage({ params }) {
 
     return (
         <>
-            {/* <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href="/Cursos" indexMeet={1} /> */}
             <Alert seccionNumber={numInt} />
             <SectionNavigation />
             {ComponentsSections[numInt - 1]}
-            {/* <Buttons NumInt={numInt} CursoPath={"/Newskills/Modulo-1/"} /> */}
         </>
     )
 }
