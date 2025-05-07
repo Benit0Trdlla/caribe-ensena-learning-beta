@@ -3,6 +3,8 @@ import {
     BookSection,
     VideoSection,
     FinalExamSection,
+    Header,
+    Buttons,
     SectionNavigation,
     Alert
 } from '../../../components/Modulos';
