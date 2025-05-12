@@ -1,0 +1,13 @@
+.w-fit{
+    width: fit-content;
+}
+
+
+@media screen and (max-width: 768px) {
+    .position-responsive{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+    }
+}

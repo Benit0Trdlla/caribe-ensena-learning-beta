@@ -20,7 +20,7 @@ export const CardCourses = ({ cursoName, ImgUrl }) => {
     ];
 
     return (
-        <div className='col-12 col-md-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center'>
+        <div className='col-12 col-md-6 col-lg-4 mt-2 d-flex justify-content-center align-items-center'>
             <div className={`card ${hover ? "cardHover" : ""} ms-lg-4 ms-md-3`}>
                 <Link href={`/${cursoName}`}>
                     <img src={`/Images/Logo_Cursos/${ImgUrl}.png`} width={"150px"} height={"150px"} style={{ objectFit: "cover" }} alt="" />
