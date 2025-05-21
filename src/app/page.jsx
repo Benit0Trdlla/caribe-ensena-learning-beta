@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <main>
       <Header imgUrl={"/Images/Logo/Header.png"} />
-      {testURL}
-      {testISSUERURL}
+      {/* {testURL}
+      {testISSUERURL} */}
       <LandingSection ImgUrl="/Images/Home.png" />
       <ServicioComponente />
       <PreguntasFrecuentesComponente />
