@@ -3,7 +3,7 @@ export const LeftColumn = ({ title, children, curso }) => {
         <div className="col-md-6 px-3 lh-lg" >
             <div className="d-flex flex-column justify-content-center ">
                 <p className="text-center fw-bold mt-3">
-                    Conocé los Módulos de {title}.
+                    Conoce los Módulos de {title}.
                 </p>
                 {children}
                 <div className="d-flex justify-content-center ">
