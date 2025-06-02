@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
+        <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
       </head>
       <UserProvider>
         <body className={inter.className}>
