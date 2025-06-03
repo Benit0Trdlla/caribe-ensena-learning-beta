@@ -13,13 +13,21 @@ import {
   ServicioComponente,
   AliadosSection
 } from "./components/HomePage";
+
 export default function Home() {
-  const id = process.env.ONESIGNAL_APP_ID;
   useEffect(() => {
     // Ensure this code runs only on the client side
     if (typeof window !== 'undefined') {
+
+      const appId = process.env.NEXT_PUBLIC_ONESIGNAL_APP_ID;
+
+      if (!appId) {
+        console.error('OneSignal App ID is not defined');
+        return;
+      }
+
       OneSignal.init({
-        appId: '5893283d-691b-402a-956d-5e1469449f94',
+        appId,
         // You can add other initialization options here
         notifyButton: {
           enable: true,
@@ -32,7 +40,6 @@ export default function Home() {
 
   return (
     <main>
-      {id}
       <Header imgUrl={"/Images/Logo/Header.png"} />
       <LandingSection ImgUrl="/Images/Home.png" />
       <ServicioComponente />
