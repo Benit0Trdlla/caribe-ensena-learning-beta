@@ -12,7 +12,7 @@ export default function MainFooter({ children, srcImg, titleMiddle, titleEnd }) 
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-4 col-lg-3 col-xl-4 text-center mt-4">
+                        <div className="col-12 col-md-4 col-lg-4 col-xl-4 text-center mt-4">
                             <div className="widget">
                                 <h4 className="widget-title">{titleMiddle}</h4>
                                 {/* <address className="mb-4">Fundación Caribe Enseña</address> */}
@@ -21,7 +21,7 @@ export default function MainFooter({ children, srcImg, titleMiddle, titleEnd }) 
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-4 col-lg-3 col-xl-4 text-center">
+                        <div className="col-12 col-md-4 col-lg-5 col-xl-4 text-center mt-4">
                             <div className="widget">
                                 <h4 className="widget-title mb-2">{titleEnd}</h4>
                                 {children[1]}

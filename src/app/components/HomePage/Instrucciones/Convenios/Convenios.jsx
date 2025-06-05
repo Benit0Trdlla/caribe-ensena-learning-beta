@@ -4,7 +4,7 @@ export default function Convenios() {
             <div className="accordion" id="accordionExample3">
                 <div className="accordion-item">
                     <h4 className="accordion-header">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button className="accordion-button collapsed px-sm-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             <small>CONVENIOS ORGANIZACIONES</small>
                         </button>
                     </h4>

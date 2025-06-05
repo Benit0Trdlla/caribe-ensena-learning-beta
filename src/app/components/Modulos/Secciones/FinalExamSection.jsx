@@ -8,8 +8,8 @@ export const FinalExamSection = async () => {
     const { cursoName, cursoLevel } = usePathData();
     return (
         <div className="container">
-            <div className="row d-flex align-items-center justify-content-center mt-4">
-                <div className="col-md-6 text-center">
+            <div className="row d-flex justify-content-center mt-4">
+                <div className="col-md-6">
                     <Activities />
                 </div>
                 <div className="col-md-6">
