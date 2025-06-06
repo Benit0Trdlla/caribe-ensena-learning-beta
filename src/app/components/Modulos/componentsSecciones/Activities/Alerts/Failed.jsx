@@ -1,6 +1,6 @@
 export const Failed = ({ correctOpcion, justificacion }) => {
     return (
-        <div className="alert alert-danger text-center mt-3" role="alert">
+        <div className="alert alert-danger text-center mt-3 mb-0" role="alert">
             La respuesta correcta: {correctOpcion} <br />
             <a className="" data-bs-toggle="modal" data-bs-target="#Modaljustificacion"><strong>Conocé la justificación. Haz Click aquí.</strong></a>
             {/* MODAL */}
