@@ -19,7 +19,11 @@ export const SectionNavigation = () => {
                     <Book href={Seccion3 ? `/${cursoName}/${cursoLevel}/4` : ""} isCompleted={Seccion3} />
                     <Video href={Seccion4 ? `/${cursoName}/${cursoLevel}/5` : ""} isCompleted={Seccion4} />
                     <Video href={Seccion5 ? `/${cursoName}/${cursoLevel}/6` : ""} isCompleted={Seccion5} />
-                    <Exam href={Seccion6 ? `/${cursoName}/${cursoLevel}/7` : ""} isCompleted={Seccion6} />
+                    {cursoLevel === "Modulo-4" ?
+                        <Exam href={Seccion6 ? `/${cursoName}/${cursoLevel}/7` : ""} isCompleted={Seccion6} />
+                        :
+                        <Book href={Seccion6 ? `/${cursoName}/${cursoLevel}/7` : ""} isCompleted={Seccion6} />
+                    }
                 </div>
             </div>
         </div>

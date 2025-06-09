@@ -18,7 +18,7 @@ export function generateMetadata({ params }) {
 function TicaModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)
-    const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <FinalExamSection />]
+    const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <BookSection />]
 
     return (
         <>
