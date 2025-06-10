@@ -11,7 +11,7 @@ export const setLastModuloAndSeccion = (cursoName, cursoLevel, seccionNumber) =>
         }
 
         // Guardar en que sección y nivel se quedo el usuario
-        previousAnswers['LastModuloAndSeccion'].moduloAndSeccion = `/${cursoLevel.concat('/').concat(seccionNumber + 1)}`;
+        previousAnswers['LastModuloAndSeccion'].moduloAndSeccion = `${cursoLevel.concat('/').concat(seccionNumber + 1)}`;
         previousAnswers['LastModuloAndSeccion'].modulo = `/${cursoLevel}`;
 
 
