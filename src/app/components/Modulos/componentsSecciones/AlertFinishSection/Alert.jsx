@@ -101,7 +101,7 @@ export const Alert = ({ seccionNumber }) => {
                         <div className="d-grid gap-2 w-50 mx-auto">
                             {porcentajeCorrectas < 75 && <h5 className="text-center"><small>Tu porcentaje de respuestas correctas es de: {porcentajeCorrectas} % debes resetear la sección</small></h5>}
                             {porcentajeCorrectas > 75 &&
-                                <Link href={seccionNumber === 7 ? `/${cursoName}/Modulo-${parseInt(cursoLevel.split('-')[1]) + 1}/` : `/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => { setLastModuloAndSeccion(cursoName, cursoLevel, seccionNumber); setFinished(false) }}>
+                                <Link href={seccionNumber === 7 ? `/${cursoName}/Modulo-${parseInt(cursoLevel.split('-')[1]) + 1}/1` : `/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => { setLastModuloAndSeccion(cursoName, cursoLevel, seccionNumber); setFinished(false) }}>
                                     Siguiente nivel
                                 </Link>
                             }
