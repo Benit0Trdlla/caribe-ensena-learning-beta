@@ -19,9 +19,10 @@ function ProgresoPage() {
                 </div>
 
                 <div className='d-flex flex-wrap flex-lg-row justify-content-center align-items-center mt-0 mt-lg-0 mt-md-0 mb-5'>
+                    <CardCourses cursoName={'Tica'} ImgUrl={'Tica'} />
+                    <CardCourses cursoName={'Tica2'} ImgUrl={'Tica2'} />
                     <CardCourses cursoName={'Ensenapaz'} ImgUrl={'Ensenapaz'} />
                     <CardCourses cursoName={'New skills'} ImgUrl={'NewSkills'} />
-                    <CardCourses cursoName={'Tica'} ImgUrl={'Tica'} />
                     <CardCourses cursoName={'Poket'} ImgUrl={'Poket'} />
                 </div>
             </div>
