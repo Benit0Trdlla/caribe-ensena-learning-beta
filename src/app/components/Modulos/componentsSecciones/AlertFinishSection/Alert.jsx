@@ -100,10 +100,18 @@ export const Alert = ({ seccionNumber }) => {
                         <hr />
                         <div className="d-grid gap-2 w-50 mx-auto">
                             {porcentajeCorrectas < 75 && <h5 className="text-center"><small>Tu porcentaje de respuestas correctas es de: {porcentajeCorrectas} % debes resetear la sección</small></h5>}
-                            {porcentajeCorrectas > 75 &&
+                            {porcentajeCorrectas > 75 && seccionNumber !== 7 &&
                                 <Link href={seccionNumber === 7 ? `/${cursoName}/Modulo-${parseInt(cursoLevel.split('-')[1]) + 1}/1` : `/${cursoName}/${cursoLevel}/${seccionNumber + 1}`} className="btn btn-primary" onClick={() => { setLastModuloAndSeccion(cursoName, cursoLevel, seccionNumber); setFinished(false) }}>
                                     Siguiente nivel
                                 </Link>
+                            }
+                            {porcentajeCorrectas > 75 && seccionNumber === 7 && cursoLevel === 'Modulo-4' &&
+                                <>
+                                    <h5 className="text-center"><small>Felicidades completaste el curso {cursoName} !!!</small></h5>
+                                    <button className="btn btn-danger" data-bs-dismiss="alert" aria-label="Close" onClick={() => window.location.reload()}>
+                                        Cerrar anuncio.
+                                    </button>
+                                </>
                             }
                             <button className="btn btn-danger" onClick={() => recalculate(cursoName, cursoLevel, `Seccion-${seccionNumber}`)}>
                                 <a href={`/${cursoName}/${cursoLevel}/${seccionNumber}`} className="text-white text-decoration-none">
