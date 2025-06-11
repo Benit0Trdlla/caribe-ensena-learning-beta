@@ -2,8 +2,8 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import {
     BookSection,
     VideoSection,
-    FinalExamSection,
     SectionNavigation,
+    FinalExamSection,
     Alert
 } from '../../../components/Modulos';
 
@@ -13,7 +13,7 @@ export function generateMetadata({ params }) {
     };
 }
 
-function TicaModuloPage({ params }) {
+function Tica2ModuloPage({ params }) {
     const number = params.number
     const numInt = parseInt(number)
     const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <FinalExamSection />]
@@ -27,6 +27,6 @@ function TicaModuloPage({ params }) {
     )
 }
 
-export default withPageAuthRequired(TicaModuloPage, {
-    returnTo: ({ params }) => `/Tica/Modulo-4/${params.number}`,
+export default withPageAuthRequired(Tica2ModuloPage, {
+    returnTo: ({ params }) => `/Tica2/Modulo-4/${params.number}`,
 });
