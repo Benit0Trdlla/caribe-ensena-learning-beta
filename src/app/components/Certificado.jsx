@@ -12,14 +12,13 @@ const Certificado = ({ nombre }) => {
 
     const { cursoName, cursoLevel } = usePathData();
     const { Seccion7 } = isSeccionCompleted(cursoName, cursoLevel);
-
     const canvasRef = useRef(null);
 
     const generarYDescargarCertificado = () => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         const image = new Image();
-        image.src = '/Images/Certificados/Certificado-Curso.png'; // Ruta del archivo subido
+        image.src = `/Images/Certificados/${cursoName}.png`; // Ruta del archivo subido
 
         image.onload = () => {
             // Dibujar la imagen en el canvas
@@ -30,12 +29,12 @@ const Certificado = ({ nombre }) => {
             ctx.fillStyle = 'black';
             ctx.textAlign = 'center';
             // Ajustar las coordenadas para colocar el texto en el lugar correcto
-            ctx.fillText(`${nombre}`, canvas.width / 2, 265); // Ajustar Y según sea necesario
+            ctx.fillText(`${nombre}`, canvas.width / 2, 300); // Ajustar Y según sea necesario
 
             // Descargar el canvas como imagen
             const link = document.createElement('a');
             link.href = canvas.toDataURL('image/png');
-            link.download = 'certificado.png';
+            link.download = `Certificado-Curso-${cursoName}.png`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

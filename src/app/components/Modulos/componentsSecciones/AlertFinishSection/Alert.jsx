@@ -1,11 +1,13 @@
 'use client'
 import Link from "next/link"
+import { useRouter } from 'next/navigation'
 import { usePathData } from "@/app/hooks/usePathData"
 import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
 import { calculatePercentageCorrect, setLastModuloAndSeccion, recalculateQuestionsData } from "@/app/lib"
 import { useContext } from "react"
 
 export const Alert = ({ seccionNumber }) => {
+    const router = useRouter()
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
 
@@ -108,7 +110,7 @@ export const Alert = ({ seccionNumber }) => {
                             {porcentajeCorrectas > 75 && seccionNumber === 7 && cursoLevel === 'Modulo-4' &&
                                 <>
                                     <h5 className="text-center"><small>Felicidades completaste el curso {cursoName} !!!</small></h5>
-                                    <button className="btn btn-danger" data-bs-dismiss="alert" aria-label="Close" onClick={() => window.location.reload()}>
+                                    <button className="btn btn-danger" data-bs-dismiss="alert" aria-label="Close" onClick={() => router.refresh()}>
                                         Cerrar anuncio.
                                     </button>
                                 </>
