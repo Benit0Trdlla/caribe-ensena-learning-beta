@@ -46,6 +46,7 @@ const VideoIntro = ({ children }) => {
             muted
             onEnded={handleVideoEnd}
             playsInline
+            preload='auto'
           >
             {/* Video por defecto (pantallas grandes) */}
             <source
@@ -56,7 +57,7 @@ const VideoIntro = ({ children }) => {
 
             {/* Video para móviles (pantallas pequeñas) */}
             <source
-              src="/org-mobile.mp4"
+              src="/org-mobile_1.mp4"
               type="video/mp4"
               media="(max-width: 820px)"
             />
