@@ -50,14 +50,14 @@ const VideoIntro = ({ children }) => {
           >
             {/* Video por defecto (pantallas grandes) */}
             <source
-              src="/org.mp4"
+              src="/VideoIntroSrc/org.mp4"
               type="video/mp4"
               media="(min-width: 821px)"
             />
 
             {/* Video para móviles (pantallas pequeñas) */}
             <source
-              src="/org-mobile_1.mp4"
+              src="/VideoIntroSrc/org-new_1.mp4"
               type="video/mp4"
               media="(max-width: 820px)"
             />
