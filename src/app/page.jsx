@@ -8,6 +8,7 @@ import {
   ServicioComponente,
   AliadosSection
 } from "./components/HomePage";
+import VideoIntro from "./components/VideoIntro/VideoIntro";
 
 import OneSignalInitClient from "./components/OneSignalInitClient";
 
@@ -15,17 +16,19 @@ export default function Home() {
 
   return (
     <main>
-      <Header imgUrl={"/Images/Logo/Header.png"} />
-      <LandingSection ImgUrl="/Images/Home.png" />
-      <ServicioComponente />
-      <PreguntasFrecuentesComponente />
-      <InstruccionesList />
-      <Donaciones />
-      <AliadosSection />
-      <Footer />
+      <VideoIntro >
+        <Header imgUrl={"/Images/Logo/Header.png"} />
+        <LandingSection ImgUrl="/Images/Home.png" />
+        <ServicioComponente />
+        <PreguntasFrecuentesComponente />
+        <InstruccionesList />
+        <Donaciones />
+        <AliadosSection />
+        <Footer />
 
-      {/* Inicializa OneSignal en el cliente */}
-      <OneSignalInitClient />
+        {/* Inicializa OneSignal en el cliente */}
+        <OneSignalInitClient />
+      </VideoIntro >
     </main>
   );
 }
