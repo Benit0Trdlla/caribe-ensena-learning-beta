@@ -57,7 +57,7 @@ const VideoIntro = ({ children }) => {
 
             {/* Video para móviles (pantallas pequeñas) */}
             <source
-              src="/VideoIntroSrc/org-new_1.mp4"
+              src="/VideoIntroSrc/org-new_2.mp4"
               type="video/mp4"
               media="(max-width: 820px)"
             />
