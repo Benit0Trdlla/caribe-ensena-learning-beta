@@ -28,7 +28,7 @@ export const Header = ({ ImgUrl, href, indexMeet }) => {
                         </button>
                         <div className='collapse navbar-collapse' id='navbarNav'>
                             <ul className="navbar-nav ms-auto gap-3">
-                                <Link href={`${href}/Progreso`} className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>
+                                <Link prefetch={true} href={`${href}/Progreso`} className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>
                                     <small>Mi Progreso</small>
                                 </Link>
                                 <Link href='/Cursos' className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}>

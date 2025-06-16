@@ -14,7 +14,7 @@ export const Header = ({ ImgUrl }) => {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto gap-3">
                                 <li className="nav-item">
-                                    <Link href="/Cursos" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }} ><small>Cursos</small></Link>
+                                    <Link prefetch={true} href="/Cursos" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }} ><small>Cursos</small></Link>
                                 </li>
                                 <li className="nav-item">
                                     <a href="/api/auth/logout" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Cerrar sesión</small></a>

@@ -27,7 +27,7 @@ export const Header = ({imgUrl}) => {
                                 <li className="nav-item">
                                     <a href="#aliados" className="nav-link text-black"><small> Aliados</small></a>
                                 </li>
-                                <Link href="/Ingresar" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Iniciar</small></Link>
+                                <Link prefetch={true} href="/Ingresar" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Iniciar</small></Link>
                             </ul>
                         </div>
                     </div>

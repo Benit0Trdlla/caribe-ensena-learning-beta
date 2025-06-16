@@ -8,7 +8,7 @@ export default function CursosCard({ CursosInfo }) {
             {CursosInfo.map((curso) => (
                 <div className="col-12 col-md-6 col-lg-4" key={curso.Id}>
                     <div className="curso-card">
-                        <Link href={curso.href}>
+                        <Link href={curso.href} prefetch={true}>
                             <Image src={curso.ImgUrl} alt={`Imagen de ${curso.Title}`} className="curso-logo img-fluid" width={180} height={180} />
                         </Link>
                         <div className="curso-title fs-6">

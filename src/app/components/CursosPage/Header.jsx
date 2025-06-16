@@ -16,7 +16,7 @@ export const Header = ({ ImgUrl }) =>{
                                     <Link href="/" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Home</small></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link href="/Cursos/Progreso" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }} ><small>Mi progreso</small></Link>
+                                    <Link prefetch={true} href="/Cursos/Progreso" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }} ><small>Mi progreso</small></Link>
                                 </li>
                                 <li className="nav-item">
                                     <a href="/api/auth/logout" className="btn btn-info" style={{ backgroundColor: "#beefff", borderColor: "#beefff" }}><small>Cerrar sesión</small></a>
