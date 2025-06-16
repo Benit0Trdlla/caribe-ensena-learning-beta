@@ -1,6 +1,10 @@
 import { calculateTotalPercentage } from '@/app/lib';
+import { savePuntaje } from '../savePuntaje';
+import { sumarPuntaje } from '../sumarPuntaje';
 
 export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex, correctAnswer, selectedValue) => {
+    savePuntaje();
+
     // Obtener las respuestas anteriores del localStorage
     const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
 
@@ -40,6 +44,7 @@ export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex,
         // Actualizar los contadores de preguntas correctas e incorrectas
         if (selectedValue === correctAnswer) {
             previousAnswers[cursoLevel]['questionsData'].mountCorrect++;
+            sumarPuntaje();
         } else {
             previousAnswers[cursoLevel]['questionsData'].mountIncorrect++;
         }

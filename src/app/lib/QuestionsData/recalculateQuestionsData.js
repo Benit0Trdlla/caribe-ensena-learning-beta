@@ -1,5 +1,5 @@
 import { recalculatePercentage, DeleteSeccion } from '@/app/lib';
-
+import { recalculatePuntaje } from '../recalculatePuntaje';
 
 export const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) => {
     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
@@ -17,6 +17,9 @@ export const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) =
             // Actualizar los contadores en base a los cambios de esta sección
             const updatedCorrect = mountCorrect - preguntasCorrectas; // Resta las correctas de la sección
             const updatedIncorrect = mountIncorrect - preguntasIncorrectas; // Resta las incorrectas de la sección
+
+            //Actulizar el puntaje guardado
+            recalculatePuntaje(preguntasCorrectas);
 
             // Evitar valores negativos
             previousAnswers[cursoLevel].questionsData = {
