@@ -1,5 +1,5 @@
 'use client';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context';
 
@@ -15,13 +15,26 @@ export const ContenidoTeorico = ({ maxHeight }) => {
     const endIndex = startIndex + 5;
     const selectedQuestions = data.slice(startIndex, endIndex);
 
+    const parseTeoria = (textToParse) => {
+        return textToParse
+            .replace(/\\n/g, '\n') // convierte \\n a \n reales
+            .split('\n\n')         // divide en párrafos
+            .map((parrafo, index) => (
+                <p key={index}>{parrafo.replace(/\n/g, ' ')}</p>
+            ));
+    }
+
     return (
         <>
             <p className="text-center fw-bold">{selectedQuestions && selectedQuestions.length > 0 && selectedQuestions[indexContext].Titulo}</p>
             <div className="overflow-auto" style={{ maxHeight: maxHeight ? maxHeight : "auto" }}>
-                <p>
-                    {selectedQuestions && selectedQuestions.length > 0 && selectedQuestions[indexContext].Teoria}
-                </p>
+                {selectedQuestions && selectedQuestions.length > 0 &&
+                    selectedQuestions[indexContext].Teoria && (
+                        <>
+                            {parseTeoria(selectedQuestions[indexContext].Teoria)}
+                        </>
+                    )
+                }
                 <style>
                     {`
                      /* Estilos para la barra de desplazamiento */
