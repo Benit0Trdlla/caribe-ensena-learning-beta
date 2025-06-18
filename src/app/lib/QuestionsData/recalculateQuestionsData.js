@@ -1,5 +1,4 @@
-import { recalculatePercentage, DeleteSeccion } from '@/app/lib';
-import { recalculatePuntaje } from '../recalculatePuntaje';
+import { recalculatePercentage, DeleteSeccion, recalculatePuntaje } from '@/app/lib';
 
 export const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) => {
     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {

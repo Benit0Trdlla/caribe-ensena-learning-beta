@@ -1,6 +1,4 @@
-import { calculateTotalPercentage } from '@/app/lib';
-import { savePuntaje } from '../savePuntaje';
-import { sumarPuntaje } from '../sumarPuntaje';
+import { calculateTotalPercentage, savePuntaje, sumarPuntaje } from '@/app/lib';
 
 export const saveLocalStorage = (cursoName, cursoLevel, seccionNumber, numIndex, correctAnswer, selectedValue) => {
     savePuntaje();

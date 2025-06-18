@@ -5,6 +5,8 @@ export * from "./Seccion";
 export * from "./LocalStorage";
 export * from "./LastModuloAndSeccion";
 export * from "./QuestionsData";
+export * from "./Puntaje";
+
 
 // export * from './readLocalStorage.js';
 // export * from './saveLocalStorage';
