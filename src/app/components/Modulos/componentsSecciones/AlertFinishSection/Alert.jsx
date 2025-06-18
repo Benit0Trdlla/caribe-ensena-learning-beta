@@ -3,8 +3,8 @@ import Link from "next/link"
 import { useRouter } from 'next/navigation'
 import { usePathData } from "@/app/hooks/usePathData"
 import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
-import { calculatePercentageCorrect, setLastModuloAndSeccion, recalculateQuestionsData } from "@/app/lib"
-import { useContext } from "react"
+import { calculatePercentageCorrect, setLastModuloAndSeccion, recalculateQuestionsData, readPercentage } from "@/app/lib"
+import { useContext, useMemo } from "react"
 
 export const Alert = ({ seccionNumber }) => {
     const router = useRouter()
@@ -13,6 +13,9 @@ export const Alert = ({ seccionNumber }) => {
 
     const porcentajeCorrectas = calculatePercentageCorrect(cursoName, cursoLevel, `Seccion-${seccionNumber}`);
 
+    const readPercentageMemo = useMemo(() => readPercentage(cursoName), [cursoName]);
+    const { isAllModulosCompleted } = readPercentageMemo;
+
     const recalculate = (cursoName, cursoLevel, seccionNumber) => {
         if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
             console.log(seccionNumber);
@@ -20,77 +23,6 @@ export const Alert = ({ seccionNumber }) => {
             setFinished(false)
         }
     }
-
-    // const DeleteSeccion = (cursoName, cursoLevel, seccionNumber) => {
-    //     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-    //         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
-    //         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
-    //             delete previousAnswers[cursoLevel][seccionNumber];
-    //             if (!previousAnswers[cursoLevel][seccionNumber]) {
-    //                 localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
-    //             }
-    //         }
-    //     }
-    //     setFinished(false)
-    // };
-
-    // const recalculatePercentage = (cursoName, cursoLevel, seccionNumber) => {
-    //     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-    //         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
-    //         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel]) {
-    //             const percentageCompleted = previousAnswers[cursoLevel].percentageCompleted;
-
-    //             // Calcular la cantidad de preguntas respondidas
-    //             const preguntasRespondidas = Object.keys(previousAnswers[cursoLevel][seccionNumber])
-    //                 .filter(key => key !== 'seccionCompleted' && key !== 'percentageCompleted').length;
-
-    //             // Calcular el porcentaje de preguntas respondidas
-    //             const percentageCompletedSeccion = ((preguntasRespondidas / TotalPreguntasSheets) * 100).toFixed(0);
-
-    //             // Calcular el nuevo porcentaje
-    //             const newPercentage = percentageCompleted - percentageCompletedSeccion;
-
-    //             // Actualizar el porcentaje
-    //             previousAnswers[cursoLevel].percentageCompleted = newPercentage;
-
-    //             localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
-    //         }
-    //     }
-    // }
-
-    // const recalculateQuestionsData = (cursoName, cursoLevel, seccionNumber) => {
-    //     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
-    //         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
-
-    //         if (typeof previousAnswers === 'object' && previousAnswers[cursoLevel] && previousAnswers[cursoLevel][seccionNumber]) {
-    //             const preguntas = Object.values(previousAnswers[cursoLevel][seccionNumber]);
-
-    //             const totalPreguntasSaved = preguntas.length - 1;
-    //             const preguntasCorrectas = preguntas.filter(pregunta => pregunta.isCorrect).length;
-    //             const preguntasIncorrectas = totalPreguntasSaved - preguntasCorrectas;
-
-    //             const { mountCorrect = 0, mountIncorrect = 0 } = previousAnswers[cursoLevel].questionsData || {};
-
-    //             // Actualizar los contadores en base a los cambios de esta sección
-    //             const updatedCorrect = mountCorrect - preguntasCorrectas; // Resta las correctas de la sección
-    //             const updatedIncorrect = mountIncorrect - preguntasIncorrectas; // Resta las incorrectas de la sección
-
-    //             // Evitar valores negativos
-    //             previousAnswers[cursoLevel].questionsData = {
-    //                 mountCorrect: Math.max(0, updatedCorrect),
-    //                 mountIncorrect: Math.max(0, updatedIncorrect)
-    //             };
-
-    //             localStorage.setItem(`${cursoName}`, JSON.stringify(previousAnswers));
-
-    //             // Recalcular el porcentaje
-    //             recalculatePercentage(cursoName, cursoLevel, seccionNumber)
-
-    //             // Luego de actualizar los contadores, elimina la sección
-    //             DeleteSeccion(cursoName, cursoLevel, seccionNumber);
-    //         }
-    //     }
-    // };
 
     return (
         <>
@@ -107,7 +39,15 @@ export const Alert = ({ seccionNumber }) => {
                                     Siguiente nivel
                                 </Link>
                             }
-                            {porcentajeCorrectas > 75 && seccionNumber === 7 && cursoLevel === 'Modulo-4' &&
+                            {porcentajeCorrectas > 75 && seccionNumber === 7 && cursoLevel === 'Modulo-4' && !isAllModulosCompleted &&
+                                <>
+                                    <h5 className="text-center"><small>Completaste la ultima seccion del curso {cursoName}, pero no completaste todos los modulos</small></h5>
+                                    <button className="btn btn-danger" data-bs-dismiss="alert" aria-label="Close" onClick={() => router.refresh()}>
+                                        Cerrar anuncio.
+                                    </button>
+                                </>
+                            }
+                            {porcentajeCorrectas > 75 && isAllModulosCompleted &&
                                 <>
                                     <h5 className="text-center"><small>Felicidades completaste el curso {cursoName} !!!</small></h5>
                                     <button className="btn btn-danger" data-bs-dismiss="alert" aria-label="Close" onClick={() => router.refresh()}>

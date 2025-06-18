@@ -1,6 +1,6 @@
 'use client'
-import { useRef, useEffect, useState } from 'react';
-import { isSeccionCompleted } from '../lib';
+import { useRef, useEffect, useState, useMemo } from 'react';
+import { readPercentage } from '../lib';
 import { usePathData } from '../hooks/usePathData';
 
 const Certificado = ({ nombre }) => {
@@ -10,8 +10,11 @@ const Certificado = ({ nombre }) => {
         setIsClient(true)
     }, [])
 
-    const { cursoName, cursoLevel } = usePathData();
-    const { Seccion7 } = isSeccionCompleted(cursoName, cursoLevel);
+    const { cursoName } = usePathData();
+
+    const readPercentageMemo = useMemo(() => readPercentage(cursoName), [cursoName]);
+    const { isAllModulosCompleted } = readPercentageMemo;
+
     const canvasRef = useRef(null);
 
     const generarYDescargarCertificado = () => {
@@ -43,7 +46,7 @@ const Certificado = ({ nombre }) => {
 
     return (
         <>
-            {Seccion7 && isClient &&
+            {isAllModulosCompleted && isClient &&
                 <div className="container text-center mt-5">
                     <canvas ref={canvasRef} width={800} height={600} style={{ display: 'none' }}></canvas>
                     <button className="btn btn-primary" onClick={generarYDescargarCertificado}>

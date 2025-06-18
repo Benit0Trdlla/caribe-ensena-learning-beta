@@ -13,7 +13,8 @@ export default function Botones({ BtnHref }) {
         setLastData(data);
     }, [BtnHref]);
 
-    const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage(BtnHref);
+    const readPercentageMemo = useMemo(() => readPercentage(BtnHref), [BtnHref]);
+    const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentageMemo;
 
     const modulos = [
         { id: 1, modulo: Modulo1, href: `/Modulo-1` },

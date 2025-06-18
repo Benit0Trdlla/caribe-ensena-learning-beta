@@ -2,7 +2,7 @@ export const readPercentage = (cursoName) => {
     if (typeof window !== 'undefined' && typeof window.localStorage !== 'undefined') {
 
         const previousAnswers = JSON.parse(localStorage.getItem(`${cursoName}`)) || {};
-        
+
         // Obtener los niveles existentes 
         const niveles = Object.keys(previousAnswers);
 
@@ -17,7 +17,10 @@ export const readPercentage = (cursoName) => {
         const Modulo3 = percentages['Modulo-3'] || 0;
         const Modulo4 = percentages['Modulo-4'] || 0;
 
-        return { Modulo1, Modulo2, Modulo3, Modulo4 };
+        // Verificar si todos los módulos fueron completados
+        const isAllModulosCompleted = [Modulo1, Modulo2, Modulo3, Modulo4].every(modulo => modulo >= 100);
+
+        return { Modulo1, Modulo2, Modulo3, Modulo4, isAllModulosCompleted };
     }
-    return {Modulo1: 0, Modulo2: 0, Modulo3: 0, Modulo4: 0};
+    return { Modulo1: 0, Modulo2: 0, Modulo3: 0, Modulo4: 0, isAllModulosCompleted: false };
 }
