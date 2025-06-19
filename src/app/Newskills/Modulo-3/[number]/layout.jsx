@@ -2,12 +2,13 @@
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
+import { useModuloStatus } from "@/app/hooks/useModuloStatus";
 
 export default function RootLayout({ children }) {
+    const modulo = useModuloStatus()
+
     const { setData } = useContext(DataActivitiesContext);
-
     const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vTWsIf52GWhXD-h5ON7tDY_WUpDugkeeonsBAwnBuqf8845Zva--cHmR42s0ociy2QmHGlfG66Dk43T/pub?output=csv");
-
     useEffect(() => {
         if (!isLoading && !error) {
             setData(preguntas);
@@ -17,6 +18,8 @@ export default function RootLayout({ children }) {
     if (error) {
         return <div>Error: {error.message}</div>;
     }
+
+    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 2 no fue completado, tienes {modulo}%</div>
 
     return (
         <>

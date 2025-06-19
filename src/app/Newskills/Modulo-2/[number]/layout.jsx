@@ -2,21 +2,37 @@
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
+import { useModuloStatus } from "@/app/hooks/useModuloStatus";
 
 export default function RootLayout({ children }) {
+    const modulo = useModuloStatus()
+    // const { cursoName } = usePathData()
+    // const { Modulo1 } = readPercentage(cursoName)
+
     const { setData } = useContext(DataActivitiesContext);
-
     const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vTEteHEdqfFY_AxF0eZfaZNzm-TsGgb4gyn4R-oqoYIsBCScudec08u3S0LPTo7iIl-F-QYqgA0Qyiw/pub?output=csv");
-
     useEffect(() => {
         if (!isLoading && !error) {
             setData(preguntas);
         }
     }, [preguntas, isLoading, error, setData]);
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
+    if (error) return <div>Error: {error.message}</div>;
+
+    if (isLoading) {
+        return (
+            <>
+                <h1 className="text-center mt-5">Espere un momento...</h1>
+                <div className="d-flex justify-content-center">
+                    <div className="spinner-border m-5 text-success" role="status">
+                        <span className="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+            </>
+        );
     }
+
+    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 1 no fue completado, tienes {modulo}%</div>
 
     return (
         <>
