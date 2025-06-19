@@ -15,8 +15,19 @@ export default function RootLayout({ children }) {
         }
     }, [preguntas, isLoading, error, setData]);
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
+    if (error) return <div>Error: {error.message}</div>;
+
+    if (isLoading) {
+        return (
+            <>
+                <h1 className="text-center mt-5">Espere un momento...</h1>
+                <div className="d-flex justify-content-center">
+                    <div className="spinner-border m-5 text-success" role="status">
+                        <span className="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+            </>
+        );
     }
 
     if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 2 no fue completado, tienes {modulo}%</div>
