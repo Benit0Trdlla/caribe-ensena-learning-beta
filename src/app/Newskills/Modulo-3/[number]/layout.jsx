@@ -3,6 +3,7 @@ import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 import { useModuloStatus } from "@/app/hooks/useModuloStatus";
+import Loading from "@/app/components/loading";
 
 export default function RootLayout({ children }) {
     const modulo = useModuloStatus()
@@ -17,18 +18,7 @@ export default function RootLayout({ children }) {
 
     if (error) return <div>Error: {error.message}</div>;
 
-    if (isLoading) {
-        return (
-            <>
-                <h1 className="text-center mt-5">Espere un momento...</h1>
-                <div className="d-flex justify-content-center">
-                    <div className="spinner-border m-5 text-success" role="status">
-                        <span className="visually-hidden">Cargando...</span>
-                    </div>
-                </div>
-            </>
-        );
-    }
+    if (isLoading) return <Loading styleSpinner="text-success" />
 
     if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 2 no fue completado, tienes {modulo}%</div>
 

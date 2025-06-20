@@ -6,6 +6,18 @@ import {
     Alert
 } from '../../../components/Modulos';
 
+export async function generateStaticParams() {
+    return [
+        { number: '1' },
+        { number: '2' },
+        { number: '3' },
+        { number: '4' },
+        { number: '5' },
+        { number: '6' },
+        { number: '7' },
+    ];
+}
+
 export function generateMetadata({ params }) {
     return {
         title: `Modulo 1 | Seccion ${params.number}`,

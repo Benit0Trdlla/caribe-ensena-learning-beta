@@ -14,7 +14,7 @@ export const Header = ({ ImgUrl, href, indexMeet }) => {
             <header id="header">
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
-                        <Image src={ImgUrl} width={60} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
+                        <Image src={ImgUrl} width={60} height={60} priority={true} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <div className='d-flex justify-content-center'>
                             {!isLoading &&
                                 <a href={`https://${data[IndexMeetData].URL}`} title={data[IndexMeetData].Title} className='btn border me-4 ms-lg-0 d-flex align-items-center gap-2' target="_blank" type='button'>
