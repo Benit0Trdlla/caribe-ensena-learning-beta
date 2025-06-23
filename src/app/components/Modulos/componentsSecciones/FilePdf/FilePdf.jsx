@@ -4,6 +4,7 @@ import styles from "./FilePdf.module.css"
 import { useParams } from 'next/navigation'
 import { useState, useContext } from 'react'
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context'
+import IframeGoogleDrive from "./IframeGoogleDrive"
 
 export const FilePdf = () => {
     const { data, indexContext } = useContext(DataActivitiesContext);
@@ -29,12 +30,13 @@ export const FilePdf = () => {
                     <div className={styles['skeleton-rect']}></div>
                 </div>
             )}
-            <iframe
+            {/* <iframe
                 onLoad={handleLoad}
                 src={selectedQuestions && selectedQuestions.length > 0 ? selectedQuestions[indexContext].PdfUrl : null}
                 style={{ display: loading ? 'none' : 'block', width: '100%', height: '400px' }}
                 className={styles['pdf-iframe']}
-            />
+            /> */}
+            <IframeGoogleDrive className={styles['pdf-iframe']} src={selectedQuestions && selectedQuestions.length > 0 ? selectedQuestions[indexContext].PdfUrl : null} onLoad={handleLoad} />
         </div>
     )
 }
