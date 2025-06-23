@@ -2,9 +2,6 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import {
     BookSection,
     VideoSection,
-    FinalExamSection,
-    Header,
-    Buttons,
     SectionNavigation,
     Alert
 } from '../../../components/Modulos';
