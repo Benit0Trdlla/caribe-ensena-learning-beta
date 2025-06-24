@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 import { useModuloStatus } from "@/app/hooks/useModuloStatus";
 import { useSeccionStatus } from "@/app/hooks/useSeccionStatus";
+// import { useSeccionStatus } from "@/app/hooks/useSeccionStatus";
 import Loading from "@/app/components/loading";
 
 export default function RootLayout({ children, params }) {
