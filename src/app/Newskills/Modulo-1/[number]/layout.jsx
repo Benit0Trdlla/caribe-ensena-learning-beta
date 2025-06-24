@@ -4,7 +4,11 @@ import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 import Loading from "@/app/components/loading";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
+    const numInt = parseInt(params.number)
+
+    if (numInt > 7) return <div className="text-center text-danger mt-5">404 Not Found</div>
+    
     const { setData } = useContext(DataActivitiesContext);
     const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vTglRUrrd5tgS3fAOxPLHasDa0nEG14n8WRGFSWemLNva0-oBm4lWq3_WYjb1hPaeoG2UzBsdxYEU6X/pub?output=csv");
     useEffect(() => {

@@ -5,9 +5,12 @@ import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 import { useModuloStatus } from "@/app/hooks/useModuloStatus";
 import Loading from "@/app/components/loading";
 
+export default function RootLayout({ children, params }) {
+    const numInt = parseInt(params.number)
 
-export default function RootLayout({ children }) {
-    const modulo = useModuloStatus()    
+    if (numInt > 7) return <div className="text-center text-danger mt-5">404 Not Found</div>
+
+    const modulo = useModuloStatus()
 
     const { setData } = useContext(DataActivitiesContext);
     const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vRf__dqMxc9LHzaF2cdiMpxrfPu2EcK-77dvg4Ri5G-yEjgPUZzl-Dg23B8_xMc1ROCUCIrQ46XHd0P/pub?output=csv");
@@ -18,10 +21,10 @@ export default function RootLayout({ children }) {
     }, [preguntas, isLoading, error, setData]);
 
     if (error) return <div>Error: {error.message}</div>;
-    
+
     if (isLoading) return <Loading styleSpinner="text-success" />
 
-    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 3 no fue completado, tienes {modulo}%</div>
+    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 3 no fue completado</div>
 
     return (
         <>

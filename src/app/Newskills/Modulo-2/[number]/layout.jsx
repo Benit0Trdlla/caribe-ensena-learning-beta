@@ -3,9 +3,15 @@ import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 import { useModuloStatus } from "@/app/hooks/useModuloStatus";
+import { useSeccionStatus } from "@/app/hooks/useSeccionStatus";
 import Loading from "@/app/components/loading";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
+    const numInt = parseInt(params.number)
+
+    if (numInt > 7) return <div className="text-center text-danger mt-5">404 Not Found</div>
+
+
     const modulo = useModuloStatus()
 
     const { setData } = useContext(DataActivitiesContext);
@@ -20,7 +26,7 @@ export default function RootLayout({ children }) {
 
     if (isLoading) return <Loading styleSpinner="text-success" />
 
-    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 1 no fue completado, tienes {modulo}%</div>
+    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 1 no fue completado</div>
 
     return (
         <>
