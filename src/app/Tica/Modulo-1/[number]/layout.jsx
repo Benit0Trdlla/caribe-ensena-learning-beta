@@ -2,12 +2,15 @@
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
+import { useSeccionStatus } from "@/app/hooks/useSeccionStatus";
 import Loading from "@/app/components/loading";
 
 export default function RootLayout({ children, params }) {
     const numInt = parseInt(params.number)
 
     if (numInt > 7) return <div className="text-center text-danger mt-5">404 Not Found</div>
+
+    const seccionCompleted = useSeccionStatus(numInt);
 
     const { setData } = useContext(DataActivitiesContext);
     const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vQRP3Ln2LI-0VSvhbwPDoHq7q7Q-0K24z8KjL0RO-BTYff-8oe2oa87Q-Vi6NkEnE2BCnXTD-zoVeLY/pub?output=csv");
@@ -18,9 +21,11 @@ export default function RootLayout({ children, params }) {
     }, [preguntas, isLoading, error, setData]);
 
     if (error) return <div>Error: {error.message}</div>;
-    
-    if (isLoading) return <Loading styleSpinner="text-primary"/>
 
+    if (isLoading) return <Loading styleSpinner="text-primary" />
+
+    if (!seccionCompleted && numInt !== 1) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">La Seccion {numInt - 1} no fue completada</div>
+    
     return (
         <>
             {children}
