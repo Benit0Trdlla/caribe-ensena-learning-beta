@@ -1,6 +1,9 @@
 ## Caribe Enseña Learning
 
-Plataforma e-learning 'Caribe Enseña Learning', diseñada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región. Esta plataforma es accesible desde dispositivos móviles y computadoras, facilitando el acceso a contenido educativo en cualquier momento y lugar. Los recursos que ofrece incluyen lecciones multimedia interactivas, guías de estudio personalizadas, evaluaciones para medir el progreso de los estudiantes y una biblioteca digital con una amplia colección de materiales académicos. Con esta herramienta, potenciamos el aprendizaje en entornos formales y no formales.
+Caribe Enseña Learning es una plataforma e-learning diseñada para ofrecer cursos, talleres y diplomados alineados con las necesidades educativas de la región.
+Accesible desde dispositivos móviles y computadoras, permite a estudiantes acceder a contenido educativo en cualquier momento y lugar.
+Ofrece lecciones multimedia interactivas, guías de estudio personalizadas, evaluaciones para medir el progreso y una biblioteca digital con amplio material académico.
+La plataforma busca potenciar el aprendizaje tanto en entornos formales como no formales, promoviendo una experiencia educativa inclusiva, flexible y de calidad.
 
 Tecnologías utilizadas: Next.js, React, Bootstrap, CSS, HTML, JavaScript.
 
