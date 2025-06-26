@@ -1,13 +1,9 @@
 'use client'
-import { useState, useEffect } from 'react'
 import { ProgressBar } from "./ProgressBar"
+import { useHidratationSolution } from '@/app/hooks/useHidratationSolution'
 
 export const Modal = ({ moduloPercentage, showInfo, onClose, total, inCorrect, correct }) => {
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
+    const isClient = useHidratationSolution();
     return (
         <>
             {showInfo && isClient &&

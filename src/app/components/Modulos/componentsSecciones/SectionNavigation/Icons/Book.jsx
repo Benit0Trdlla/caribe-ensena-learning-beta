@@ -1,12 +1,9 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useHidratationSolution } from '@/app/hooks/useHidratationSolution'
 import Link from "next/link"
 
 export const Book = ({ href, isCompleted }) => {
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
+    const isClient = useHidratationSolution();
     return (
         <>
             <Link href={isClient ? href : ""}>

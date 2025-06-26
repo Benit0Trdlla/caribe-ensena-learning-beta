@@ -3,12 +3,12 @@ import BtnLocked from "./BtnLocked"
 import BtnUnlocked from "./BtnUnlocked"
 import { useState, useEffect, useMemo } from "react"
 import { readPercentage, readLastModuloAndSeccion } from "@/app/lib"
+import { useHidratationSolution } from "@/app/hooks/useHidratationSolution"
 export default function Botones({ BtnHref }) {
     const [lastData, setLastData] = useState({ lastModuloAndSeccion: 'Modulo-1/1', lastModulo: 'Modulo-1', });
 
-    const [isClient, setIsClient] = useState(false);
+    const isClient = useHidratationSolution();
     useEffect(() => {
-        setIsClient(true);
         const data = readLastModuloAndSeccion(BtnHref);
         setLastData(data);
     }, [BtnHref]);

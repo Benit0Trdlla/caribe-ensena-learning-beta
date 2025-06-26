@@ -2,13 +2,11 @@
 import { useRef, useEffect, useState, useMemo } from 'react';
 import { readPercentage } from '../lib';
 import { usePathData } from '../hooks/usePathData';
+import { useHidratationSolution } from '../hooks/useHidratationSolution';
 
 const Certificado = ({ nombre }) => {
     // Hidration problem, solution
-    const [isClient, setIsClient] = useState(false)
-    useEffect(() => {
-        setIsClient(true)
-    }, [])
+    const isClient = useHidratationSolution()
 
     const { cursoName } = usePathData();
 

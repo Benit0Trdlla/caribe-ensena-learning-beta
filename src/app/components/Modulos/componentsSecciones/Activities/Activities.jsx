@@ -5,15 +5,13 @@ import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { FinishSectionContext } from '@/app/contexts/FinishSection-context';
 import { saveLocalStorage, readLocalStorage, updateSeccionCompleted } from '@/app/lib';
 import { usePathData } from '@/app/hooks/usePathData';
+import { useHidratationSolution } from '@/app/hooks/useHidratationSolution';
 import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
 
 export const Activities = () => {
     // Hidration problem, solution
-    const [isClient, setIsClient] = useState(false)
-    useEffect(() => {
-        setIsClient(true)
-    }, [])
+    const isClient = useHidratationSolution()
 
     const { data, indexContext, setIndexContext } = useContext(DataActivitiesContext);
     const { setFinished } = useContext(FinishSectionContext);
