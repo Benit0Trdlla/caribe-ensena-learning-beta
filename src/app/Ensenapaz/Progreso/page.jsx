@@ -27,7 +27,7 @@ export default function ProgresoEnsenapazPage() {
         { number: 'Modulo-3', percentage: Modulo3, totalQuestions: 35 },
         { number: 'Modulo-4', percentage: Modulo4, totalQuestions: 35 },
     ];
-
+    // throw new Error('Error en la petición 2')
     return (
         <>
             <h1 className='text-center mt-3'>Este el progreso del curso Ensenapaz</h1>

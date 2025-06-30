@@ -7,6 +7,7 @@ export const metadata = {
 }
 
 function EnsenapazPage() {
+    throw new Error("Error en la petición");
     return (
         <>
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} /> */}
