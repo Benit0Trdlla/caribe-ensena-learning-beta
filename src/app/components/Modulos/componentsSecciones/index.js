@@ -5,6 +5,7 @@ export * from "./SectionNavigation/SectionNavigation";
 export * from "./VideoIframe/VideoIframe";
 export * from "./Point/Point";
 export * from "./AlertFinishSection/Alert";
+export * from "./AddImagen/AddImagen";
 
 export * from "./Header";
 

@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context';
+import { AddImagen } from '..';
 
 export const ContenidoTeorico = ({ maxHeight }) => {
     const { data, indexContext } = useContext(DataActivitiesContext);
@@ -32,6 +33,9 @@ export const ContenidoTeorico = ({ maxHeight }) => {
                     selectedQuestions[indexContext].Teoria && (
                         <>
                             {parseTeoria(selectedQuestions[indexContext].Teoria)}
+                            {selectedQuestions[indexContext].Imagen.split(',').map((imagen, index) => (
+                                <AddImagen key={index} url={imagen.trim()} alt={selectedQuestions[indexContext].Titulo} />
+                            ))}
                         </>
                     )
                 }
