@@ -33,9 +33,11 @@ export const ContenidoTeorico = ({ maxHeight }) => {
                     selectedQuestions[indexContext].Teoria && (
                         <>
                             {parseTeoria(selectedQuestions[indexContext].Teoria)}
-                            {selectedQuestions[indexContext].Imagen.split(',').map((imagen, index) => (
-                                <AddImagen key={index} url={imagen.trim()} alt={selectedQuestions[indexContext].Titulo} />
-                            ))}
+                            <div className='row container'>
+                                {selectedQuestions[indexContext].Imagen.split(',').map((imagen, index) => (
+                                    <AddImagen key={index} url={imagen.trim()} alt={selectedQuestions[indexContext].Titulo} />
+                                ))}
+                            </div>
                         </>
                     )
                 }
