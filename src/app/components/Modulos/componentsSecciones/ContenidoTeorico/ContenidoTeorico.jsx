@@ -33,11 +33,7 @@ export const ContenidoTeorico = ({ maxHeight }) => {
                     selectedQuestions[indexContext].Teoria && (
                         <>
                             {parseTeoria(selectedQuestions[indexContext].Teoria)}
-                            <div className='row container'>
-                                {selectedQuestions[indexContext].Imagen.split(',').map((imagen, index) => (
-                                    <AddImagen key={index} url={imagen.trim()} alt={selectedQuestions[indexContext].Titulo} />
-                                ))}
-                            </div>
+                            {selectedQuestions[indexContext].Imagen && <AddImagen dataUrl={selectedQuestions[indexContext].Imagen} alt={selectedQuestions[indexContext].Titulo} />}
                             {selectedQuestions[indexContext].Audio && <Audios url={selectedQuestions[indexContext].Audio} />}
                         </>
                     )
