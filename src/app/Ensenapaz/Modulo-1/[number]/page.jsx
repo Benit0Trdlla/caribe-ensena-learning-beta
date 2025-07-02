@@ -13,7 +13,7 @@ export function generateMetadata({ params }) {
 }
 
 function EnsenapazModuloPage({ params }) {
-    throw new Error('Error en la petición 23');
+    // throw new Error('Error en la petición 23');
     
     const number = params.number
     const numInt = parseInt(number)

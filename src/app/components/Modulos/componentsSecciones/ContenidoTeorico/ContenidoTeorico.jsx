@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context';
-import { AddImagen } from '..';
+import { AddImagen, Audios } from '..';
 
 export const ContenidoTeorico = ({ maxHeight }) => {
     const { data, indexContext } = useContext(DataActivitiesContext);
@@ -38,6 +38,7 @@ export const ContenidoTeorico = ({ maxHeight }) => {
                                     <AddImagen key={index} url={imagen.trim()} alt={selectedQuestions[indexContext].Titulo} />
                                 ))}
                             </div>
+                            {selectedQuestions[indexContext].Audio && <Audios url={selectedQuestions[indexContext].Audio} />}
                         </>
                     )
                 }
