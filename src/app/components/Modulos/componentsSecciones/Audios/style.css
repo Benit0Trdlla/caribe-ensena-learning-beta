@@ -1,0 +1,11 @@
+.dimensions {
+    width: 416px;
+    height: 55px;
+}
+
+@media (max-width: 576px) {
+    .dimensions-xs {
+        width: 416px;
+        height: 140px;
+    }
+}
