@@ -12,27 +12,25 @@ export default function Areas() {
                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                         <div className="accordion-body">
                             <Secciones title="Ciencias sociales y humanas">
-                                <li><a className="dropdown-item" href="#">Enseñapaz</a></li>
-                                <li><a className="dropdown-item" href="#">Derechos Humanos </a></li>
+                                <li className="dropdown-item">English Basic 1</li>
+                                <li className="dropdown-item">English Basic 2</li>
+                                <li className="dropdown-item">English Intermediate 1</li>
+                                <li className="dropdown-item">English Intermediate 2</li>
                             </Secciones>
                             <Secciones title="Tecnología">
-                                <li><a className="dropdown-item" href="#">Robótica</a></li>
-                                <li><a className="dropdown-item" href="#">Access to training</a></li>
+                                <li className="dropdown-item">Tica</li>
+                                <li className="dropdown-item">Tica 2</li>
                             </Secciones>
-                            <Secciones title="Artes">
+                            {/* <Secciones title="Artes">
                                 <li><a className="dropdown-item" href="#">Action</a></li>
                                 <li><a className="dropdown-item" href="#">Another action</a></li>
                                 <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </Secciones>
+                            </Secciones> */}
                             <Secciones title="Ciencias ambientales">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                <li className="dropdown-item">New Skills</li>
                             </Secciones>
                             <Secciones title="Ciencias exactas y educación financiera">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                <li className="dropdown-item">Poket</li>
                             </Secciones>
                         </div>
                     </div>

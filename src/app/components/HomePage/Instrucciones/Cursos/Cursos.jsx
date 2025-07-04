@@ -17,6 +17,10 @@ export default function Cursos() {
                             { Id: "ModalTwo", Title: "Tica 2" },
                             { Id: "ModalThree", Title: "New skills" },
                             { Id: "ModalFour", Title: "Poket" },
+                            { Id: "ModalFive", Title: "English Basic 1" },
+                            { Id: "ModalSix", Title: "English Basic 2" },
+                            { Id: "ModalSeven", Title: "English Intermediate 1" },
+                            { Id: "ModalEight", Title: "English Intermediate 2" },
                         ]} />
                         <ModalCursos id="ModalOne" title="Tica">
                             <p>
@@ -78,6 +82,88 @@ export default function Cursos() {
                                 <li><strong>Materiales Didácticos:</strong> Incluyen guías ilustradas, hojas de trabajo y juegos de mesa imprimibles.</li>
                                 <li><strong>Simulaciones y Juegos:</strong> Herramientas interactivas como "escape rooms financieros" y "mercados de valores virtuales".</li>
                                 <li><strong>Encuentros Presenciales:</strong> Espacios diseñados para aplicar conocimientos en actividades prácticas y competencias amistosas. También se incluyen dinámicas como "El Gran Reto del Ahorro", "Bolsa de Valores en Vivo", "Construye tu Score de Crédito" y el juego “Poket” en tiempo real, cada una con enfoques interactivos y lúdicos.</li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalFive" title="English Basic 1">
+                            <p>
+                                Diseñado para personas que inician su aprendizaje del idioma y desean comunicarse en situaciones cotidianas. El curso está organizado en 4 módulos progresivos, cubriendo desde lo más básico hasta conversaciones simples sobre experiencias personales y viajes.
+                                Es un curso 90% autónomo, pensado para que puedas estudiar a tu ritmo, con actividades interactivas y materiales variados. Además, tendrás encuentros virtuales con profesores para practicar speaking, resolver dudas y afianzar tu aprendizaje.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p>
+                                <strong>Recursos del Curso</strong>
+                            </p>
+                            <ul>
+                                <li>Lecturas breves: diálogos, descripciones y mensajes reales.</li>
+                                <li>Audios y videos: pronunciación, listening y contextos reales.</li>
+                                <li>Actividades interactivas:
+                                    <ul>
+                                        <li>Preguntas de opción múltiple (MCQ).</li>
+                                        <li>Matching presentado en formato MCQ.</li>
+                                        <li>Identificación de imágenes correctas.</li>
+                                        <li>Ordenar frases seleccionando opciones.</li>
+                                        <li>Detectar errores en frases (error spotting MCQ).</li>
+                                        <li>Mini conversaciones con opciones de respuesta.</li>
+                                    </ul>
+                                </li>
+                                <li>Role-plays virtuales en los encuentros con profesores para practicar speaking y fluidez.</li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalSix" title="English Basic 2">
+                            <p>
+                                Continuación del nivel A1 y está diseñado para ayudarte a comunicarte con mayor confianza y seguridad en inglés en situaciones cotidianas, viajes y conversaciones sobre experiencias personales.
+                                A lo largo de 4 módulos, aprenderás nueva gramática, ampliarás tu vocabulario y mejorarás tus habilidades para hablar, comprender, leer y escribir. Tendrás acceso a recursos interactivos y encuentros virtuales con profesores para practicar lo aprendido y resolver dudas.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p>
+                                <strong>Recursos del Curso</strong>
+                            </p>
+                            <ul>
+                                <li>Audios y videos reales.</li>
+                                <li>Lecturas cortas y textos prácticos.</li>
+                                <li>Ejercicios interactivos.</li>
+                                <li>Práctica de pronunciación.</li>
+                                <li>Role-plays virtuales.</li>
+                                <li>Material de autoevaluación.</li>
+                                <li>Acceso online permanente.</li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalSeven" title="English Intermediate 1">
+                            <p>
+                                diseñado para hablantes de español y busca que los estudiantes hablen inglés con confianza y seguridad. La metodología se basa en el principio:
+                                <br /><strong>Grammar + Vocabulary + Pronunciation = Confident Speaking</strong><br />
+                                Cada lección integra estos tres pilares, empleando situaciones reales, humor e historias atractivas para facilitar el aprendizaje y mantener la motivación.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p>
+                                <strong>📚 Recursos del Curso</strong>
+                            </p>
+                            <ul>
+                                <li>Students Book (Libro del Estudiante).</li>
+                                <li>Workbook (Libro de Ejercicios).</li>
+                                <li>Practical English.</li>
+                                <li>Online Practice.</li>
+                                <li>Teachers Guide y Oxford Premium Resources.</li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalEight" title="English Intermediate 2">
+                            <p>
+                                Diseñado para desarrollar fluidez, confianza y precisión en la comunicación oral y escrita. Se basa en un enfoque comunicativo que integra gramática, vocabulario y pronunciación, utilizando temas actuales y situaciones de la vida real para mantener la motivación de los estudiantes. Cada módulo permite avanzar en complejidad, consolidar estructuras previas y prepararse para contextos académicos, profesionales o personales en el uso del inglés.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p>
+                                <strong>📚 Recursos del Curso</strong>
+                            </p>
+                            <ul>
+                                <li>Students Book & Workbook (English File B2.2).</li>
+                                <li>Grammar Banks (reglas y ejercicios claros).</li>
+                                <li>Online Practice (ejercicios interactivos, audios, vídeos).</li>
+                                <li>Sound Bank (videos para practicar pronunciación).</li>
+                                <li>Practical English (videos y situaciones cotidianas).</li>
+                                <li>Revise & Check (revisión y autoevaluación).</li>
+                                <li>Teachers Guide (actividades extra y fichas fotocopiables).</li>
+                                <li>Use of English B2 (para refuerzo de gramática y vocabulario).</li>
+                                <li>Videos auténticos (entrevistas, conversaciones reales).</li>
                             </ul>
                         </ModalCursos>
                     </div>
