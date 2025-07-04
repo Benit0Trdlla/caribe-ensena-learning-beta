@@ -6,7 +6,11 @@ export const Cursos = () => {
         // { Id: 3, Title: 'Enseñapaz', ImgUrl: '/Images/Logo_Cursos/Ensenapaz.png', href: 'Ensenapaz' },
         { Id: 4, Title: 'New skills', ImgUrl: '/Images/Logo_Cursos/NewSkills.png', href: 'Newskills' },
         { Id: 5, Title: 'Poket', ImgUrl: '/Images/Logo_Cursos/Poket.png', href: 'Poket' },
-        // { Id: 5, Title: 'Educación Financiera', ImgUrl: '/Images/Donaciones.png', href: '/EducacionFinanciera' },
+        { Id: 6, Title: 'English Basic 1', ImgUrl: '/Images/Logo_Cursos/EnglishBasic1.png', href: 'EnglishBasic1' },
+        { Id: 7, Title: 'English Basic 2', ImgUrl: '/Images/Logo_Cursos/EnglishBasic2.png', href: 'EnglishBasic2' },
+        { Id: 8, Title: 'English Intermediate 1', ImgUrl: '/Images/Logo_Cursos/EnglishIntermediate1.png', href: 'EnglishIntermediate1' },
+        { Id: 9, Title: 'English Intermediate 2', ImgUrl: '/Images/Logo_Cursos/EnglishIntermediate2.png', href: 'EnglishIntermediate2' },
+
     ]
     return (
         <div className="container">
