@@ -19,7 +19,7 @@ function ProgresoPage() {
                     <CardCourses cursoName={'Tica2'} ImgUrl={'Tica2'} />
                     {/* <CardCourses cursoName={'Ensenapaz'} ImgUrl={'Ensenapaz'} /> */}
                     <CardCourses cursoName={'New skills'} ImgUrl={'NewSkills'} />
-                    <CardCourses cursoName={'Poket '} ImgUrl={'Poket'} />
+                    <CardCourses cursoName={'Poket'} ImgUrl={'Poket'} />
                     <CardCourses cursoName={'EnglishBasic1'} ImgUrl={'EnglishBasic1'} />
                     <CardCourses cursoName={'EnglishBasic2'} ImgUrl={'EnglishBasic2'} />
                     <CardCourses cursoName={'EnglishIntermediate1'} ImgUrl={'EnglishIntermediate1'} />
