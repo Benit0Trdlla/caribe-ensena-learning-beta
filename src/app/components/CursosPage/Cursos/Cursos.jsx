@@ -10,6 +10,7 @@ export const Cursos = () => {
         { Id: 7, Title: 'English Basic 2', ImgUrl: '/Images/Logo_Cursos/EnglishBasic2.png', href: 'EnglishBasic2' },
         { Id: 8, Title: 'English Intermediate 1', ImgUrl: '/Images/Logo_Cursos/EnglishIntermediate1.png', href: 'EnglishIntermediate1' },
         { Id: 9, Title: 'English Intermediate 2', ImgUrl: '/Images/Logo_Cursos/EnglishIntermediate2.png', href: 'EnglishIntermediate2' },
+        { Id: 10, Title: 'Python Project Pro', ImgUrl: '/Images/Logo_Cursos/PythonProjectPro.png', href: 'PythonProjectPro' },
 
     ]
     return (

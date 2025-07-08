@@ -24,6 +24,7 @@ function ProgresoPage() {
                     <CardCourses cursoName={'EnglishBasic2'} ImgUrl={'EnglishBasic2'} />
                     <CardCourses cursoName={'EnglishIntermediate1'} ImgUrl={'EnglishIntermediate1'} />
                     <CardCourses cursoName={'EnglishIntermediate2'} ImgUrl={'EnglishIntermediate2'} />
+                    <CardCourses cursoName={'PythonProjectPro'} ImgUrl={'PythonProjectPro'} />
                 </div>
             </div>
         </>

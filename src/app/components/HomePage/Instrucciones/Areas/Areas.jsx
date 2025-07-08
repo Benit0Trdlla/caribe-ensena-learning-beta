@@ -20,6 +20,7 @@ export default function Areas() {
                             <Secciones title="Tecnología">
                                 <li className="dropdown-item">Tica</li>
                                 <li className="dropdown-item">Tica 2</li>
+                                <li className="dropdown-item">Python Project Pro</li>
                             </Secciones>
                             {/* <Secciones title="Artes">
                                 <li><a className="dropdown-item" href="#">Action</a></li>

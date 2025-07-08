@@ -21,6 +21,7 @@ export default function Cursos() {
                             { Id: "ModalSix", Title: "English Basic 2" },
                             { Id: "ModalSeven", Title: "English Intermediate 1" },
                             { Id: "ModalEight", Title: "English Intermediate 2" },
+                            { Id: "ModalNine", Title: "Python Project Pro" },
                         ]} />
                         <ModalCursos id="ModalOne" title="Tica">
                             <p>
@@ -165,6 +166,23 @@ export default function Cursos() {
                                 <li>Use of English B2 (para refuerzo de gramática y vocabulario).</li>
                                 <li>Videos auténticos (entrevistas, conversaciones reales).</li>
                             </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalNine" title="Python Project Pro">
+                            <p>Este curso ha sido diseñado para que aprendas a programar desde cero en Python, uno de los lenguajes más poderosos y demandados en el mundo tecnológico.</p>
+                            <p>Aquí no solo aprenderás teoría: crearás proyectos reales que te darán confianza y habilidades prácticas para tu camino como programador.</p>
+                            <p>🛠<strong>Recursos del curso</strong></p>
+                            <p>✅ Videos prácticos paso a paso.</p>
+                            <p>✅ Materiales de lectura (PDF/HTML) con ejemplos y ejercicios.</p>
+                            <p>✅ Ejercicios prácticos en cada módulo.</p>
+                            <p>✅ Proyectos guiados para reforzar tu aprendizaje.</p>
+                            <p>✅ Libros recomendados:
+                                <ul>
+                                    <li>Ultimate Python: De cero a experto</li>
+                                    <li>Python para todos</li>
+                                    <li>Python para principiantes</li>
+                                    <li>Learn Python the Hard Way</li>
+                                </ul>
+                            </p>
                         </ModalCursos>
                     </div>
                 </div>
