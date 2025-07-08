@@ -13,7 +13,7 @@ export default function RootLayout({ children, params }) {
     const seccionCompleted = useSeccionStatus(numInt);
     
     const { setData } = useContext(DataActivitiesContext);
-    const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vQRP3Ln2LI-0VSvhbwPDoHq7q7Q-0K24z8KjL0RO-BTYff-8oe2oa87Q-Vi6NkEnE2BCnXTD-zoVeLY/pub?output=csv");
+    const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vSdzuN8E43UDl8hG9g4MMiEh797V7Xw7-t_xvGhLiPB2E6JQ40vMxVk5sR6c7GudSXu0_5zZ7NuftYe/pub?output=csv");
     useEffect(() => {
         if (!isLoading && !error) {
             setData(preguntas);

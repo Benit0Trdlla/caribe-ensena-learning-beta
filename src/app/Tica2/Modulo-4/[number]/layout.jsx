@@ -16,7 +16,7 @@ export default function RootLayout({ children, params }) {
     const modulo = useModuloStatus()
 
     const { setData } = useContext(DataActivitiesContext);
-    const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vQRP3Ln2LI-0VSvhbwPDoHq7q7Q-0K24z8KjL0RO-BTYff-8oe2oa87Q-Vi6NkEnE2BCnXTD-zoVeLY/pub?output=csv");
+    const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vQuLT0Yzk8gkWAmV258LmzAqkyc8frGOGfe-3uEkwfw31heEkh1AU4FKLSh0rbFJx6GwuAT3wvSL-Lz/pub?output=csv");
     useEffect(() => {
         if (!isLoading && !error) {
             setData(preguntas);
@@ -27,7 +27,7 @@ export default function RootLayout({ children, params }) {
 
     if (isLoading) return <Loading styleSpinner="text-primary" />
 
-    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 3 no fue completado</div>
+    // if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 3 no fue completado</div>
 
     if (!seccionCompleted && numInt !== 1) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">La Seccion {numInt - 1} no fue completada</div>
 
