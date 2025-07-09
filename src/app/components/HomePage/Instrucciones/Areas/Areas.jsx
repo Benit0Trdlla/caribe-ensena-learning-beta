@@ -22,11 +22,6 @@ export default function Areas() {
                                 <li className="dropdown-item">Tica 2</li>
                                 <li className="dropdown-item">Python Project Pro</li>
                             </Secciones>
-                            {/* <Secciones title="Artes">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </Secciones> */}
                             <Secciones title="Ciencias ambientales">
                                 <li className="dropdown-item">New Skills</li>
                             </Secciones>
