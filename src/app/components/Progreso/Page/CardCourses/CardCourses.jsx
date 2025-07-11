@@ -5,10 +5,8 @@ import { useState } from "react"
 import { readPercentage } from "@/app/lib"
 import { ProgressBar } from "../../ProgressBar"
 
-export const CardCourses = ({ cursoName, ImgUrl }) => {
+export const CardCourses = ({ cursoName, ImgUrl, title }) => {
     const [hover, setHover] = useState(false)
-
-    if (cursoName === "New skills") cursoName = "Newskills"
 
     const { Modulo1, Modulo2, Modulo3, Modulo4 } = readPercentage(cursoName);
 
@@ -26,7 +24,7 @@ export const CardCourses = ({ cursoName, ImgUrl }) => {
                     <img src={`/Images/Logo_Cursos/${ImgUrl}.png`} width={"150px"} height={"150px"} style={{ objectFit: "cover" }} alt="" />
                 </Link>
 
-                <p className="fs-5 fw-bold">{cursoName}</p>
+                <p className="fs-5 fw-bold">{title}</p>
                 <p onClick={() => setHover(!hover)} style={{ cursor: "pointer" }}>Conoce el progreso</p>
 
                 <div className="card__content">

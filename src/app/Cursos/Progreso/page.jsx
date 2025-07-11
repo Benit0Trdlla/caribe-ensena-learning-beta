@@ -15,16 +15,16 @@ function ProgresoPage() {
                 <ShowPuntaje/>
 
                 <div className='d-flex flex-wrap flex-lg-row justify-content-center align-items-center mt-0 mt-lg-0 mt-md-0 mb-5'>
-                    <CardCourses cursoName={'Tica'} ImgUrl={'Tica'} />
-                    <CardCourses cursoName={'Tica2'} ImgUrl={'Tica2'} />
+                    <CardCourses title={'Tica'} cursoName={'Tica'} ImgUrl={'Tica'} />
+                    <CardCourses title={'Tica 2'} cursoName={'Tica2'} ImgUrl={'Tica2'} />
                     {/* <CardCourses cursoName={'Ensenapaz'} ImgUrl={'Ensenapaz'} /> */}
-                    <CardCourses cursoName={'New skills'} ImgUrl={'NewSkills'} />
-                    <CardCourses cursoName={'Poket'} ImgUrl={'Poket'} />
-                    <CardCourses cursoName={'EnglishBasic1'} ImgUrl={'EnglishBasic1'} />
-                    <CardCourses cursoName={'EnglishBasic2'} ImgUrl={'EnglishBasic2'} />
-                    <CardCourses cursoName={'EnglishIntermediate1'} ImgUrl={'EnglishIntermediate1'} />
-                    <CardCourses cursoName={'EnglishIntermediate2'} ImgUrl={'EnglishIntermediate2'} />
-                    <CardCourses cursoName={'PythonProjectPro'} ImgUrl={'PythonProjectPro'} />
+                    <CardCourses title={'New skills'} cursoName={'Newskills'} ImgUrl={'NewSkills'} />
+                    <CardCourses title={'Poket'} cursoName={'Poket'} ImgUrl={'Poket'} />
+                    <CardCourses title={'English Basic 1'} cursoName={'EnglishBasic1'} ImgUrl={'EnglishBasic1'} />
+                    <CardCourses title={'English Basic 2'} cursoName={'EnglishBasic2'} ImgUrl={'EnglishBasic2'} />
+                    <CardCourses title={'English Intermediate 1'} cursoName={'EnglishIntermediate1'} ImgUrl={'EnglishIntermediate1'} />
+                    <CardCourses title={'English Intermediate 2'} cursoName={'EnglishIntermediate2'} ImgUrl={'EnglishIntermediate2'} />
+                    <CardCourses title={'Python Project Pro'} cursoName={'PythonProjectPro'} ImgUrl={'PythonProjectPro'} />
                 </div>
             </div>
         </>
