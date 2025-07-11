@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
     return (
         <DataActivitiesContextProvider>
             <FinishSectionContextProvider>
-                <Header ImgUrl={"/Images/Logo_Cursos/PythonProjectPro.png"} href={"/PythonProjectPro"} indexMeet={0} />
+                <Header ImgUrl={"/Images/Logo_Cursos/PythonProjectPro.png"} href={"/PythonProjectPro"} indexMeet={9} />
                 {children}
             </FinishSectionContextProvider>
         </DataActivitiesContextProvider>
