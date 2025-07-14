@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+// import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { AccordionModulos, Header, LeftColumn, RightColumn } from "../components/ExplicacionCursos";
 
 export const metadata = {
@@ -6,7 +6,7 @@ export const metadata = {
     description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
 }
 
-function NewskillsPage() {
+export default function NewskillsPage() {
     return (
         <>
             {/* <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href={"/Cursos"} indexMeet={1}/> */}
@@ -72,6 +72,6 @@ function NewskillsPage() {
     )
 }
 
-export default withPageAuthRequired(NewskillsPage, {
-    returnTo: '/Newskills',
-}); 
+// export default withPageAuthRequired(NewskillsPage, {
+//     returnTo: '/Newskills',
+// }); 

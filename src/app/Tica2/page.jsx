@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+// import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { AccordionModulos, Header, LeftColumn, RightColumn } from "../components/ExplicacionCursos";
 
 export const metadata = {
@@ -6,7 +6,7 @@ export const metadata = {
     description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
 }
 
-function Tica2Page() {
+export default function Tica2Page() {
     return (
         <>
             <div className="container">
@@ -132,6 +132,6 @@ function Tica2Page() {
     );
 }
 
-export default withPageAuthRequired(Tica2Page, {
-    returnTo: '/Tica2',
-});
+// export default withPageAuthRequired(Tica2Page, {
+//     returnTo: '/Tica2',
+// });

@@ -6,7 +6,7 @@ export const metadata = {
     description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
 }
 
-function PythonProjectPro() {
+export default function PythonProjectPro() {
     return (
         <>
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} /> */}
@@ -103,14 +103,13 @@ function PythonProjectPro() {
                         <p>✅ Materiales de lectura (PDF/HTML) con ejemplos y ejercicios.</p>
                         <p>✅ Ejercicios prácticos en cada módulo.</p>
                         <p>✅ Proyectos guiados para reforzar tu aprendizaje.</p>
-                        <p>✅ Libros recomendados:
-                            <ul>
-                                <li>Ultimate Python: De cero a experto</li>
-                                <li>Python para todos</li>
-                                <li>Python para principiantes</li>
-                                <li>Learn Python the Hard Way</li>
-                            </ul>
-                        </p>
+                        <p>✅ Libros recomendados:</p>
+                        <ul>
+                            <li>Ultimate Python: De cero a experto</li>
+                            <li>Python para todos</li>
+                            <li>Python para principiantes</li>
+                            <li>Learn Python the Hard Way</li>
+                        </ul>
 
                     </RightColumn>
                 </div>
@@ -119,6 +118,6 @@ function PythonProjectPro() {
     );
 }
 
-export default withPageAuthRequired(PythonProjectPro, {
-    returnTo: '/PythonProjectPro',
-});
+// export default withPageAuthRequired(PythonProjectPro, {
+//     returnTo: '/PythonProjectPro',
+// });

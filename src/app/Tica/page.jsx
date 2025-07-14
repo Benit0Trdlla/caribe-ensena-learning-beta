@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+// import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { AccordionModulos, Header, LeftColumn, RightColumn } from "../components/ExplicacionCursos";
 
 export const metadata = {
@@ -6,7 +6,7 @@ export const metadata = {
     description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
 }
 
-function TicaPage() {
+export default function TicaPage() {
     return (
         <>
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} /> */}
@@ -206,6 +206,6 @@ function TicaPage() {
     );
 }
 
-export default withPageAuthRequired(TicaPage, {
-    returnTo: '/Tica',
-});
+// export default withPageAuthRequired(TicaPage, {
+//     returnTo: '/Tica',
+// });

@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+// import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { AccordionModulos, LeftColumn, RightColumn } from "../components/ExplicacionCursos";
 
 export const metadata = {
@@ -6,7 +6,7 @@ export const metadata = {
     description: "Plataforma e-learning 'Caribe Enseña Learning', desarrollada para ofrecer cursos, talleres y diplomados adaptados a las necesidades educativas de la región.",
 }
 
-function EnglishIntermediate1() {
+export default function EnglishIntermediate1() {
     return (
         <>
             <div className="container">
@@ -211,6 +211,6 @@ function EnglishIntermediate1() {
     );
 }
 
-export default withPageAuthRequired(EnglishIntermediate1, {
-    returnTo: '/EnglishIntermediate1',
-});
+// export default withPageAuthRequired(EnglishIntermediate1, {
+//     returnTo: '/EnglishIntermediate1',
+// });
