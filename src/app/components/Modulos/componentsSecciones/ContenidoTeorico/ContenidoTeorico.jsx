@@ -2,19 +2,14 @@
 import { useContext } from 'react';
 import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context';
+import { useSelectedQuestions } from '@/app/hooks/useSelectedQuestions';
 import { AddImagen, Audios } from '..';
 
 export const ContenidoTeorico = ({ maxHeight }) => {
     const { data, indexContext } = useContext(DataActivitiesContext);
 
-    // Obtener el numero de la seccion desde la URL
-    const params = useParams()
-    const number = parseInt(params.number);
-
     // Seleccionar las 5 preguntas correspondientes para cada seccion
-    const startIndex = (number - 1) * 5;
-    const endIndex = startIndex + 5;
-    const selectedQuestions = data.slice(startIndex, endIndex);
+    const { selectedQuestions } = useSelectedQuestions(data);
 
     const parseTeoria = (textToParse) => {
         return textToParse
