@@ -11,5 +11,5 @@ export const useSelectedQuestions = (data) => {
     const endIndex = startIndex + 5;
     const selectedQuestions = data.slice(startIndex, endIndex);
 
-    return { selectedQuestions };
+    return { selectedQuestions, number };
 };

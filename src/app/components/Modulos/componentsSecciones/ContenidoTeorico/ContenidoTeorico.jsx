@@ -1,6 +1,5 @@
 'use client';
 import { useContext } from 'react';
-import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context';
 import { useSelectedQuestions } from '@/app/hooks/useSelectedQuestions';
 import { AddImagen, Audios } from '..';

@@ -1,21 +1,15 @@
 'use client'
 
 import styles from './VideoIframe.module.css'
-import { useParams } from 'next/navigation'
 import { useContext } from 'react';
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context'
+import { useSelectedQuestions } from '@/app/hooks/useSelectedQuestions';
 
 export const VideoIframe = () => {
     const { data, indexContext } = useContext(DataActivitiesContext);
 
-    // Obtener el numero de la seccion desde la URL
-    const params = useParams()
-    const number = parseInt(params.number);
-
     // Seleccionar las 5 preguntas correspondientes para cada seccion
-    const startIndex = (number - 1) * 5;
-    const endIndex = startIndex + 5;
-    const selectedQuestions = data.slice(startIndex, endIndex);
+    const { selectedQuestions } = useSelectedQuestions(data);
 
     return (
         <div className={styles['responsive-iframe']}>

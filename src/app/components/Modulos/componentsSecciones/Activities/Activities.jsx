@@ -1,11 +1,11 @@
 'use client';
 import { useState, useContext, useEffect } from 'react';
-import { useParams } from 'next/navigation'
 import { DataActivitiesContext } from "@/app/contexts/DataActivities-context";
 import { FinishSectionContext } from '@/app/contexts/FinishSection-context';
 import { saveLocalStorage, readLocalStorage, updateSeccionCompleted } from '@/app/lib';
 import { usePathData } from '@/app/hooks/usePathData';
 import { useHidratationSolution } from '@/app/hooks/useHidratationSolution';
+import { useSelectedQuestions } from '@/app/hooks/useSelectedQuestions';
 import { Success, Failed } from './Alerts';
 import { BtnActivies } from './Buttons/BtnActivities';
 
@@ -19,19 +19,13 @@ export const Activities = () => {
     // Obtener el nombre y nivel del curso desde la URL
     const { cursoName, cursoLevel } = usePathData();
 
-    // Obtener el numero de la seccion desde la URL
-    const params = useParams()
-    const number = parseInt(params.number);
-
     // Seleccionar las 5 preguntas correspondientes para cada seccion
-    const startIndex = (number - 1) * 5;
-    const endIndex = startIndex + 5;
-    const selectedQuestions = data.slice(startIndex, endIndex);
+    const { selectedQuestions, number } = useSelectedQuestions(data);
 
     // Reiniciar el índice de las preguntas al cambiar de sección
     useEffect(() => {
         setIndexContext(0);
-    }, [params.number]);
+    }, [number]);
 
     const [showAlert, setShowAlert] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
