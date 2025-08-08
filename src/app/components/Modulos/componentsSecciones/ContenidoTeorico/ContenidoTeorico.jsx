@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context';
 import { useSelectedQuestions } from '@/app/hooks/useSelectedQuestions';
 import { AddImagen, Audios } from '..';
+import { Markdown } from '@/app/components/Markdown';
 
 export const ContenidoTeorico = ({ maxHeight }) => {
     const { data, indexContext } = useContext(DataActivitiesContext);
@@ -26,7 +27,9 @@ export const ContenidoTeorico = ({ maxHeight }) => {
                 {selectedQuestions && selectedQuestions.length > 0 &&
                     selectedQuestions[indexContext].Teoria && (
                         <>
-                            {parseTeoria(selectedQuestions[indexContext].Teoria)}
+                            <Markdown>
+                                {selectedQuestions[indexContext].Teoria}
+                            </Markdown>
                             {selectedQuestions[indexContext].Imagen && <AddImagen dataUrl={selectedQuestions[indexContext].Imagen} alt={selectedQuestions[indexContext].Titulo} />}
                             {selectedQuestions[indexContext].Audio && <Audios url={selectedQuestions[indexContext].Audio} />}
                         </>
