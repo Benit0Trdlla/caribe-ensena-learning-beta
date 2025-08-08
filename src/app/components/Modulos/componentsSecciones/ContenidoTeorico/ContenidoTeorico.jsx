@@ -3,22 +3,13 @@ import { useContext } from 'react';
 import { DataActivitiesContext } from '@/app/contexts/DataActivities-context';
 import { useSelectedQuestions } from '@/app/hooks/useSelectedQuestions';
 import { AddImagen, Audios } from '..';
-import { Markdown } from '@/app/components/Markdown';
+import { Markdown } from '@/app/components/./markdown';
 
 export const ContenidoTeorico = ({ maxHeight }) => {
     const { data, indexContext } = useContext(DataActivitiesContext);
 
     // Seleccionar las 5 preguntas correspondientes para cada seccion
     const { selectedQuestions } = useSelectedQuestions(data);
-
-    const parseTeoria = (textToParse) => {
-        return textToParse
-            .replace(/\\n/g, '\n') // convierte \\n a \n reales
-            .split('\n\n')         // divide en párrafos
-            .map((parrafo, index) => (
-                <p key={index}>{parrafo.replace(/\n/g, ' ')}</p>
-            ));
-    }
 
     return (
         <>
