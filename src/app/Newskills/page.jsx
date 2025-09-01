@@ -9,9 +9,8 @@ export const metadata = {
 export default function NewskillsPage() {
     return (
         <>
-            {/* <Header ImgUrl={"/Images/Logo_Cursos/NewSkills.png"} href={"/Cursos"} indexMeet={1}/> */}
             <div className="container">
-                <div className="px-1 py-5 row">
+                <div className="px-1 py-0 py-lg-5 row">
                     <LeftColumn title={"New skills"} curso={"Newskills"}>
                         <AccordionModulos title={"Módulo 1: Bienvenida e Introducción a la Sostenibilidad (2H)"} collapseNumber={"collapseOne"}>
                             <hr />
@@ -37,8 +36,14 @@ export default function NewskillsPage() {
                                 En este módulo final, te centrarás en la transición energética, aprendiendo sobre las energías renovables y desarrollando habilidades esenciales para el sector. También trabajarás en un proyecto real de transición energética, donde podrás aplicar lo aprendido a lo largo del curso, poner a prueba tus habilidades y obtener experiencia práctica en el campo.
                             </p>
                         </AccordionModulos>
+                        <div className="d-flex justify-content-center align-items-center order-1 mt-lg-5" style={{ position: "fixed", top: "100px", left: "-10px", zIndex: "-1" }}>
+                            <img src="/Images/Logo_Cursos/NewSkills-2.png" className="img-fluid opacity-50" width={400} height={400} alt="" />
+                        </div>
+                        <div className="d-flex d-md-none justify-content-center align-items-center order-1 mt-lg-5" style={{ position: "fixed", top: "100px", right: "10px", zIndex: "-1" }}>
+                            <img src="/Images/Logo_Cursos/NewSkills-3.png" className="img-fluid opacity-50" width={350} height={350} alt="" />
+                        </div>
                     </LeftColumn>
-                    <RightColumn>
+                    <RightColumn urlImage={"/Images/Logo_Cursos/NewSkills.png"}>
                         <strong id="Presentación">¡Bienvenidos al curso "New Skills"!</strong>
                         <br /><br />
                         <p>
@@ -65,6 +70,9 @@ export default function NewskillsPage() {
                             personalizados. Además, se te proporcionarán herramientas y materiales necesarios para completar el proyecto final
                             de transición energética, lo que te permitirá aplicar tus nuevas habilidades en un entorno real.
                         </p>
+                        <div className="d-none d-md-flex justify-content-center align-items-center order-1 mt-lg-5" style={{ position: "fixed", top: "100px", right: "10px", zIndex: "-1" }}>
+                            <img src="/Images/Logo_Cursos/NewSkills-3.png" className="img-fluid opacity-50" width={350} height={350} alt="" />
+                        </div>
                     </RightColumn>
                 </div>
             </div >

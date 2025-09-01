@@ -13,6 +13,13 @@ export const AccordionModulos = ({ children, title, collapseNumber }) => {
                     </div>
                 </div>
             </div>
+            <style>
+                {`
+                    .accordion{
+                        --bs-accordion-bg: #transparent !important;
+                    }
+                `}
+            </style>
         </div>
     )
 }

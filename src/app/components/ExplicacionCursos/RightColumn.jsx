@@ -1,6 +1,6 @@
-export const RightColumn = ({children}) => {
+export const RightColumn = ({ children }) => {
     return (
-        <div className="col-md-6 mt-2">
+        <div className="col-md-6 mt-lg-2 mt-5">
             <nav className="nav border-bottom justify-content-center">
                 <a className="nav-link text-info" href="#Presentación">Presentación</a>
                 <a className="nav-link text-info" href="#Contenidos">Contenidos</a>
