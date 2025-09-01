@@ -6,7 +6,7 @@ import { FinishSectionContext } from "@/app/contexts/FinishSection-context"
 import { calculatePercentageCorrect, setLastModuloAndSeccion, recalculateQuestionsData, readPercentage } from "@/app/lib"
 import { useContext, useMemo } from "react"
 
-export const Alert = ({ seccionNumber }) => {
+export const Alert = ({ seccionNumber, urlImage }) => {
     const router = useRouter()
     const { finished, setFinished } = useContext(FinishSectionContext)
     const { cursoName, cursoLevel } = usePathData()
@@ -30,7 +30,7 @@ export const Alert = ({ seccionNumber }) => {
                 <div className="LevelCompleted" >
                     <div className='alert alert-light' role='alert'>
                         <h4 className="alert-heading mb-3">{`Sección ${seccionNumber} Completada!`}</h4>
-                        <img src="/Images/Home.png" alt="Imagen de nivel completado" width={200} height={200} />
+                        <img src={urlImage ? urlImage : '/Images/Home.png'} alt="Imagen de nivel completado" className="img-fluid" width={300} height={300} />
                         <hr />
                         <div className="d-grid gap-2 w-50 mx-auto">
                             {porcentajeCorrectas < 75 && <h5 className="text-center"><small>Tu porcentaje de respuestas correctas es de: {porcentajeCorrectas} % debes resetear la sección</small></h5>}

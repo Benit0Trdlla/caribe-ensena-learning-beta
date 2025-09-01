@@ -20,7 +20,7 @@ function NewskillsModuloPage({ params }) {
 
     return (
         <>
-            <Alert seccionNumber={numInt} />
+            <Alert seccionNumber={numInt} urlImage={`/Images/Logo_Cursos/NewSkills-1.png`}/>
             <SectionNavigation />
             {ComponentsSections[numInt - 1]}
         </>
