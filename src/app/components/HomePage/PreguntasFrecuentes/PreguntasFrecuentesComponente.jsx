@@ -10,16 +10,13 @@ export const PreguntasFrecuentesComponente = () => {
                     Sin embargo, cualquier otra persona interesada puede hacer las formaciones.
                 </Preguntas>
                 <Preguntas flushheading={"flush-headingTwo"} flushcollapse={"flush-collapseTwo"} title={"¿Cuáles son las características y beneficios de CEL?"}>
-                    CEL ofrece cursos y talleres gratuitos, certificados por asistencia y participación,
+                    CEL ofrece cursos y talleres, certificados por asistencia y participación,
                     con reconocimiento oficial según convenios con entidades. En el futuro, se brindarán insignias digitales.
                     Es accesible desde dispositivos móviles y computadoras, y está diseñado para potenciar el aprendizaje formal y no formal.
                 </Preguntas>
                 <Preguntas flushheading={"flush-headingThree"} flushcollapse={"flush-collapseThree"} title={"¿Cómo puedo usar CEL?"}>
                     Para usar CEL, simplemente debes registrarte e hacer login con tu e-mail personal.
                     Desde allí, podrás acceder a todos los cursos y talleres disponibles en la plataforma.
-                </Preguntas>
-                <Preguntas flushheading={"flush-headingFour"} flushcollapse={"flush-collapseFour"} title={"¿CEL es gratis?"}>
-                    Sí, CEL es completamente gratuito.
                 </Preguntas>
                 <Preguntas flushheading={"flush-headingFive"} flushcollapse={"flush-collapseFive"} title={"¿Quién puede usar CEL?"}>
                     CEL está disponible para docentes, estudiantes del Caribe colombiano y cualquier persona interesada en formar
