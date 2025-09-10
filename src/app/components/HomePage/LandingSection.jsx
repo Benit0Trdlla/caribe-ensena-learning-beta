@@ -11,7 +11,7 @@ export const LandingSection = ({ ImgUrl }) => {
                     <p>🎉 Bienvenid@ a CEL, donde la educación se convierte en tu futuro. 🎉</p>
                 </div>
                 <div className="col-md-6 row mt-2">
-                    <Image className="img-fluid" src={ImgUrl} width={400} height={400} alt='Imagen Principal' />
+                    <Image className="img-fluid" src={ImgUrl} width={800} height={800} alt='Imagen Principal' />
                 </div>
             </div>
         </div>
