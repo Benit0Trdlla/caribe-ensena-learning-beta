@@ -79,6 +79,7 @@ export default function NewskillsPage() {
                         </div>
                     </RightColumn>
                 </div>
+                <p className="text-center fw-bold">Desarrollado y propiedad de INCO y la Fundación Schneider Electric</p>
             </div >
         </>
     )

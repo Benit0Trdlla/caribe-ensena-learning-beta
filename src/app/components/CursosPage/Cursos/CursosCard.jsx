@@ -12,7 +12,8 @@ export default function CursosCard({ CursosInfo }) {
                             <Image src={curso.ImgUrl} alt={`Imagen de ${curso.Title}`} className="curso-logo img-fluid" width={180} height={180} />
                         </Link>
                         <div className="curso-title fs-6">
-                            {curso.Title}
+                            {curso.Title} <br />
+                            <small>{curso.SubTitle || ""}</small>
                         </div>
                         {/* Botones levels */}
                         <Botones BtnHref={curso.href} />
