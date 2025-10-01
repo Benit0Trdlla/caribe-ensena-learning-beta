@@ -1,4 +1,4 @@
-Caribe Enseña Learning 
+# Caribe Enseña Learning 
 
 **Caribe Enseña Learning** es una plataforma e-learning desarrollada con Next.js que ofrece cursos, talleres y diplomados adaptados a las necesidades educativas de la región.
 
