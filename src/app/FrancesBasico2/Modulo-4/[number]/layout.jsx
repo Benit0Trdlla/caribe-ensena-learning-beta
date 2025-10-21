@@ -12,11 +12,11 @@ export default function RootLayout({ children, params }) {
     if (numInt > 7) return <div className="text-center text-danger mt-5">404 Not Found</div>
 
     const seccionCompleted = useSeccionStatus(numInt);
-    
+
     const modulo = useModuloStatus()
 
     const { setData } = useContext(DataActivitiesContext);
-    const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vSnc2dbiggWhIQmFmX8VkfwDxj75Kla_LS6FrHg5E6iIEawjCzllcE0mm83L6SybB0032_Q2qvdHugT/pub?output=csv");
+    const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vStZNwRMPLIbNZRrOBOiYtAqprlQssoKLhD8GW51vCtDRlP90h8Ok3wBjht0VM0KmuwzNA6zt9N3qdp/pub?output=csv");
     useEffect(() => {
         if (!isLoading && !error) {
             setData(preguntas);
@@ -26,8 +26,8 @@ export default function RootLayout({ children, params }) {
     if (error) return <div>Error: {error.message}</div>;
 
     if (isLoading) return <Loading styleSpinner="text-info" />
-    
-    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 2 no fue completado</div>
+
+    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 3 no fue completado</div>
 
     if (!seccionCompleted && numInt !== 1) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">La Seccion {numInt - 1} no fue completada</div>
 

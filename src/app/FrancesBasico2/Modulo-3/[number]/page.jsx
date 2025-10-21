@@ -8,11 +8,11 @@ import {
 
 export function generateMetadata({ params }) {
     return {
-        title: `Modulo 1 | Seccion ${params.number}`,
+        title: `Modulo 3 | Seccion ${params.number}`,
     };
 }
 
-function FrancesBasico1Page({ params }) {
+function FrancesBasico2Page({ params }) {
     const number = params.number
     const numInt = parseInt(number)
     const ComponentsSections = [<BookSection />, <BookSection />, <VideoSection />, <BookSection />, <VideoSection />, <VideoSection />, <BookSection />]
@@ -26,6 +26,6 @@ function FrancesBasico1Page({ params }) {
     )
 }
 
-export default withPageAuthRequired(FrancesBasico1Page, {
-    returnTo: ({ params }) => `/FrancesBasico1/Modulo-1/${params.number}`,
+export default withPageAuthRequired(FrancesBasico2Page, {
+    returnTo: ({ params }) => `/FrancesBasico2/Modulo-3/${params.number}`,
 });
