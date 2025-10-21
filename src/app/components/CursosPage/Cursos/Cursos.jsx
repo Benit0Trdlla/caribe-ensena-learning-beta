@@ -12,7 +12,8 @@ export const Cursos = () => {
         { Id: 9, Title: 'English Intermediate 2', ImgUrl: '/Images/Logo_Cursos/EnglishIntermediate2.png', href: 'EnglishIntermediate2' },
         { Id: 10, Title: 'Python Project Pro', ImgUrl: '/Images/Logo_Cursos/PythonProjectPro.png', href: 'PythonProjectPro' },
         { Id: 11, Title: 'Francés Básico 1', ImgUrl: '/Images/Logo_Cursos/FrancesBasico1.png', href: 'FrancesBasico1' },
-        { Id: 11, Title: 'Francés Básico 2', ImgUrl: '/Images/Logo_Cursos/FrancesBasico2.png', href: 'FrancesBasico2' },
+        { Id: 12, Title: 'Francés Básico 2', ImgUrl: '/Images/Logo_Cursos/FrancesBasico2.png', href: 'FrancesBasico2' },
+        { Id: 13, Title: 'Francés Intermedio 1', ImgUrl: '/Images/Logo_Cursos/FrancesIntermedio1.png', href: 'FrancesIntermedio1' },
     ]
     return (
         <div className="container">
