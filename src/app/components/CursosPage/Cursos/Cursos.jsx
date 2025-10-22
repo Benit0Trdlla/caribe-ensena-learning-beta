@@ -14,6 +14,7 @@ export const Cursos = () => {
         { Id: 11, Title: 'Francés Básico 1', ImgUrl: '/Images/Logo_Cursos/FrancesBasico1.png', href: 'FrancesBasico1' },
         { Id: 12, Title: 'Francés Básico 2', ImgUrl: '/Images/Logo_Cursos/FrancesBasico2.png', href: 'FrancesBasico2' },
         { Id: 13, Title: 'Francés Intermedio 1', ImgUrl: '/Images/Logo_Cursos/FrancesIntermedio1.png', href: 'FrancesIntermedio1' },
+        { Id: 14, Title: 'Francés Intermedio 2', ImgUrl: '/Images/Logo_Cursos/FrancesIntermedio2.png', href: 'FrancesIntermedio2' },
     ]
     return (
         <div className="container">
