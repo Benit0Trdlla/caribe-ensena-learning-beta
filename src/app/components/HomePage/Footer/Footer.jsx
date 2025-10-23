@@ -13,13 +13,10 @@ export const Footer = () => {
             </div>
             <ul className="list-unstyled">
                 <p className="mb-0 mt-2">
-                    <a className="link-secondary text-decoration-none text-info" href="mailto:">e-learning@caribeensena.org</a>
+                    <a className="link-secondary text-decoration-none text-info" href="mailto:proyectocel@caribeensena.org">proyectocel@caribeensena.org</a>
                 </p>
                 <p className="mb-0 mt-2">
-                    <a className="link-secondary text-decoration-none text-info" href="mailto:">e-learningsoporte@caribeensena.org</a>
-                </p>
-                <p className="mb-0 mt-2">
-                    <a className="link-secondary text-decoration-none text-info" href="mailto:">donaciones@caribeensena.org</a>
+                    <a className="link-secondary text-decoration-none text-info" href="mailto:donaciones@caribeensena.org">donaciones@caribeensena.org</a>
                 </p>
             </ul>
             <SubFooter>
