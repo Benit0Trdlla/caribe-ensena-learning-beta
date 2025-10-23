@@ -45,6 +45,65 @@ export default function FrancesIntermedio1() {
                         <p>
                             Este curso permite al estudiante participar en debates, narrar eventos complejos y expresar juicios y opiniones con matices. Se introduce el Subjuntivo para expresar deseo, emoción y finalidad, y el uso de conectores lógicos (causa/consecuencia).
                         </p>
+                        <p id="Contenidos">
+                            <strong>Contenidos de los Módulos</strong>
+                        </p>
+                        <p><strong>🎯 Objetivo general:</strong></p>
+                        <p>Desarrollar autonomía comunicativa, opinar, argumentar y describir situaciones complejas. Introducción al subjuntivo, conectores lógicos y discurso indirecto.</p>
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Módulo</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Contenidos temáticos principales</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Expresión de  <br /> la Voluntad y <br /> la Condición</td>
+                                    <td>Conditionnel présent (cortesía, consejo); Futur simple (planes y predicciones); Subjonctif présent (deseo, emoción, obligación); hipótesis irreal (si + imparfait + conditionnel).</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Argumentación y <br /> Conectores Lógicos</td>
+                                    <td>Conectores de causa (parce que, puisque, grâce à) y consecuencia (donc, alors, de sorte que); concesión (même si, malgré); pronombres posesivos (le mien, la tienne).</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Estudios, Vida <br /> Social y Discurso Reportado</td>
+                                    <td>Léxico académico y profesional; redacción de textos formales; introducción al discurso indirecto (style indirect); plus-que-parfait; estructura de informes y narraciones.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Narración Compleja y <br /> Precisión Léxica</td>
+                                    <td>Gérondif (en + participe); être en train de; pronombre relativo dont; expresiones de apariencia (avoir l’air, sembler); preposiciones temporales complejas (avant que, après que).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p id='Recursos'>
+                            <strong>Recursos del Curso</strong>
+                        </p>
+                        <p>
+                            Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
+                            </li>
+                            <li>
+                                <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
+                            </li>
+                            <li>
+                                <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
+                            </li>
+                            <li>
+                                <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
+                            </li>
+                            <li>
+                                <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
+                            </li>
+                        </ul>
                     </RightColumn>
                 </div>
             </div>
