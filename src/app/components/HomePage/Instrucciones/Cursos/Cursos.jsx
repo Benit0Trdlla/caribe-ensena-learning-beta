@@ -21,7 +21,11 @@ export default function Cursos() {
                             { Id: "ModalSix", Title: "English Basic 2" },
                             { Id: "ModalSeven", Title: "English Intermediate 1" },
                             { Id: "ModalEight", Title: "English Intermediate 2" },
-                            { Id: "ModalNine", Title: "Python Project Pro" },
+                            { Id: "ModalNine", Title: "Francés Básico 1" },
+                            { Id: "ModalTen", Title: "Francés Básico 2" },
+                            { Id: "ModalEleven", Title: "Francés Intermedio 1" },
+                            { Id: "ModalTwelve", Title: "Francés Intermedio 2" },
+                            { Id: "ModalThirteen", Title: "Python Project Pro" },
                         ]} />
                         <ModalCursos id="ModalOne" title="Tica">
                             <p>
@@ -167,7 +171,115 @@ export default function Cursos() {
                                 <li>Videos auténticos (entrevistas, conversaciones reales).</li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalNine" title="Python Project Pro">
+                        <ModalCursos id="ModalNine" title="Francés Básico 1">
+                            <p>
+                                Este curso se enfoca en establecer los elementos básicos de la comunicación, permitiendo al estudiante presentarse, hablar de su entorno inmediato y manejar interacciones de la vida diaria. El objetivo es que el estudiante pueda desenvolverse bien en la mayoría de las situaciones cotidianas. Se pone especial énfasis en la fonética inicial y la correcta conjugación de los verbos fundamentales (être, avoir, verbos en -er).
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p><strong>📚 Recursos del Curso</strong></p>
+                            <p>
+                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
+                                </li>
+                                <li>
+                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
+                                </li>
+                                <li>
+                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
+                                </li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalTen" title="Francés Básico 2">
+                            <p>
+                                Este curso se enfoca en el dominio del pasado y la interacción en contextos reales como viajes, compras y exposición de problemas personales. El estudiante podrá relatar brevemente un recuerdo y entender situaciones relacionadas con el trabajo y los estudios. Se refuerza el uso de pronombres para evitar repeticiones.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p><strong>📚 Recursos del Curso</strong></p>
+                            <p>
+                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
+                                </li>
+                                <li>
+                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
+                                </li>
+                                <li>
+                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
+                                </li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalEleven" title="Francés Intermedio 1">
+                            <p>
+                                Este curso permite al estudiante participar en debates, narrar eventos complejos y expresar juicios y opiniones con matices. Se introduce el Subjuntivo para expresar deseo, emoción y finalidad, y el uso de conectores lógicos (causa/consecuencia).
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p><strong>📚 Recursos del Curso</strong></p>
+                            <p>
+                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
+                                </li>
+                                <li>
+                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
+                                </li>
+                                <li>
+                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
+                                </li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalTwelve" title="Francés Intermedio 2">
+                            <p>
+                                Este curso se centra en la fluidez y la precisión. El estudiante debe ser capaz de utilizar estructuras complejas para expresar oposición, hipótesis y finalidad, y de adaptar el registro a situaciones formales o informales. Se incluyen temas de vida asociativa y sindical, profesional y tecnológica, además del dominio completo del Discurso Indirecto.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p><strong>📚 Recursos del Curso</strong></p>
+                            <p>
+                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
+                                </li>
+                                <li>
+                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
+                                </li>
+                                <li>
+                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
+                                </li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="ModalThirteen" title="Python Project Pro">
                             <p>Este curso ha sido diseñado para que aprendas a programar desde cero en Python, uno de los lenguajes más poderosos y demandados en el mundo tecnológico.</p>
                             <p>Aquí no solo aprenderás teoría: crearás proyectos reales que te darán confianza y habilidades prácticas para tu camino como programador.</p>
                             <p>🛠<strong>Recursos del curso</strong></p>
