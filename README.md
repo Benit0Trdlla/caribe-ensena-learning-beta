@@ -25,17 +25,17 @@ La plataforma está diseñada para entregar contenido educativo estructurado a t
 
 ### 📚 Cursos Disponibles
 
-#### Cursos de Educación para la Paz
-- **Enseñapaz**: Cátedra de paz integral con 4 módulos enfocados en construcción de paz, resolución de conflictos y ciudadanía activa
-
 #### Cursos de Sostenibilidad
 - **New Skills**: Programa de 4 módulos sobre economía verde, sostenibilidad y transición energética 
 
 #### Cursos Técnicos
-- **English Basic 1**: Curso de inglés básico A1 con 4 módulos progresivos 
 - **TICA 1 & 2**: Cursos de robótica con Arduino, desde fundamentos hasta proyectos avanzados 
 - **Python Project Pro**: Programación en Python desde cero hasta proyectos avanzados 
-- **Poket**: Educación financiera gamificada para jóvenes de 12-18 años  
+- **Poket**: Educación financiera gamificada para jóvenes de 12-18 años
+
+#### Cursos de Idiomas
+- **Inglés**: Curso de inglés desde A1 a B2 con 4 módulos progresivos por cada curso
+- **Francés**: Curso de Francés desde principiante (A1) a avanzado (B2)
 
 ### 🔐 Sistema de Autenticación
 
