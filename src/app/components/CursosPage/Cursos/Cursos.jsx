@@ -18,7 +18,7 @@ export const Cursos = () => {
     ]
     return (
         <div className="container">
-            <div className="row">
+            <div className="row mb-5">
                 <CursosCard CursosInfo={Cursos} />
             </div>
         </div>
