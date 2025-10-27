@@ -16,7 +16,7 @@ export default function RootLayout({ children, params }) {
 
     const modulo = useModuloStatus()
 
-    const mensaje = useCheckCompletion({ modulo, seccionCompleted, numInt });
+    const CheckCompletion = useCheckCompletion({ modulo, seccionCompleted, numInt });
 
     const { setData } = useContext(DataActivitiesContext);
     const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vTEteHEdqfFY_AxF0eZfaZNzm-TsGgb4gyn4R-oqoYIsBCScudec08u3S0LPTo7iIl-F-QYqgA0Qyiw/pub?output=csv");
@@ -33,7 +33,7 @@ export default function RootLayout({ children, params }) {
     // if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 1 no fue completado</div>
 
     // if (!seccionCompleted && numInt !== 1) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">La Seccion {numInt - 1} no fue completada</div>
-    if (mensaje) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">{mensaje}</div>;
+    if (!CheckCompletion.isCompleted) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">{CheckCompletion.message}</div>;
 
     return (
         <>
