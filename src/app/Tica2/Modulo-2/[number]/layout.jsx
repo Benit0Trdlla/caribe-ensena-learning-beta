@@ -4,6 +4,7 @@ import { useContext, useEffect } from "react"
 import { useDataFromSheets } from "@/app/hooks/useDataFromSheets";
 import { useModuloStatus } from "@/app/hooks/useModuloStatus";
 import { useSeccionStatus } from "@/app/hooks/useSeccionStatus";
+import { useCheckCompletion } from "@/app/hooks/useCheckCompletion";
 import Loading from "@/app/components/loading";
 
 export default function RootLayout({ children, params }) {
@@ -14,6 +15,8 @@ export default function RootLayout({ children, params }) {
     const seccionCompleted = useSeccionStatus(numInt);
     
     const modulo = useModuloStatus()
+
+    const CheckCompletion = useCheckCompletion({ modulo, seccionCompleted, numInt });
 
     const { setData } = useContext(DataActivitiesContext);
     const { data: preguntas, isLoading, error } = useDataFromSheets("https://docs.google.com/spreadsheets/d/e/2PACX-1vRRGj9e5QRIJac0Nyy87MP-me4fA36qtIiKntq43qgt9k_5t5AK6pNSOfWvsrvoW0v-ZbmAkuJs80fD/pub?output=csv");
@@ -27,9 +30,7 @@ export default function RootLayout({ children, params }) {
 
     if (isLoading) return <Loading styleSpinner="text-primary" />
 
-    if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 1 no fue completado</div>
-
-    if (!seccionCompleted && numInt !== 1) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">La Seccion {numInt - 1} no fue completada</div>
+    if (!CheckCompletion.isCompleted) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">{CheckCompletion.message}</div>
 
     return (
         <>

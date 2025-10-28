@@ -30,9 +30,6 @@ export default function RootLayout({ children, params }) {
 
     if (isLoading) return <Loading styleSpinner="text-success" />
 
-    // if (modulo < 100) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">El Modulo 1 no fue completado</div>
-
-    // if (!seccionCompleted && numInt !== 1) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">La Seccion {numInt - 1} no fue completada</div>
     if (!CheckCompletion.isCompleted) return <div className="d-flex mt-5 text-danger align-items-center justify-content-center">{CheckCompletion.message}</div>;
 
     return (
