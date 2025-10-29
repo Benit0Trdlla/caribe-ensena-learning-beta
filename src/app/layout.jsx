@@ -3,6 +3,7 @@ import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import InstallBootstrap from "./components/Bootstrap/InstallBootstrap";
 import { UserProvider } from '@auth0/nextjs-auth0/client';
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,6 +66,7 @@ export default function RootLayout({ children }) {
         <body className={inter.className}>
           <InstallBootstrap />
           {children}
+          <Analytics />
         </body>
       </UserProvider>
     </html>
