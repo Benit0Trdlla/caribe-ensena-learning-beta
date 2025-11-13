@@ -3,7 +3,7 @@
     "background_color": "#beefff",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/",
+    "start_url": "/Cursos",
     "lang": "es-AR",
     "name": "CEL",
     "short_name": "CEL",
