@@ -11,23 +11,8 @@ export default function Cursos() {
                         </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordion1">
-                        <NombresCursos CursosInfo={[
-                            // { Id: "ModalOne", Title: "Enseñapaz" },
-                            { Id: "ModalOne", Title: "Tica" },
-                            { Id: "ModalTwo", Title: "Tica 2" },
-                            { Id: "ModalThree", Title: "New skills" },
-                            { Id: "ModalFour", Title: "Poket" },
-                            { Id: "ModalFive", Title: "English Basic 1" },
-                            { Id: "ModalSix", Title: "English Basic 2" },
-                            { Id: "ModalSeven", Title: "English Intermediate 1" },
-                            { Id: "ModalEight", Title: "English Intermediate 2" },
-                            { Id: "ModalNine", Title: "Francés Básico 1" },
-                            { Id: "ModalTen", Title: "Francés Básico 2" },
-                            { Id: "ModalEleven", Title: "Francés Intermedio 1" },
-                            { Id: "ModalTwelve", Title: "Francés Intermedio 2" },
-                            { Id: "ModalThirteen", Title: "Python Project Pro" },
-                        ]} />
-                        <ModalCursos id="ModalOne" title="Tica">
+                        <NombresCursos />
+                        <ModalCursos id="1" title="Tica">
                             <p>
                                 Este curso introductorio está diseñado para jóvenes entre 12 y 17 años interesados en iniciarse en el mundo de la robótica y la electrónica con Arduino. A través de lecturas, videos y actividades prácticas, aprenderán los fundamentos de la electrónica, la programación básica, el uso de sensores, y cómo crear sus primeros circuitos y prototipos inteligentes.
                             </p>
@@ -47,7 +32,7 @@ export default function Cursos() {
                                 <li><strong>Cables de conexión (jumpers)</strong></li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalTwo" title="Tica 2">
+                        <ModalCursos id="2" title="Tica 2">
                             <p>
                                 TICA 2 es la segunda parte del curso de introducción a la robótica y programación con Arduino. En esta etapa, nos enfocamos en conectar la teoría con proyectos reales, profundizando en el uso de sensores, comunicación serial, motores y tecnologías inalámbricas. El objetivo es que cada estudiante logre diseñar y construir prototipos funcionales que resuelvan problemas concretos en su entorno.
                             </p>
@@ -69,11 +54,11 @@ export default function Cursos() {
                                 <li><strong>Videos tutoriales y PDFs descargables</strong></li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalThree" title="New skills">
+                        <ModalCursos id="4" title="New skills">
                             <p>Este programa está diseñado para equiparte con las habilidades y conocimientos necesarios para destacarte en la economía verde y sostenible. A lo largo del curso, explorarás conceptos fundamentales de sostenibilidad, descubrirás trayectorias profesionales emergentes y adquirirás competencias esenciales en energías renovables y gestión de recursos. "New Skills" te prepara para enfrentar los desafíos del futuro con confianza y creatividad, ofreciéndote una experiencia de aprendizaje única y transformadora.</p>
                             <p>- Cantidad de Módulos: 4</p>
                         </ModalCursos>
-                        <ModalCursos id="ModalFour" title="Poket">
+                        <ModalCursos id="5" title="Poket">
                             <p>
                                 El curso "POKET" busca que la educación financiera sea una experiencia divertida, dinámica y práctica. Está diseñado para jóvenes de 12 a 18 años y tiene una duración estimada de 3 a 4 meses. A través de métodos como experiencias gamificadas, retos interactivos y simulaciones, se propone ayudar a los estudiantes a desarrollar habilidades financieras sólidas.
                             </p>
@@ -89,7 +74,7 @@ export default function Cursos() {
                                 <li><strong>Encuentros Presenciales:</strong> Espacios diseñados para aplicar conocimientos en actividades prácticas y competencias amistosas. También se incluyen dinámicas como "El Gran Reto del Ahorro", "Bolsa de Valores en Vivo", "Construye tu Score de Crédito" y el juego “Poket” en tiempo real, cada una con enfoques interactivos y lúdicos.</li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalFive" title="English Basic 1">
+                        <ModalCursos id="6" title="English Basic 1">
                             <p>
                                 Diseñado para personas que inician su aprendizaje del idioma y desean comunicarse en situaciones cotidianas. El curso está organizado en 4 módulos progresivos, cubriendo desde lo más básico hasta conversaciones simples sobre experiencias personales y viajes.
                                 Es un curso 90% autónomo, pensado para que puedas estudiar a tu ritmo, con actividades interactivas y materiales variados. Además, tendrás encuentros virtuales con profesores para practicar speaking, resolver dudas y afianzar tu aprendizaje.
@@ -114,7 +99,7 @@ export default function Cursos() {
                                 <li>Role-plays virtuales en los encuentros con profesores para practicar speaking y fluidez.</li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalSix" title="English Basic 2">
+                        <ModalCursos id="7" title="English Basic 2">
                             <p>
                                 Continuación del nivel A1 y está diseñado para ayudarte a comunicarte con mayor confianza y seguridad en inglés en situaciones cotidianas, viajes y conversaciones sobre experiencias personales.
                                 A lo largo de 4 módulos, aprenderás nueva gramática, ampliarás tu vocabulario y mejorarás tus habilidades para hablar, comprender, leer y escribir. Tendrás acceso a recursos interactivos y encuentros virtuales con profesores para practicar lo aprendido y resolver dudas.
@@ -133,7 +118,7 @@ export default function Cursos() {
                                 <li>Acceso online permanente.</li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalSeven" title="English Intermediate 1">
+                        <ModalCursos id="8" title="English Intermediate 1">
                             <p>
                                 diseñado para hablantes de español y busca que los estudiantes hablen inglés con confianza y seguridad. La metodología se basa en el principio:
                                 <br /><strong>Grammar + Vocabulary + Pronunciation = Confident Speaking</strong><br />
@@ -151,7 +136,7 @@ export default function Cursos() {
                                 <li>Teachers Guide y Oxford Premium Resources.</li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalEight" title="English Intermediate 2">
+                        <ModalCursos id="9" title="English Intermediate 2">
                             <p>
                                 Diseñado para desarrollar fluidez, confianza y precisión en la comunicación oral y escrita. Se basa en un enfoque comunicativo que integra gramática, vocabulario y pronunciación, utilizando temas actuales y situaciones de la vida real para mantener la motivación de los estudiantes. Cada módulo permite avanzar en complejidad, consolidar estructuras previas y prepararse para contextos académicos, profesionales o personales en el uso del inglés.
                             </p>
@@ -171,7 +156,23 @@ export default function Cursos() {
                                 <li>Videos auténticos (entrevistas, conversaciones reales).</li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalNine" title="Francés Básico 1">
+                        <ModalCursos id="10" title="Python Project Pro">
+                            <p>Este curso ha sido diseñado para que aprendas a programar desde cero en Python, uno de los lenguajes más poderosos y demandados en el mundo tecnológico.</p>
+                            <p>Aquí no solo aprenderás teoría: crearás proyectos reales que te darán confianza y habilidades prácticas para tu camino como programador.</p>
+                            <p>🛠<strong>Recursos del curso</strong></p>
+                            <p>✅ Videos prácticos paso a paso.</p>
+                            <p>✅ Materiales de lectura (PDF/HTML) con ejemplos y ejercicios.</p>
+                            <p>✅ Ejercicios prácticos en cada módulo.</p>
+                            <p>✅ Proyectos guiados para reforzar tu aprendizaje.</p>
+                            <p>✅ Libros recomendados:</p>
+                            <ul>
+                                <li>Ultimate Python: De cero a experto</li>
+                                <li>Python para todos</li>
+                                <li>Python para principiantes</li>
+                                <li>Learn Python the Hard Way</li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="11" title="Francés Básico 1">
                             <p>
                                 Este curso se enfoca en establecer los elementos básicos de la comunicación, permitiendo al estudiante presentarse, hablar de su entorno inmediato y manejar interacciones de la vida diaria. El objetivo es que el estudiante pueda desenvolverse bien en la mayoría de las situaciones cotidianas. Se pone especial énfasis en la fonética inicial y la correcta conjugación de los verbos fundamentales (être, avoir, verbos en -er).
                             </p>
@@ -198,7 +199,7 @@ export default function Cursos() {
                                 </li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalTen" title="Francés Básico 2">
+                        <ModalCursos id="12" title="Francés Básico 2">
                             <p>
                                 Este curso se enfoca en el dominio del pasado y la interacción en contextos reales como viajes, compras y exposición de problemas personales. El estudiante podrá relatar brevemente un recuerdo y entender situaciones relacionadas con el trabajo y los estudios. Se refuerza el uso de pronombres para evitar repeticiones.
                             </p>
@@ -225,7 +226,7 @@ export default function Cursos() {
                                 </li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalEleven" title="Francés Intermedio 1">
+                        <ModalCursos id="13" title="Francés Intermedio 1">
                             <p>
                                 Este curso permite al estudiante participar en debates, narrar eventos complejos y expresar juicios y opiniones con matices. Se introduce el Subjuntivo para expresar deseo, emoción y finalidad, y el uso de conectores lógicos (causa/consecuencia).
                             </p>
@@ -252,7 +253,7 @@ export default function Cursos() {
                                 </li>
                             </ul>
                         </ModalCursos>
-                        <ModalCursos id="ModalTwelve" title="Francés Intermedio 2">
+                        <ModalCursos id="14" title="Francés Intermedio 2">
                             <p>
                                 Este curso se centra en la fluidez y la precisión. El estudiante debe ser capaz de utilizar estructuras complejas para expresar oposición, hipótesis y finalidad, y de adaptar el registro a situaciones formales o informales. Se incluyen temas de vida asociativa y sindical, profesional y tecnológica, además del dominio completo del Discurso Indirecto.
                             </p>
@@ -277,22 +278,6 @@ export default function Cursos() {
                                 <li>
                                     <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
                                 </li>
-                            </ul>
-                        </ModalCursos>
-                        <ModalCursos id="ModalThirteen" title="Python Project Pro">
-                            <p>Este curso ha sido diseñado para que aprendas a programar desde cero en Python, uno de los lenguajes más poderosos y demandados en el mundo tecnológico.</p>
-                            <p>Aquí no solo aprenderás teoría: crearás proyectos reales que te darán confianza y habilidades prácticas para tu camino como programador.</p>
-                            <p>🛠<strong>Recursos del curso</strong></p>
-                            <p>✅ Videos prácticos paso a paso.</p>
-                            <p>✅ Materiales de lectura (PDF/HTML) con ejemplos y ejercicios.</p>
-                            <p>✅ Ejercicios prácticos en cada módulo.</p>
-                            <p>✅ Proyectos guiados para reforzar tu aprendizaje.</p>
-                            <p>✅ Libros recomendados:</p>
-                            <ul>
-                                <li>Ultimate Python: De cero a experto</li>
-                                <li>Python para todos</li>
-                                <li>Python para principiantes</li>
-                                <li>Learn Python the Hard Way</li>
                             </ul>
                         </ModalCursos>
                     </div>
