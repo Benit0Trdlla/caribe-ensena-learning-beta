@@ -4,7 +4,7 @@ body::-webkit-scrollbar {
 
 /* ESTILOS PARA ALERTA DE NIVEL COMPLETADO */
 .LevelCompleted {
-  position: fixed;
+  position: fixed !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
