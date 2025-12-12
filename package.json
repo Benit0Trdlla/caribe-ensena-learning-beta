@@ -12,7 +12,7 @@
     "@auth0/nextjs-auth0": "^3.5.0",
     "@vercel/analytics": "^1.5.0",
     "bootstrap": "^5.3.3",
-    "next": "14.2.5",
+    "next": "14.2.35",
     "papaparse": "^5.4.1",
     "react": "^18",
     "react-dom": "^18",
