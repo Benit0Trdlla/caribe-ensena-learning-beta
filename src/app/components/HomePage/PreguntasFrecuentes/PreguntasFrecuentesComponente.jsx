@@ -27,10 +27,10 @@ export const PreguntasFrecuentesComponente = () => {
                     Algunas certificaciones tendrán reconocimiento oficial según convenios con entidades.
                 </Preguntas>
                 <Preguntas flushheading={"flush-headingSeven"} flushcollapse={"flush-collapseSeven"} title={"Si surge un problema técnico, ¿qué hago?"}>
-                    Si uno de los cursos tiene un error o no puedes acceder, escribe a e-learningsoporte@caribeensena.org.
+                    Si uno de los cursos tiene un error o no puedes acceder, escribe a proyectocel@caribeensena.org.
                 </Preguntas>
                 <Preguntas flushheading={"flush-headingNine"} flushcollapse={"flush-collapseNine"} title={"Si tengo alguna duda con respecto a un curso o taller, ¿dónde consulto?"}>
-                    Para dudas sobre un curso o taller, envía un email con tu consulta y el nombre de la formación a e-learning@caribeensena.org.
+                    Para dudas sobre un curso o taller, envía un email con tu consulta y el nombre de la formación a proyectocel@caribeensena.org.
                 </Preguntas>
                 <Preguntas flushheading={"flush-headingTen"} flushcollapse={"flush-collapseTen"} title={"¿Qué ofrece CEL?"}>
                     <p>

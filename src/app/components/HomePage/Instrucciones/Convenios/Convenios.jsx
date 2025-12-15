@@ -12,7 +12,7 @@ export default function Convenios() {
                         <div className="accordion-body">
                             <small>
                                 Si eres una organización o universidad y deseas que tu curso, taller o diplomado se ofrezca desde nuestra plataforma
-                                envíanos un correo a: <br /><strong>e-learning@caribeensena.org</strong>
+                                envíanos un correo a: <br /><strong>proyectocel@caribeensena.org</strong>
                             </small>
                         </div>
                     </div>

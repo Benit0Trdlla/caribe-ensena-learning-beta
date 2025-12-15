@@ -16,12 +16,13 @@ export const Donaciones = () => {
                                 <br />
                                 <br />
                                 <strong>¿Cómo puedes ayudar?</strong> <br />
-                                ¡Con tu solidaridad! Al contribuir con nuestro proyecto, estás abriendo las puertas a una formación de alta calidad a muchas personas. ¡Únete a nuestra causa y sé el héroe que transforma vidas!
-                                Para mayor información: <strong>donaciones@caribeensena.org</strong>
+                                ¡Con tu solidaridad! Al contribuir con nuestro proyecto, estás abriendo las puertas a una formación de alta calidad a muchas personas. <br /> ¡Únete a nuestra causa y sé el héroe que transforma vidas! <br />
+                                Si quieres hacer una donación en especie o necesitas más información envia un correo a: <br />
+                                <a href="mailto:donaciones@caribeensena.org" target="_blank"><strong>donaciones@caribeensena.org</strong></a>
                             </small>
                         </p>
                         <button className='btn' style={{ backgroundColor: "#beefff ", borderColor: "#beefff" }}>
-                            <a className='text-black link-offset-2 link-underline link-underline-opacity-0' href="https://www.paypal.com/paypalme/caribeensena?country.x=CO&locale.x=es_XC" target="_blank"><strong>¡Haz tu donación aqui!</strong></a>
+                            <a className='text-black link-offset-2 link-underline link-underline-opacity-0' href="https://www.donatecaribeensena.org/" target="_blank"><strong>¡Haz tu donación aqui!</strong></a>
                         </button>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center py-4">
