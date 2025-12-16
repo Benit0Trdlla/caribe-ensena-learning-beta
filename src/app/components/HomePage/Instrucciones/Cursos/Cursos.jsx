@@ -282,29 +282,40 @@ export default function Cursos() {
                         </ModalCursos>
                         <ModalCursos id="15" title="Proyecto Steam">
                             <p>
-                                DADA expresar oposición, hipótesis y finalidad, y de adaptar el registro a situaciones formales o informales. Se incluyen temas de vida asociativa y sindical, profesional y tecnológica, además del dominio completo del Discurso Indirecto.
-                            </p>
-                            <p>- Cantidad de Módulos: 4</p>
-                            <p><strong>📚 Recursos del Curso</strong></p>
-                            <p>
-                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                                El curso “Educación STEAM está diseñado para que los estudiantes de 12 a 16 años aprendan haciendo, a través de experiencias prácticas, proyectos colaborativos y actividades que integran la creatividad con la solución de problemas reales.
                             </p>
                             <ul>
-                                <li>
-                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
-                                </li>
-                                <li>
-                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
-                                </li>
-                                <li>
-                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
-                                </li>
-                                <li>
-                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
-                                </li>
-                                <li>
-                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
-                                </li>
+                                <li><strong>Duración:</strong> 4 módulos (35 temas cada uno)</li>
+                                <li><strong>Modalidad:</strong> Virtual/Autónoma</li>
+                                <li><strong>Metodología:</strong> Aprendizaje por proyectos (Learning by Doing)</li>
+                                <li><strong>Evaluación:</strong> Evidencias prácticas, reflexiones y prototipos</li>
+                                <li><strong>Meta:</strong> Desarrollar pensamiento crítico, creatividad e innovación tecnológica en jóvenes</li>
+                            </ul>
+                                                        <p><strong>Recursos del Curso</strong></p>
+                            <p><strong>🌿 Modulo 1</strong></p>
+                            <ul>
+                                <li><strong>Para Exploración:</strong> Cuaderno (Bitácora), lupa (o lente de botella), lápices.</li>
+                                <li><strong>Laboratorio Casero:</strong> Botellas plásticas (filtros), repollo morado (indicador pH).</li>
+                                <li><strong>Entorno:</strong> Muestras de tierra, hojas, agua de lluvia.</li>
+                            </ul>
+                            <p><strong>🏗 Modulo 2</strong></p>
+                            <ul>
+                                <li><strong>Estructurales:</strong> Mucho cartón, palitos de brocheta, pegamento (o engrudo casero), cinta adhesiva.</li>
+                                <li><strong>Mecánicos:</strong> Tapas de botella (ruedas/poleas), bandas elásticas (transmisión), cuerda o pabilo.</li>
+                                <li><strong>Hidráulicos:</strong> Jeringas sin aguja, mangueras plásticas delgadas (kits de venoclisis o acuario).</li>
+                                <li><strong>Herramientas:</strong> Tijeras, regla, escuadra.</li>
+                            </ul>
+                            <p><strong>🤖 Modulo 3</strong></p>
+                            <ul>
+                                <li><strong>Electrónica Básica:</strong> LEDs, pilas (AA o botón), cables caimán, motorcitos DC (de juguetes viejos), zumbadores.</li>
+                                <li><strong>Materiales Conductores:</strong> Papel aluminio, clips metálicos, alambre de cobre esmaltado, imanes.</li>
+                                <li><strong>Low-Tech:</strong> Papel cuadriculado (para pixel art y lógica), cartón (para chasis de robots).</li>
+                            </ul>
+                            <p><strong>🎨 Modulo 4</strong></p>
+                            <ul>
+                                <li><strong>Artísticos:</strong> Pinturas, pigmentos naturales, papeles de colores, revistas (collage).</li>
+                                <li><strong>Matemáticos:</strong> Regla, transportador, compás, calculadora básica.</li>
+                                <li><strong>Audiovisuales:</strong> Celular (para fotos/video del pitch), materiales reciclados para escenografía o instrumentos.</li>
                             </ul>
                         </ModalCursos>
                         <ModalCursos id="16" title="Educación Emocional">
