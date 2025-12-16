@@ -54,57 +54,59 @@ export default function EducacionEmocional() {
                         </div>
                         <div id="Contenidos">
                             <p><strong>Contenidos de los Módulos</strong></p>
-                            <table className="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Módulo</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Enfoque/Logro</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>🧭 Mi Mundo Interior <br />(Autoconocimiento e Identidad)</td>
-                                        <td>
-                                            <ul>
-                                                <li>Diferenciación entre identidad offline y online, neurociencia del cerebro adolescente y fortalecimiento de la autoestima.</li>
-                                                <li>El estudiante podrá responder "¿Quién soy?" más allá de los likes y las etiquetas sociales.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>🧠 Capitán de mi Mente (Regulación Emocional)</td>
-                                        <td>
-                                            <ul>
-                                                <li>Técnicas de mindfulness, gestión de la frustración académica, manejo de la ira y prevención de la depresión.</li>
-                                                <li>El estudiante adquiere un "kit de emergencia" emocional para gestionar crisis y presiones cotidianas.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>🤝 Convivencia y Redes <br />(Habilidades Sociales)</td>
-                                        <td>
-                                            <ul>
-                                                <li>Comunicación asertiva, resolución pacífica de conflictos, prevención del ciberbullying, empatía y liderazgo positivo.</li>
-                                                <li>Mejora del clima escolar y desarrollo de relaciones interpersonales sanas y seguras.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>🚀 Mi Proyecto de Vida (Futuro y Autonomía)</td>
-                                        <td>
-                                            <ul>
-                                                <li>Descubrimiento vocacional (Ikigai), toma de decisiones éticas, prevención de riesgos (consumo, sexualidad) y planteamiento de metas SMART.</li>
-                                                <li>El estudiante traza un plan de acción concreto para su transición a la vida adulta.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div className="table-responsive">
+                                <table className="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Módulo</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Enfoque/Logro</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>🧭 Mi Mundo Interior <br />(Autoconocimiento e Identidad)</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Diferenciación entre identidad offline y online, neurociencia del cerebro adolescente y fortalecimiento de la autoestima.</li>
+                                                    <li>El estudiante podrá responder "¿Quién soy?" más allá de los likes y las etiquetas sociales.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>🧠 Capitán de mi Mente (Regulación Emocional)</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Técnicas de mindfulness, gestión de la frustración académica, manejo de la ira y prevención de la depresión.</li>
+                                                    <li>El estudiante adquiere un "kit de emergencia" emocional para gestionar crisis y presiones cotidianas.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>🤝 Convivencia y Redes <br />(Habilidades Sociales)</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Comunicación asertiva, resolución pacífica de conflictos, prevención del ciberbullying, empatía y liderazgo positivo.</li>
+                                                    <li>Mejora del clima escolar y desarrollo de relaciones interpersonales sanas y seguras.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>🚀 Mi Proyecto de Vida (Futuro y Autonomía)</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Descubrimiento vocacional (Ikigai), toma de decisiones éticas, prevención de riesgos (consumo, sexualidad) y planteamiento de metas SMART.</li>
+                                                    <li>El estudiante traza un plan de acción concreto para su transición a la vida adulta.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div id='Recursos'>
                             <p><strong>🛠️ Recursos en Plataforma</strong></p>
