@@ -291,7 +291,7 @@ export default function Cursos() {
                                 <li><strong>Evaluación:</strong> Evidencias prácticas, reflexiones y prototipos</li>
                                 <li><strong>Meta:</strong> Desarrollar pensamiento crítico, creatividad e innovación tecnológica en jóvenes</li>
                             </ul>
-                                                        <p><strong>Recursos del Curso</strong></p>
+                            <p><strong>Recursos del Curso</strong></p>
                             <p><strong>🌿 Modulo 1</strong></p>
                             <ul>
                                 <li><strong>Para Exploración:</strong> Cuaderno (Bitácora), lupa (o lente de botella), lápices.</li>
@@ -319,31 +319,50 @@ export default function Cursos() {
                             </ul>
                         </ModalCursos>
                         <ModalCursos id="16" title="Educación Emocional">
-                            <p>
-                                DADA 2 expresar oposición, hipótesis y finalidad, y de adaptar el registro a situaciones formales o informales. Se incluyen temas de vida asociativa y sindical, profesional y tecnológica, además del dominio completo del Discurso Indirecto.
-                            </p>
-                            <p>- Cantidad de Módulos: 4</p>
-                            <p><strong>📚 Recursos del Curso</strong></p>
-                            <p>
-                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
-                            </p>
-                            <ul>
-                                <li>
-                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
-                                </li>
-                                <li>
-                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
-                                </li>
-                                <li>
-                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
-                                </li>
-                                <li>
-                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
-                                </li>
-                                <li>
-                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
-                                </li>
-                            </ul>
+                            <div id="Presentación">
+                                <p>
+                                    Diseñado por la <strong>Fundación Caribe Enseña</strong>, este es un programa educativo de vanguardia dirigido a adolescentes entre <strong>10 y 17 años.</strong> Más que un curso, es una experiencia de aprendizaje híbrida que combina tecnología, psicología y pedagogía activa para dar cumplimiento a la <strong>Nueva Ley de Educación Emocional (Ley 2503 de 2025)</strong>  y la <strong> Ley de Convivencia Escolar (Ley 1620).</strong>
+                                </p>
+                                <ul>
+                                    <li><strong>Formato:</strong> 4 Módulos | 28 Secuencias Totales.</li>
+                                </ul>
+                            </div>
+                            <div id='Recursos'>
+                                <p><strong>🛠️ Recursos en Plataforma</strong></p>
+                                <ol>
+                                    <li>
+                                        <strong>🎬 Video-Clases:</strong>
+                                        <ul>
+                                            <li>Contenido dinámico en las secuencias 3, 5 y 7 de cada módulo.</li>
+                                            <li>Narrativa storytelling, ágil y visualmente atractiva para mantener la atención.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>📄 Workbooks y Guías Interactivas:</strong>
+                                        <ul>
+                                            <li>Material descargable (PDF) para realizar "Retos Personales" y ejercicios de introspección en casa o en el aula.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>🎧 Audios de Inmersión:</strong>
+                                        <ul>
+                                            <li>Podcasts breves y guiones de meditación guiada para entrenar la calma y la atención plena.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>🧪 Laboratorios Grupales:</strong>
+                                        <ul>
+                                            <li>Guías paso a paso para que los docentes o líderes estudiantiles repliquen dinámicas sociales y debates en el salón de clases.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>✅ Sistema de Evaluación Continua:</strong>
+                                        <ul>
+                                            <li>Quices interactivos al final de cada secuencia con retroalimentación pedagógica inmediata para asegurar la comprensión de los conceptos.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
                         </ModalCursos>
                     </div>
                 </div>
