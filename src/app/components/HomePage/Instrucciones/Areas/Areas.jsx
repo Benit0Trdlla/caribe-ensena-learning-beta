@@ -17,11 +17,17 @@ export default function Areas() {
                                 <li className="dropdown-item"><Link href={"/EnglishBasic2"} className="text-decoration-none text-dark">English Basic 2</Link></li>
                                 <li className="dropdown-item"><Link href={"/EnglishIntermediate1"} className="text-decoration-none text-dark">English Intermediate 1</Link></li>
                                 <li className="dropdown-item"><Link href={"/EnglishIntermediate2"} className="text-decoration-none text-dark">English Intermediate 2</Link></li>
+                                <li className="dropdown-item"><Link href={"/FrancesBasico1"} className="text-decoration-none text-dark">Francés Básic 1</Link></li>
+                                <li className="dropdown-item"><Link href={"/FrancesBasico2"} className="text-decoration-none text-dark">Francés Básic 2</Link></li>
+                                <li className="dropdown-item"><Link href={"/FrancesIntermedio1"} className="text-decoration-none text-dark">Francés Intermedio 1</Link></li>
+                                <li className="dropdown-item"><Link href={"/FrancesIntermedio2"} className="text-decoration-none text-dark">Francés Intermedio 2</Link></li>
+                                <li className="dropdown-item"><Link href={"/EducacionEmocional"} className="text-decoration-none text-dark">Educación Emocional</Link></li>
                             </Secciones>
                             <Secciones title="Tecnología">
                                 <li className="dropdown-item"><Link href="/Tica" className="text-decoration-none text-dark">Tica 1</Link></li>
                                 <li className="dropdown-item"><Link href="/Tica2" className="text-decoration-none text-dark">Tica 2</Link></li>
                                 <li className="dropdown-item"><Link href="/PythonProjectPro" className="text-decoration-none text-dark">Python Project Pro</Link></li>
+                                <li className="dropdown-item"><Link href={"/ProyectoSteam"} className="text-decoration-none text-dark">Proyecto Steam</Link></li>
                             </Secciones>
                             <Secciones title="Ciencias ambientales">
                                 <li className="dropdown-item"><Link href="/Newskills" className="text-decoration-none text-dark">New Skills</Link></li>

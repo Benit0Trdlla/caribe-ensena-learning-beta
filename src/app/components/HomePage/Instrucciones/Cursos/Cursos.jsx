@@ -280,6 +280,60 @@ export default function Cursos() {
                                 </li>
                             </ul>
                         </ModalCursos>
+                        <ModalCursos id="15" title="Proyecto Steam">
+                            <p>
+                                DADA expresar oposición, hipótesis y finalidad, y de adaptar el registro a situaciones formales o informales. Se incluyen temas de vida asociativa y sindical, profesional y tecnológica, además del dominio completo del Discurso Indirecto.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p><strong>📚 Recursos del Curso</strong></p>
+                            <p>
+                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
+                                </li>
+                                <li>
+                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
+                                </li>
+                                <li>
+                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
+                                </li>
+                            </ul>
+                        </ModalCursos>
+                        <ModalCursos id="16" title="Educación Emocional">
+                            <p>
+                                DADA 2 expresar oposición, hipótesis y finalidad, y de adaptar el registro a situaciones formales o informales. Se incluyen temas de vida asociativa y sindical, profesional y tecnológica, además del dominio completo del Discurso Indirecto.
+                            </p>
+                            <p>- Cantidad de Módulos: 4</p>
+                            <p><strong>📚 Recursos del Curso</strong></p>
+                            <p>
+                                Los recursos necesarios para el autoaprendizaje deben ser constantes a lo largo de los cuatro niveles (A1-B2) y están directamente soportados por los materiales proporcionados:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Audio y Vídeo:</strong> Contienen documentos sonoros y transcripciones para verificar la comprensión oral. Permite escuchar a <strong>hablantes nativos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Ejercicios de Sistematización: </strong>Cada tema debe incluir ejercicios de <strong>comprobación de progreso, </strong>incluyendo ejercicios de aplicación y preguntas <strong>Multiple Choice</strong> (Choisissez la ou les bonne(s) réponse(s)).
+                                </li>
+                                <li>
+                                    <strong>Guía de Pronunciación: </strong>Necesaria para familiarizarse con la pronunciación francesa, especialmente la <strong>acentuación y los sonidos nasales.</strong> Debe tener una guía de <strong>signos fonéticos.</strong>
+                                </li>
+                                <li>
+                                    <strong>Portafolio / Autoevaluación:</strong> Permite al estudiante <strong>notar los diferentes momentos de su aprendizaje así como sus progresos. </strong>Se recomienda un <strong>test de evaluación</strong> con sus correcciones.
+                                </li>
+                                <li>
+                                    <strong>Anexos Gramaticales: </strong>Incluye un <strong>ayuda-memoria de gramática y conjugación,</strong> y resúmenes de <strong>participios pasados más frecuentes.</strong>
+                                </li>
+                            </ul>
+                        </ModalCursos>
                     </div>
                 </div>
             </div>
