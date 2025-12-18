@@ -12,25 +12,25 @@ export default function ProyectoSteam() {
             <div className="container">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Proyecto Steam"} curso={"ProyectoSteam"}>
-                        <AccordionModulos title={"Módulo 1 - Ciencia - Los secretos de mi entorno"} collapseNumber={"collapseOne"}>
+                        <AccordionModulos title={"Módulo 1 - 👩🏻‍🔬 Ciencia: Los secretos de mi entorno"} collapseNumber={"collapseOne"}>
                             <hr />
                             <p>
                                 En este módulo, el estudiante deja de ser un espectador pasivo para convertirse en un detective de la naturaleza, aprendiendo a leer las pistas que el agua, el suelo y la energía le dan.
                             </p>
                         </AccordionModulos>
-                        <AccordionModulos title={"Módulo 2 - Ingeniería - Manos a la obra"} collapseNumber={"collapseTwo"}>
+                        <AccordionModulos title={"Módulo 2 - 👷🏻‍♀️ Ingeniería: Manos a la obra"} collapseNumber={"collapseTwo"}>
                             <hr />
                             <p>
                                 Aquí la historia evoluciona: el estudiante usa lo que descubrió en el Módulo 1 para modificar su entorno. Pasamos del "por qué" al "cómo funciona".
                             </p>
                         </AccordionModulos>
-                        <AccordionModulos title={"Módulo 3 - Tecnología - El cerebro del futuro"} collapseNumber={"collapseThree"}>
+                        <AccordionModulos title={"Módulo 3 - 👨🏼‍💻 Tecnología: El cerebro del futuro"} collapseNumber={"collapseThree"}>
                             <hr />
                             <p>
                                 El estudiante da el salto al futuro. Ya sabe construir estructuras (Módulo 2), ahora les dará "vida" e "inteligencia" mediante la electricidad y la lógica.
                             </p>
                         </AccordionModulos>
-                        <AccordionModulos title={"Módulo 4 - Arte y Matemáticas - Crear e innovar"} collapseNumber={"collapseFour"}>
+                        <AccordionModulos title={"Módulo 4 - 🧑🏻‍🎨 Arte y Matemáticas: Crear e innovar"} collapseNumber={"collapseFour"}>
                             <hr />
                             <p>
                                 El gran final. El estudiante une ciencia, ingeniería y tecnología con la creatividad humana para comunicar ideas, diseñar soluciones estéticas y presentar su visión al mundo.
@@ -69,7 +69,7 @@ export default function ProyectoSteam() {
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>CIENCIA:<br />LOS SECRETOS DE MI ENTORNO</td>
+                                            <td>👩🏻‍🔬 Ciencia:<br />los secretos de mi entorno</td>
                                             <td>
                                                 <ol>
                                                     <li><strong>El Método:</strong> Aprender a diferenciar mirar de observar, usar una bitácora y entender el valor de fallar.</li>
@@ -84,7 +84,7 @@ export default function ProyectoSteam() {
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
-                                            <td>INGENIERÍA:<br /> MANOS A LA OBRA</td>
+                                            <td>👷🏻‍♀️ Ingeniería:<br /> manos a la obra</td>
                                             <td>
                                                 <ol>
                                                     <li><strong>Soportes:</strong> Descubrir el poder del triángulo, columnas, vigas y nudos fuertes.</li>
@@ -99,7 +99,7 @@ export default function ProyectoSteam() {
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
-                                            <td>TECNOLOGÍA:<br /> EL CEREBRO DEL FUTURO</td>
+                                            <td>👨🏼‍💻 Tecnología:<br /> el cerebro del futuro</td>
                                             <td>
                                                 <ol>
                                                     <li><strong>Lógica:</strong> Entender algoritmos, patrones, abstracción y diagramas de flujo (sin computadoras aún).</li>
@@ -114,7 +114,7 @@ export default function ProyectoSteam() {
                                         </tr>
                                         <tr>
                                             <th scope="row">4</th>
-                                            <td>ARTE Y MATEMÁTICAS: <br />CREAR E INNOVAR</td>
+                                            <td>🧑🏻‍🎨 Arte y Matemáticas: <br />crear e innovar</td>
                                             <td>
                                                 <ol>
                                                     <li><strong>Geometría:</strong> Explorar fractales naturales, simetría, teselados y poliedros 3D.</li>
