@@ -6,7 +6,6 @@ import { useLinkMeet } from '../../hooks/useLinkMeet'
 import { useUser } from "@auth0/nextjs-auth0/client";
 const URL_SHEETS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWEDU8Ty2Bz_cMSvvm-YxRWXima4w5dD1VoLwAZYTOZ756z3RQkAwphrX6_F74BWnWN9VJbUvgz7_0/pub?output=csv"
 export const Header = ({ ImgUrl, href, indexMeet }) => {
-    const IndexMeetData = indexMeet;
     const { user } = useUser();
 
     const { data, isLoading, error } = useLinkMeet(URL_SHEETS)
