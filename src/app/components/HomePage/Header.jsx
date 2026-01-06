@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-export const Header = ({imgUrl}) => {
+export const Header = ({ imgUrl }) => {
     return (
         <>
             <header id="header">
@@ -20,6 +20,9 @@ export const Header = ({imgUrl}) => {
                                 </li>
                                 <li className="nav-item">
                                     <a href="#instrucciones" className="nav-link text-secondary"><small>Instrucciones</small></a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="#Marquee" className="nav-link text-secondary"><small>Cursos</small></a>
                                 </li>
                                 <li className="nav-item">
                                     <a href="#donate" className="nav-link text-black"><strong> Haz tu donación</strong></a>

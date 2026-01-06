@@ -6,7 +6,8 @@ import {
   InstruccionesList,
   PreguntasFrecuentesComponente,
   ServicioComponente,
-  AliadosSection
+  AliadosSection,
+  MarqueeCursos
 } from "./components/HomePage";
 import VideoIntro from "./components/VideoIntro/VideoIntro";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <ServicioComponente />
         <PreguntasFrecuentesComponente />
         <InstruccionesList />
+        <MarqueeCursos />
         <Donaciones />
         <AliadosSection />
         <Footer />
