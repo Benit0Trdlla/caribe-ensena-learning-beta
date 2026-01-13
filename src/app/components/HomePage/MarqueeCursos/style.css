@@ -1,0 +1,5 @@
+.hover-transition:hover {
+    transform: scale(1.2);
+    /* padding: 20px; */
+    transition: all 0.2s ease-in-out;
+}
