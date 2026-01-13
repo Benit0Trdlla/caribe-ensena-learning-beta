@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
 import { CURSOS } from "@/app/lib/consts";
 import Link from "next/link";
+import './style.css';
 export const MarqueeCursos = () => {
     return (
         <div id="Marquee" className="p-0 p-sm-4">
@@ -10,7 +11,7 @@ export const MarqueeCursos = () => {
 
             <Marquee gradient gradientWidth={50} pauseOnHover={true}>
                 {CURSOS.map((curso) => (
-                    <div key={curso.Id} className="d-flex flex-column align-items-center text-center px-4 my-5">
+                    <div key={curso.Id} className="hover-transition d-flex flex-column align-items-center text-center px-4 my-5">
                         <Link href={curso.href} prefetch={true} className="link-secondary text-decoration-none">
                             <img src={curso.ImgUrl} alt={curso.Title} className="img-fluid" width={128} height={128} />
                             <p className="fw-medium fs-5 fst-italic">{curso.Title}</p>
