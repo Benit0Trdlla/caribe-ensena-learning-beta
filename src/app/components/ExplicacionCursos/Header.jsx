@@ -21,9 +21,9 @@ export const Header = ({ ImgUrl, href, indexMeet }) => {
                         <Image src={ImgUrl} width={60} height={60} priority={true} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <div className='d-flex justify-content-center'>
                             {!isLoading &&
-                                <a href={`https://${data[indexMeet].URL}`} title={data[indexMeet].Title} className='btn border me-4 ms-lg-0 d-flex align-items-center gap-2' target="_blank" type='button'>
+                                <a href={`https://${data[indexMeet].URL}`} title={data[indexMeet].Title} className='btn border me-4 ms-lg-0 d-flex align-items-center gap-2 rounded-4 shadow bg-body-tertiary' target="_blank" type='button'>
                                     <Point />
-                                    {/* ¡Únete al evento! */}
+                                    ¡Únete al evento!
                                 </a>
                             }
                         </div>

@@ -17,7 +17,7 @@
     height: 1px;
     background-color: rgb(255, 0, 0);
     border-radius: 25px;
-    animation: loop 1s 0s infinite;
+    /* animation: loop 1s 0s infinite; */
 }
 
 @keyframes loop {
