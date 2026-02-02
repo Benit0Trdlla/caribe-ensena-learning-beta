@@ -9,7 +9,7 @@ export const metadata = {
 export default function EducacionEmocional() {
     return (
         <>
-            <div className="container">
+            <div className="container educacion-emocional-background-root">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Educación Emocional"} curso={"EducacionEmocional"}>
                         <AccordionModulos title={"Módulo 1 - 🧭 Mi Mundo Interior (Autoconocimiento e Identidad)"} collapseNumber={"collapseOne"}>

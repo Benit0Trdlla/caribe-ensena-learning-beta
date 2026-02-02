@@ -9,7 +9,7 @@ export const metadata = {
 export default function EnglishBasic1() {
     return (
         <>
-            <div className="container">
+            <div className="container english-background-root">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"English Basic 1"} curso={"EnglishBasic1"}>
                         <AccordionModulos title={"Módulo 1 - Getting Started: Primeros pasos en inglés."} collapseNumber={"collapseOne"}>

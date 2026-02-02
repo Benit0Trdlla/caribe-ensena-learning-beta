@@ -15,9 +15,9 @@ export const Header = ({ ImgUrl, href, indexMeet }) => {
 
     return (
         <>
-            <header id="header">
-                <nav className="navbar navbar-expand-md bg-white">
-                    <div className="container">
+            <header id="header" className=''>
+                <nav className="navbar navbar-expand-md z-1">
+                    <div className="container z-2">
                         <Image src={ImgUrl} width={60} height={60} priority={true} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <div className='d-flex justify-content-center'>
                             {!isLoading &&

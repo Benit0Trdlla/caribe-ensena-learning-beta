@@ -9,7 +9,7 @@ export const metadata = {
 export default function Tica2Page() {
     return (
         <>
-            <div className="container">
+            <div className="container tica-background-root">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Tica 2"} curso={"Tica2"}>
                         <AccordionModulos title={"📡 Módulo 1: Comunicación Serial y Monitor Serial"} collapseNumber={"collapseOne"}>

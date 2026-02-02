@@ -10,7 +10,7 @@ export default function PythonProjectPro() {
     return (
         <>
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} /> */}
-            <div className="container">
+            <div className="container python-background-root">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Python Project Pro"} curso={"PythonProjectPro"}>
                         <AccordionModulos title={"Módulo 1: Fundamentos de Python y lógica básica."} collapseNumber={"collapseOne"}>

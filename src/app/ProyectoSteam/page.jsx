@@ -9,7 +9,7 @@ export const metadata = {
 export default function ProyectoSteam() {
     return (
         <>
-            <div className="container">
+            <div className="container steam-background-root">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Proyecto Steam"} curso={"ProyectoSteam"}>
                         <AccordionModulos title={"Módulo 1 - 👩🏻‍🔬 Ciencia: Los secretos de mi entorno"} collapseNumber={"collapseOne"}>

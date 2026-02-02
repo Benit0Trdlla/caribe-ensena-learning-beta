@@ -10,7 +10,7 @@ export default function PoketPage() {
     return (
         <>
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} /> */}
-            <div className="container">
+            <div className="container poket-background-root">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Poket"} curso={"Poket"}>
                         <AccordionModulos title={"Módulo 1: El Dinero y el Ahorro."} collapseNumber={"collapseOne"}>

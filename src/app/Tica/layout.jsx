@@ -6,13 +6,11 @@ import { Header } from "../components/ExplicacionCursos";
 // Se aplica un contenedor con fondo responsive a todo el layout
 export default function RootLayout({ children }) {
   return (
-    <div className="tica-background-root">
-      <DataActivitiesContextProvider>
-        <FinishSectionContextProvider>
-          <Header ImgUrl={"/Images/Logo_Cursos/Tica.png"} href={"/Tica"} indexMeet={2} />
-          {children}
-        </FinishSectionContextProvider>
-      </DataActivitiesContextProvider>
-    </div>
+    <DataActivitiesContextProvider>
+      <FinishSectionContextProvider>
+        <Header ImgUrl={"/Images/Logo_Cursos/Tica.png"} href={"/Tica"} indexMeet={2} />
+        {children}
+      </FinishSectionContextProvider>
+    </DataActivitiesContextProvider>
   );
 }

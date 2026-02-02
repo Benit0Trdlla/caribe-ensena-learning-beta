@@ -10,7 +10,7 @@ export default function TicaPage() {
     return (
         <>
             {/* <Header ImgUrl="/Images/Logo_Cursos/Ensenapaz.png" href="/Cursos" indexMeet={0} /> */}
-            <div className="container">
+            <div className="container tica-background-root">
                 <div className="px-0 px-md-1 py-0 py-md-5 row">
                     <LeftColumn title={"Tica"} curso={"Tica"}>
                         <AccordionModulos title={"📦 Módulo 1: Introducción a la Electrónica y Lógica"} collapseNumber={"collapseOne"}>
