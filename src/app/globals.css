@@ -33,6 +33,11 @@ body::-webkit-scrollbar {
   background-attachment: fixed;
   background-position: center center;
   z-index: -1;
+
+  /* Ajustes imagen para móviles en vertical */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    background-image: url('/Images/BackgroundImagesCursos/Tica-mobile-background.png');
+  }
 }
 
 .poket-background-root::before {
@@ -48,6 +53,10 @@ body::-webkit-scrollbar {
   background-attachment: fixed;
   background-position: center center;
   z-index: -1;
+
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    background-image: url('/Images/BackgroundImagesCursos/Poket-mobile-background.png');
+  }
 }
 
 .english-background-root::before {
@@ -63,6 +72,10 @@ body::-webkit-scrollbar {
   background-attachment: fixed;
   background-position: center center;
   z-index: -1;
+
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    background-image: url('/Images/BackgroundImagesCursos/English-mobile-background.png');
+  }
 }
 
 .france-background-root::before {
@@ -78,6 +91,10 @@ body::-webkit-scrollbar {
   background-attachment: fixed;
   background-position: center center;
   z-index: -1;
+
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    background-image: url('/Images/BackgroundImagesCursos/France-mobile-background.png');
+  }
 }
 
 .python-background-root::before {
@@ -93,6 +110,10 @@ body::-webkit-scrollbar {
   background-attachment: fixed;
   background-position: center center;
   z-index: -1;
+
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    background-image: url('/Images/BackgroundImagesCursos/Python-mobile-background.png');
+  }
 }
 
 .steam-background-root::before {
@@ -108,6 +129,10 @@ body::-webkit-scrollbar {
   background-attachment: fixed;
   background-position: center center;
   z-index: -1;
+
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    background-image: url('/Images/BackgroundImagesCursos/Steam-mobile-background.png');
+  }
 }
 
 .educacion-emocional-background-root::before {
@@ -123,4 +148,8 @@ body::-webkit-scrollbar {
   background-attachment: fixed;
   background-position: center center;
   z-index: -1;
+
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    background-image: url('/Images/BackgroundImagesCursos/EducacionEmocional-mobile-background.png');
+  }
 }
