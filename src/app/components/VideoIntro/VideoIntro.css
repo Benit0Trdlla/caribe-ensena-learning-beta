@@ -71,8 +71,8 @@
 
 @media (orientation: portrait) {
   .video-controls {
-    top: 55px;
-    left: 12px;
+    bottom: 105px;
+    right: 4px;
   }
 }
 

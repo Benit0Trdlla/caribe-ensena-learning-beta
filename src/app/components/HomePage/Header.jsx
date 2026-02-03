@@ -25,7 +25,7 @@ export const Header = ({ imgUrl }) => {
                                     <a href="#Marquee" className="nav-link text-secondary"><small>Cursos</small></a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#donate" className="nav-link text-black rounded-4 shadow bg-body-tertiary"><strong> Haz tu donación</strong></a>
+                                    <a href="#donate" className="nav-link text-black rounded-4 shadow bg-body-tertiary px-2" style={{width: "fit-content"}}><strong> Haz tu donación</strong></a>
                                 </li>
                                 <li className="nav-item">
                                     <a href="#aliados" className="nav-link text-black"><small> Aliados</small></a>
